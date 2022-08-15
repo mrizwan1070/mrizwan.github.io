@@ -13,14 +13,22 @@ a{
     margin: auto;
     
 }
+header{
+    background-color: #87509c;
+    display: flex;
+    justify-content: space-between;
+}
+header > .container{
+    display: flex;
+    justify-content: space-around;
+}
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     opacity: 0.9;
 }
-.navbar, .short-intro{
-    background-color: #87509c;
+.navbar, .short-intro, header{
     padding: 15px;
 }
 .nav-items{
