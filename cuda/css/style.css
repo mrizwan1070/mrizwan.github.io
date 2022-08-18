@@ -5,16 +5,12 @@
     font-family: 'Titillium web', 'sans-serif';
     scroll-behavior: smooth;
 }
-body{
-    position: relative;
-}
 a{
     text-decoration: none;
 }
 .my-container{
     max-width: 1140px;
-    margin: auto;
-    
+    margin: auto; 
 }
 header{
     background-color: #87509c;
@@ -26,8 +22,9 @@ header{
 .navbar{
     display: flex;
     justify-content: space-between;
+    margin-bottom: 0 !important;
 }
-.navbar, .short-intro, header{
+.navbar, .short-intro{
     padding: 15px;
 }
 .nav-items{
@@ -69,15 +66,15 @@ header{
     text-align: center;
     padding: 0 2em;
 }
-.short-intro button{
+.short-intro .btn{
     min-width: 200px;
-    height: 50px;
+    padding: 16px;
     margin: 2em 0;
     background-color: #eb7d4b;
     border: 1px solid #eb7d4b;
     border-radius: 5px;
 }
-.short-intro button a{
+.short-intro a.btn{
     color: #fff;
     font-size: 16px;
     font-weight: 600;
