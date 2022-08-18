@@ -8,25 +8,21 @@
 a{
     text-decoration: none;
 }
-.container{
+.my-container{
     max-width: 1140px;
     margin: auto;
     
 }
 header{
     background-color: #87509c;
-    display: flex;
-    justify-content: space-between;
-}
-header > .container{
-    display: flex;
-    justify-content: space-around;
-}
-.navbar {
     position: fixed;
     top: 0;
     width: 100%;
     opacity: 0.9;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
 }
 .navbar, .short-intro, header{
     padding: 15px;
@@ -54,6 +50,7 @@ header > .container{
     background: #74247e;
 }
 .short-intro{
+    background-color: #87509c;
     padding: 150px 0;
 }
 .short-intro-content{
