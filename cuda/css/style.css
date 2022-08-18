@@ -5,6 +5,9 @@
     font-family: 'Titillium web', 'sans-serif';
     scroll-behavior: smooth;
 }
+body{
+    position: relative;
+}
 a{
     text-decoration: none;
 }
