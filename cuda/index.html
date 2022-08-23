@@ -33,18 +33,19 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body data-spy="scroll" data-target="#myNavbar" data-offset="0">
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
     <header>
       <div class="my-container">
-        <nav class="navbar">
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="myNavbar">
           <div class="site-logo">
             <img src="img/logo.png" alt="site logo" />
           </div>
           <div class="nav-items">
-            <div class="nav-links" id="myNavbar">
-              <ul id="nav-links nav navbar-nav" role="tablist">
+            <div class="nav-links">
+              <ul id="nav-links nav navbar-nav">
                 <li><a href="#home" class="btn">Home</a></li>
-                <li><a href="#services" class="btn">Services</a></li>
+                <li><a href="#services" class="btn">Services</a>
+                </li>
                 <li><a href="#team" class="btn">Team</a></li>
                 <li><a href="#skills" class="btn">Skills</a></li>
                 <li><a href="#portfolio" class="btn">Portfolio</a></li>

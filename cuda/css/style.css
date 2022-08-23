@@ -49,9 +49,9 @@ header{
     padding: 10px 15px;
     border-radius: 5px;
 }
-.nav-links ul li a:hover, .active{
+/* .nav-links ul li a:hover, .active{
     background: #74247e;
-}
+} */
 .short-intro{
     background-color: #87509c;
     padding: 150px 0;
