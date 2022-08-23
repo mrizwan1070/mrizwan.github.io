@@ -21,6 +21,7 @@ header{
     top: 0;
     width: 100%;
     opacity: 0.9;
+    z-index: 100;
 }
 .navbar{
     display: flex;
@@ -105,11 +106,9 @@ header{
 
 }
 .our-services{
-    display: flex;
     justify-content: space-between;
 }
 .services-detail{
-    width: 25%;
     padding: 0 10px;
 }
 .services-detail img{
@@ -130,11 +129,9 @@ header{
     margin: 20px auto;
 }
 .team-member{
-    display: flex;
     padding: 100px 0;
 }
 .team-member-detail{
-    width: 25%;
     padding: 0 20px;
 }
 .team-member-detail :not(:last-child){
@@ -234,7 +231,6 @@ header{
     flex-wrap: wrap;
 }
 .client-reviews{
-    width: 50%;
     display: flex;
     text-align: left;
     padding: 50px 20px;
