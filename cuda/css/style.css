@@ -207,7 +207,6 @@ header{
     flex-wrap: wrap;
 }
 .tab-data-detail{
-    width: 50%;
     padding: 50px 0;
 }
 .tab-data-detail p{
@@ -324,3 +323,55 @@ input::placeholder, textarea::placeholder{
     font-size: 16px;
     padding: 10px 15px;
 }
+@media screen and (max-width: 575px){
+    h1{
+        font-size: 27px !important;
+    }
+    .navbar{
+        justify-content: center !important;
+    }
+    .short-intro{
+        padding-bottom: 20px;
+    }
+    .short-intro-content{
+        row-gap: .5em;
+    }
+    .short-intro-content p{
+        padding: 0 10px;
+    }
+    .services, .team, .team-member, .skills, .portfolio, .about-us, .contact, .tab-data-detail, .portfolio-detail .tabs{
+        padding: 20px 0;
+    }
+    .services-content > p, .team-content > p{
+        padding: 0 20px;
+    }
+    .our-services {
+        padding-top: 25px;
+    }
+    .client-reviews{
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .review-detail{
+        padding-right: 0;
+        padding-left: 0;
+        text-align: center;
+    }
+    .review-detail :not(:last-child){
+        margin-bottom: 5px;
+    }
+    .client-job{
+        margin-bottom: 0;
+    }
+    .social-links ul li a{
+        padding: 8px;
+    }
+    .contact-input{
+        width: 49%;
+    }
+    .message textarea{
+        width: 98%;
+    }
+}
+
