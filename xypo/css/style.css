@@ -1,8 +1,14 @@
 :root{
     --primary-color: #fc888d;
 }
+body{
+    font-family: sans-serif;
+}
 .main-wrapper{
     background-image: url(https://ehmasuk.github.io/xypo/img/background.png);
+}
+.container{
+    max-width: 1200px;
 }
 .square-xs{
     width: 10px;
@@ -15,16 +21,19 @@
     background-color: var(--primary-color);
 }
 .long-bar{
-    height: 3px;
+    height: 2px;
     width: 50px;
     background-color: var(--primary-color);
 }
 .small-bar{
-    height: 3px;
+    height: 2px;
     width: 25px;
     background-color: var(--primary-color);
 }
 .testimonial::before{
     content: "--";
     font-weight: 600;
+}
+.learn-button button{
+    font-size: 14px;
 }
