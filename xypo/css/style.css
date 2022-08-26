@@ -1,11 +1,16 @@
 :root{
     --primary-color: #fc888d;
 }
+*{
+    line-height: 1;
+}
 body{
     font-family: sans-serif;
 }
 .main-wrapper{
     background-image: url(https://ehmasuk.github.io/xypo/img/background.png);
+    background-position: center;
+    background-size: cover;
 }
 .container{
     max-width: 1200px;
@@ -36,4 +41,27 @@ body{
 }
 .learn-button button{
     font-size: 14px;
+}
+.site-logo img{
+    width: 100px;
+}
+.pt-100{
+    padding-top: 100px;
+}
+.py-100{
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.py-50{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.pt-80{
+    padding-top: 80px;
+}
+.join-us-form input, .join-us-form button{
+    border-width: 2px;
+}
+.join-us-form{
+    padding-right: 200px;
 }
