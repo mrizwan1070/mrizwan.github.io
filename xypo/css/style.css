@@ -7,6 +7,9 @@
 body{
     font-family: sans-serif;
 }
+a{
+    color: #000;
+}
 .main-wrapper{
     background-image: url(https://ehmasuk.github.io/xypo/img/background.png);
     background-position: center;
@@ -35,15 +38,36 @@ body{
     width: 25px;
     background-color: var(--primary-color);
 }
+.about-us-img, .learning-img{
+    margin-left: -150px;
+}
 .testimonial::before{
     content: "--";
     font-weight: 600;
+}
+.nav-icon{
+    position: fixed;
+    right: 30px;
+    top: 16px;
+    width: 40px;
+    z-index: 1050;
+}
+
+.nav-bar{
+    max-width: 200px;
+    padding: 100px 0 0 50px;
+    margin-left: auto;
+    height: 100%;
+    background-color: #f67c92;
 }
 .learn-button button{
     font-size: 14px;
 }
 .site-logo img{
-    width: 100px;
+    width: 80px;
+}
+footer .site-logo img{
+    width: 100px
 }
 .pt-100{
     padding-top: 100px;
