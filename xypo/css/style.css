@@ -3,6 +3,7 @@
 }
 *{
     line-height: 1;
+    scroll-behavior: smooth;
 }
 body{
     font-family: sans-serif;
