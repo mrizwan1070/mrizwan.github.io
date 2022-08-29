@@ -17,21 +17,17 @@ a{
 }
 header{
     background-color: #87509c;
-    position: fixed;
-    top: 0;
-    width: 100%;
     opacity: 0.9;
-    z-index: 100;
-}
-.navbar{
+} 
+/* .navbar{
     display: flex;
     justify-content: space-between;
     margin-bottom: 0 !important;
-}
+} */
 .navbar, .short-intro{
     padding: 15px;
 }
-.nav-items{
+/* .nav-items{
     display: flex;
     justify-content: space-between;
 }
@@ -41,17 +37,18 @@ header{
 .nav-links ul li{
     list-style-type: none;
     padding: 0 10px !important;
-}
-.nav-links ul li a{
+}*/
+a.nav-link{
     color: rgb(206, 206, 206);
     font-weight: 600;
     font-size: 16px;
     text-transform: uppercase;
     padding: 10px 15px;
     border-radius: 5px;
-}
-.nav-links ul li a:hover, .active{
+} 
+a.nav-link:hover, .active{
     background: #74247e;
+    color: rgb(206, 206, 206);
 }
 .short-intro{
     background-color: #87509c;
