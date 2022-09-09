@@ -4,3 +4,20 @@ h1{
 body{
     font-family: oswald, sans-serif;
 }
+.container-fluid{
+    max-width: 1440px;
+}
+header{
+    .container-fluid{
+    background-image: url("https://mrizwan1070.github.io/musicology/images/main-image.png");
+    h1{
+        padding-top: 250px;
+    }
+    p, button{
+        font-size: 30px;
+    }
+    button{
+        background-color: #e8631c;
+    }
+}
+}

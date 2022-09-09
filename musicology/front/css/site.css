@@ -5,3 +5,23 @@ h1 {
 body {
   font-family: oswald, sans-serif;
 }
+
+.container-fluid {
+  max-width: 1440px;
+}
+
+header .container-fluid {
+  background-image: url("https://mrizwan1070.github.io/musicology/images/main-image.png");
+}
+
+header .container-fluid h1 {
+  padding-top: 250px;
+}
+
+header .container-fluid p, header .container-fluid button {
+  font-size: 30px;
+}
+
+header .container-fluid button {
+  background-color: #e8631c;
+}
