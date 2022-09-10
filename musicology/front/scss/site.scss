@@ -1,23 +1,116 @@
-h1{
-    font-size: 1.2rem;
+h2 {
+  font-size: 1.2rem;
 }
-body{
-    font-family: oswald, sans-serif;
+*{
+    box-sizing: border-box;
 }
-.container-fluid{
-    max-width: 1440px;
+h1,
+h2,
+h3,
+button, nav {
+  font-family: oswald, sans-serif;
 }
-header{
-    .container-fluid{
-    background-image: url("https://mrizwan1070.github.io/musicology/images/main-image.png");
-    h1{
-        padding-top: 250px;
-    }
-    p, button{
-        font-size: 30px;
-    }
+nav{
+    font-size: 25px;
+}
+p {
+  font-family: "Montserrat", sans-serif;
+}
+.my-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+header {
+  .my-container {
+    background: url("https://mrizwan1070.github.io/musicology/images/main-image.png")
+      no-repeat;
+    background-position: right top;
+  }
+}
+.header-content {
+  padding-top: 250px;
+  padding-bottom: 80px;
+  button {
+    background-color: #e8631c;
+  }
+}
+.px-80 {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.py-105 {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+.f-size-30 {
+  font-size: 30px;
+}
+.f-size-75 {
+  font-size: 75px;
+}
+#dance-toures {
+  background: #e8631c url("https://mrizwan1070.github.io/musicology/images/background-shape.png") no-repeat 0 142%;
+  .toures-detail {
+    max-width: 372px;
+    width: 100%;
+    img {
+    object-fit: contain;
+  }
+}
+}
+#pricing{
+.pricing-detail-content {
+  background-color: #e8631c;
+  width: 100%;
+  max-width: 372px;
+}
+.pricing-detail{
     button{
-        background-color: #e8631c;
+        font-size: 25px;
     }
 }
+}
+
+
+#promo{
+    background-color: #e8631c;
+    img{
+        object-fit: contain;
+    }
+    .amazing{
+        background-color: #e8631c;
+        .position-absolute{
+        top: 50%;
+        transform: translateY(-50%);
+        }
+    button{
+        font-size: 25px;
+    }
+}
+}
+#stats{
+    padding-top: 205px;
+    padding-bottom: 205px;
+    .stats-detail{
+        p{
+            font-size: 42px;
+        }
+    }
+}
+#below-stats{
+    position: relative;
+.below-stats-content > div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    p{
+        font-size: 50px;
+    }
+    h2{
+        font-size: 58px;
+    }
+}
+}
+#subscribe{
+    background-color: #e8631c;
 }

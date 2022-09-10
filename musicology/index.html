@@ -22,11 +22,15 @@
       href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
-      <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="my-container p-0">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-80">
           <a href="" class="navbar-brand"
             ><img src="images/music-logo.png" alt=""
           /></a>
@@ -37,7 +41,7 @@
           >
             <i class="fas fa-bars" aria-hidden="true"></i>
           </button>
-          <div class="collapse navbar-collapse" id="myNav">
+          <div class="collapse navbar-collapse justify-content-center" id="myNav">
             <ul class="navbar-nav">
               <li class="nav-item active">
                 <a href="#home" class="nav-link">Home</a>
@@ -57,28 +61,302 @@
             </ul>
           </div>
           <form action="">
+            <div class="input-group">
             <input
               type="search"
               placeholder="Search Here"
               class="form-control d-none"
             />
+            <div class="input-group-append">
             <button type="button" class="btn btn-link text-white">
               <i class="fa-solid fa-magnifying-glass"></i>
             </button>
+            </div>
+            </div>
           </form>
         </nav>
-        <div class="row">
-          <div class="col-sm-6 mb-5">
-            <div class="text-white px-5 p-200 ml-5">
-            <h1 class="display-3 mb-3">Title Here</h1>
-            <p class="mb-3">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi error harum tempora accusantium excepturi praesentium mollitia maxime voluptate, id doloribus!
-            </p>
-            <button type="button" class="btn btn-lg text-uppercase text-white px-5">Register now</button>
-            </div> 
+        <div class="row px-80">
+          <div class="col-sm-6">
+            <div class="text-white header-content">
+              <h2 class="f-size-75">Title Here</h2>
+              <p class="f-size-30">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perspiciatis explicabo quaerat asperiores iste quam.
+              </p>
+              <button
+                type="button"
+                class="btn btn-lg text-uppercase text-white f-size-30"
+              >
+                Register now
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </header>
+    <div class="my-container">
+      <section id="dance-toures" class="text-white py-105 px-80">
+        <div class="toures-content">
+          <h2 class="f-size-75 text-uppercase text-center mb-5">dance tour</h2>
+          <p class="text-center mb-5 f-size-30 px-80">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto
+            maiores ipsam excepturi consectetur expedita.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="toures-detail mx-auto">
+              <img src="images/dancer-1.png" class="img-fluid" alt="dancer" />
+              <div class="py-3 bg-dark">
+                <h3 class="text-center text-uppercase">america</h3>
+                <p class="text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="toures-detail mx-auto">
+              <img src="images/dancer-2.png" class="img-fluid" alt="dancer" />
+              <div class="py-3 bg-dark">
+                <h3 class="text-center text-uppercase">asia</h3>
+                <p class="text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="toures-detail mx-auto">
+              <img src="images/dancer-3.png" class="img-fluid" alt="dancer" />
+              <div class="py-3 bg-dark">
+                <h3 class="text-center text-uppercase">australia</h3>
+                <p class="text-center">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="my-container">
+      <section id="pricing" class="bg-dark py-105 px-80 text-white">
+        <div class="price-content">
+          <h2 class="f-size-75 text-center text-uppercase mb-5">pricing</h2>
+          <p class="text-center f-size-30 px-80 mb-5">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi
+            voluptate modi vero aperiam placeat.
+          </p>
+        </div>
+        <div class="pricing-detail">
+          <div class="row">
+            <div class="col-md-4">
+              <div
+                class="pricing-detail-content py-3 text-center rounded-lg px-3"
+              >
+                <img
+                  src="images/pricing-icon.png"
+                  class="img-fluid py-5"
+                  alt=""
+                />
+                <h3 class="text-uppercase py-2">basic</h3>
+                <p class="py-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button type="button" class="btn btn-dark w-100 d-block py-2">
+                  $150.00
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="pricing-detail-content py-3 text-center rounded-lg px-3"
+              >
+                <img
+                  src="images/pricing-icon.png"
+                  class="img-fluid py-5"
+                  alt=""
+                />
+                <h3 class="text-uppercase py-2">professional</h3>
+                <p class="py-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button type="button" class="btn btn-dark w-100 d-block py-2">
+                  $150.00
+                </button>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div
+                class="pricing-detail-content py-3 text-center rounded-lg px-3"
+              >
+                <img
+                  src="images/pricing-icon.png"
+                  class="img-fluid py-5"
+                  alt=""
+                />
+                <h3 class="text-uppercase py-2">ultimate</h3>
+                <p class="py-2">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <button type="button" class="btn btn-dark w-100 d-block py-2">
+                  $150.00
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="my-container">
+      <section id="promo" class="text-white">
+        <div class="row m-0">
+          <div class="col-sm-6 p-0">
+            <img src="images/amazing-dance.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-sm-6 amazing positon-relative">
+            <div class="px-80 position-absolute">
+              <h2 class="text-uppercase f-size-75 mb-5">amazing dance</h2>
+              <p class="f-size-30 mb-5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+                tempora praesentium voluptate at expedita.
+              </p>
+              <button
+                class="btn btn-large text-uppercase bg-dark text-white px-5"
+              >
+                read more
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="row m-0">
+          <div class="col-sm-6 amazing positon-relative">
+            <div class="px-80 position-absolute">
+              <h2 class="text-uppercase f-size-75 mb-5">Best dance</h2>
+              <p class="f-size-30 mb-5">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut
+                tempora praesentium voluptate at expedita.
+              </p>
+              <button
+                class="btn btn-large text-uppercase bg-dark text-white px-5"
+              >
+                read more
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-6 p-0">
+            <img src="images/best-dance.png" class="img-fluid" alt="" />
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="my-container">
+      <section id="stats" class="bg-dark text-center text-white px-80">
+        <h2 class="f-size-75 mb-5 text-uppercase">our statistics</h2>
+        <p class="px-80 f-size-30 mb-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+          obcaecati eaque eos tenetur deleniti.
+        </p>
+        <div class="stats-detail">
+          <div class="row">
+            <div class="col-sm-4">
+              <h2 class="f-size-75">1240+</h2>
+              <p class="">Club</p>
+            </div>
+            <div class="col-sm-4">
+              <h2 class="f-size-75">2000+</h2>
+              <p class="">Active Member</p>
+            </div>
+            <div class="col-sm-4">
+              <h2 class="f-size-75">1.000+</h2>
+              <p class="">Community</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="my-container">
+      <section id="below-stats">
+        <div class="below-stats-content">
+            <img src="images/hertbert.png" class="img-fluid" alt="">
+            <div class="text-white text-center px-80">
+              <p class="mb-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore recusandae laboriosam dolor.
+              </p>
+              <h2 class="f-size-75 text-uppercase">herbert simon</h2>
+            </div>
+        </div>
+      </section>
+    </div>
+    <div class="my-container">
+      <section id="subscribe" class="px-80 py-105 text-white text-center">
+        <h2 class="f-size-75 text-uppercase mb-5">
+          subscribe
+        </h2>
+        <p class="mb-5 f-size-30 px-80">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam perspiciatis esse dolores culpa numquam?
+        </p>
+        <div class="input-group w-50 mx-auto">
+          <input type="email" name="" id="" placeholder="Your Email" class="form-control p-4">
+        <div class="input-group-append">
+          <button class="btn btn-dark text-uppercase px-5">subscribe</button>
+        </div>
+      </section>
+    </div>
+
+    <div class="my-container">
+      <footer class="py-105 px-5 text-white bg-dark">
+      <div class="row">
+        <div class="col-md-6">
+          <h3 class="text-uppercase mb-3">
+            musicology
+          </h3>
+          <p class="mb-3 f-size-30">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero amet nemo fugit at obcaecati a ullam delectus? Expedita, assumenda consectetur.
+          </p>
+          <div class="social">
+            <img src="images/insta-icon.png" alt="" class="ing-fluid">
+            <img src="images/fb-icon.png" alt="" class="ing-fluid">
+            <img src="images/twitter-icon.png" alt="" class="ing-fluid">
+            <img src="images/whatsapp-icon.png" alt="" class="ing-fluid">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="row">
+            <div class="col-sm-4">
+              <h3 class="text-uppercase">about</h3>
+              <nav class="nav flex-column">
+              <a href="" class="nav-link text-white">History</a>
+              <a href="" class="nav-link text-white">Our Team</a>
+              <a href="" class="nav-link text-white">Brand Guidelines</a>
+              <a href="" class="nav-link text-white">Term & Condition</a>
+              <a href="" class="nav-link text-white">Privacy Policy</a>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <h3 class="text-uppercase">services</h3>
+              <nav class="nav flex-column">
+              <a href="" class="nav-link text-white">How to Order</a>
+              <a href="" class="nav-link text-white">Our Product</a>
+              <a href="" class="nav-link text-white">Order Status</a>
+              <a href="" class="nav-link text-white">Promo</a>
+              <a href="" class="nav-link text-white">Payment Method</a>
+              </ul>
+            </div>
+            <div class="col-sm-4">
+              <h3 class="text-uppercase">Other</h3>
+              <nav class="nav flex-column">
+              <a href="" class="nav-link text-white">Contact Us</a>
+              <a href="" class="nav-link text-white">Help</a>
+              <a href="" class="nav-link text-white">Privacy</a>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  </footer>
+  </div>
+
   </body>
 </html>

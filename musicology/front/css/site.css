@@ -1,27 +1,134 @@
-h1 {
+h2 {
   font-size: 1.2rem;
 }
 
-body {
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+button, nav {
   font-family: oswald, sans-serif;
 }
 
-.container-fluid {
+nav {
+  font-size: 25px;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+}
+
+.my-container {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
-header .container-fluid {
-  background-image: url("https://mrizwan1070.github.io/musicology/images/main-image.png");
+header .my-container {
+  background: url("https://mrizwan1070.github.io/musicology/images/main-image.png") no-repeat;
+  background-position: right top;
 }
 
-header .container-fluid h1 {
+.header-content {
   padding-top: 250px;
+  padding-bottom: 80px;
 }
 
-header .container-fluid p, header .container-fluid button {
+.header-content button {
+  background-color: #e8631c;
+}
+
+.px-80 {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.py-105 {
+  padding-top: 105px;
+  padding-bottom: 105px;
+}
+
+.f-size-30 {
   font-size: 30px;
 }
 
-header .container-fluid button {
+.f-size-75 {
+  font-size: 75px;
+}
+
+#dance-toures {
+  background: #e8631c url("https://mrizwan1070.github.io/musicology/images/background-shape.png") no-repeat 0 142%;
+}
+
+#dance-toures .toures-detail {
+  max-width: 372px;
+  width: 100%;
+}
+
+#dance-toures .toures-detail img {
+  object-fit: contain;
+}
+
+#pricing .pricing-detail-content {
+  background-color: #e8631c;
+  width: 100%;
+  max-width: 372px;
+}
+
+#pricing .pricing-detail button {
+  font-size: 25px;
+}
+
+#promo {
+  background-color: #e8631c;
+}
+
+#promo img {
+  object-fit: contain;
+}
+
+#promo .amazing {
+  background-color: #e8631c;
+}
+
+#promo .amazing .position-absolute {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#promo .amazing button {
+  font-size: 25px;
+}
+
+#stats {
+  padding-top: 205px;
+  padding-bottom: 205px;
+}
+
+#stats .stats-detail p {
+  font-size: 42px;
+}
+
+#below-stats {
+  position: relative;
+}
+
+#below-stats .below-stats-content > div {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#below-stats .below-stats-content > div p {
+  font-size: 50px;
+}
+
+#below-stats .below-stats-content > div h2 {
+  font-size: 58px;
+}
+
+#subscribe {
   background-color: #e8631c;
 }
