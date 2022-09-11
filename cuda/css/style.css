@@ -193,8 +193,6 @@ a.nav-link:hover, .active{
     font-size: 20px;
     padding: 0 16px;
 }
-.tabs-data{
-}
 .tabs-data-inner{
     display: flex;
     flex-wrap: wrap;
