@@ -1,17 +1,18 @@
 h2 {
   font-size: 1.2rem;
 }
-*{
-    box-sizing: border-box;
+* {
+  box-sizing: border-box;
 }
 h1,
 h2,
 h3,
-button, nav {
+button,
+nav {
   font-family: oswald, sans-serif;
 }
-nav{
-    font-size: 25px;
+nav {
+  font-size: 25px;
 }
 p {
   font-family: "Montserrat", sans-serif;
@@ -22,9 +23,8 @@ p {
 }
 header {
   .my-container {
-    background: url("https://mrizwan1070.github.io/musicology/images/main-image.png")
-      no-repeat;
-    background-position: right top;
+    background: url("../../images/main-image.png") no-repeat 67% 0;
+    background-size: cover;
   }
 }
 .header-content {
@@ -49,68 +49,149 @@ header {
   font-size: 75px;
 }
 #dance-toures {
-  background: #e8631c url("https://mrizwan1070.github.io/musicology/images/background-shape.png") no-repeat 0 142%;
+  background: #e8631c url("../../images/background-shape.png") no-repeat 0 142%;
   .toures-detail {
     max-width: 372px;
     width: 100%;
     img {
-    object-fit: contain;
+      object-fit: contain;
+    }
   }
 }
+#pricing {
+  background: url("../../images/price-bg-top.png") no-repeat left 160%,
+    url("../../images/price-bg-bottom.png") no-repeat right -160%;
+  .pricing-detail-content {
+    background: #e8631c;
+    width: 100%;
+    max-width: 372px;
+  }
+  .pricing-detail {
+    button {
+      font-size: 25px;
+    }
+  }
 }
-#pricing{
-.pricing-detail-content {
+
+#promo {
   background-color: #e8631c;
-  width: 100%;
-  max-width: 372px;
-}
-.pricing-detail{
-    button{
-        font-size: 25px;
-    }
-}
-}
-
-
-#promo{
+  img {
+    object-fit: contain;
+  }
+  .amazing {
     background-color: #e8631c;
-    img{
-        object-fit: contain;
-    }
-    .amazing{
-        background-color: #e8631c;
-        .position-absolute{
-        top: 50%;
-        transform: translateY(-50%);
-        }
-    button{
+    &:nth-of-type(2) {
+      background: url("../../images/price-bg-bottom.png") no-repeat right 360%,
+        url("../../images/amazing-dance-bg-bottom.png") no-repeat right -205%;
+      background-size: cover, cover;
+      button {
         font-size: 25px;
+      }
     }
-}
-}
-#stats{
-    padding-top: 205px;
-    padding-bottom: 205px;
-    .stats-detail{
-        p{
-            font-size: 42px;
-        }
+    & > div {
+      height: 100%;
     }
+  }
 }
-#below-stats{
-    position: relative;
-.below-stats-content > div {
+#stats {
+  padding-top: 205px;
+  padding-bottom: 205px;
+  .stats-detail {
+    p {
+      font-size: 42px;
+    }
+  }
+}
+#below-stats {
+  position: relative;
+  .below-stats-content > div {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    p{
-        font-size: 50px;
+    p {
+      font-size: 50px;
     }
-    h2{
-        font-size: 58px;
+    h2 {
+      font-size: 58px;
     }
+  }
 }
+#subscribe {
+  background: url("../../images/sub-bg-left.png") no-repeat left center,
+    url("../../images/sub-bg-right.png") no-repeat right center;
+  background-color: #e8631c;
+  .input-group {
+    width: 50%;
+  }
 }
-#subscribe{
-    background-color: #e8631c;
+@media (max-width: 1200px) {
+  #subscribe {
+    .input-group {
+      width: 75%;
+    }
+  }
+  nav {
+    font-size: 18px;
+  }
+  .px-80 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .py-105 {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  p {
+    font-size: 22px !important;
+  }
+  .f-size-75 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 991px) {
+  .px-80 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .py-105 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  nav {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px !important;
+  }
+  .f-size-75 {
+    font-size: 35px;
+  }
+  h3{
+    font-size: 22px;
+  }
+}
+@media (max-width: 576px) {
+  #subscribe {
+    .input-group {
+      flex-direction: column;
+      width: 75%;
+      input {
+        width: 100%;
+      }
+      .input-group-append {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 13px;
+      }
+    }
+  }
+  p {
+    font-size: 16px !important;
+  }
+  .f-size-75 {
+    font-size: 25px;
+  }
+  h3{
+    font-size: 20px;
+  }
 }

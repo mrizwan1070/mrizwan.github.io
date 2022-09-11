@@ -9,7 +9,8 @@ h2 {
 h1,
 h2,
 h3,
-button, nav {
+button,
+nav {
   font-family: oswald, sans-serif;
 }
 
@@ -27,8 +28,8 @@ p {
 }
 
 header .my-container {
-  background: url("https://mrizwan1070.github.io/musicology/images/main-image.png") no-repeat;
-  background-position: right top;
+  background: url("../../images/main-image.png") no-repeat 67% 0;
+  background-size: cover;
 }
 
 .header-content {
@@ -59,7 +60,7 @@ header .my-container {
 }
 
 #dance-toures {
-  background: #e8631c url("https://mrizwan1070.github.io/musicology/images/background-shape.png") no-repeat 0 142%;
+  background: #e8631c url("../../images/background-shape.png") no-repeat 0 142%;
 }
 
 #dance-toures .toures-detail {
@@ -71,8 +72,12 @@ header .my-container {
   object-fit: contain;
 }
 
+#pricing {
+  background: url("../../images/price-bg-top.png") no-repeat left 160%, url("../../images/price-bg-bottom.png") no-repeat right -160%;
+}
+
 #pricing .pricing-detail-content {
-  background-color: #e8631c;
+  background: #e8631c;
   width: 100%;
   max-width: 372px;
 }
@@ -93,13 +98,17 @@ header .my-container {
   background-color: #e8631c;
 }
 
-#promo .amazing .position-absolute {
-  top: 50%;
-  transform: translateY(-50%);
+#promo .amazing:nth-of-type(2) {
+  background: url("../../images/price-bg-bottom.png") no-repeat right 360%, url("../../images/amazing-dance-bg-bottom.png") no-repeat right -205%;
+  background-size: cover, cover;
 }
 
-#promo .amazing button {
+#promo .amazing:nth-of-type(2) button {
   font-size: 25px;
+}
+
+#promo .amazing > div {
+  height: 100%;
 }
 
 #stats {
@@ -130,5 +139,80 @@ header .my-container {
 }
 
 #subscribe {
+  background: url("../../images/sub-bg-left.png") no-repeat left center, url("../../images/sub-bg-right.png") no-repeat right center;
   background-color: #e8631c;
+}
+
+#subscribe .input-group {
+  width: 50%;
+}
+
+@media (max-width: 1200px) {
+  #subscribe .input-group {
+    width: 75%;
+  }
+  nav {
+    font-size: 18px;
+  }
+  .px-80 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .py-105 {
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+  p {
+    font-size: 22px !important;
+  }
+  .f-size-75 {
+    font-size: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .px-80 {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .py-105 {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  nav {
+    font-size: 16px;
+  }
+  p {
+    font-size: 18px !important;
+  }
+  .f-size-75 {
+    font-size: 35px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 576px) {
+  #subscribe .input-group {
+    flex-direction: column;
+    width: 75%;
+  }
+  #subscribe .input-group input {
+    width: 100%;
+  }
+  #subscribe .input-group .input-group-append {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+  }
+  p {
+    font-size: 16px !important;
+  }
+  .f-size-75 {
+    font-size: 25px;
+  }
+  h3 {
+    font-size: 20px;
+  }
 }
