@@ -70,6 +70,7 @@ header .my-container {
 
 #dance-toures .toures-detail img {
   object-fit: contain;
+  margin-bottom: -1px;
 }
 
 #pricing {
@@ -167,7 +168,7 @@ header .my-container {
     font-size: 22px !important;
   }
   .f-size-75 {
-    font-size: 50px;
+    font-size: 50px !important;
   }
 }
 
@@ -187,10 +188,10 @@ header .my-container {
     font-size: 18px !important;
   }
   .f-size-75 {
-    font-size: 35px;
+    font-size: 35px !important;
   }
   h3 {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 }
 
@@ -211,9 +212,9 @@ header .my-container {
     font-size: 16px !important;
   }
   .f-size-75 {
-    font-size: 25px;
+    font-size: 25px !important;
   }
   h3 {
-    font-size: 20px;
+    font-size: 20px !important;
   }
 }
