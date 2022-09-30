@@ -11,7 +11,7 @@ body {
 
 /* line 15, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 h2 {
-  font-size: 1.2rem;
+  font-size: 2.2rem;
 }
 
 /* line 19, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
@@ -20,8 +20,8 @@ a {
 }
 
 /* line 23, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
-.nav-item > .active, .nav-item:hover .nav-link, .social-links .btn:hover {
-  background-image: linear-gradient(90deg, #b1480a 0%, #db0563 100%) !important;
+.nav-item > .active, .nav-item:hover .nav-link, .social-links .btn:hover, .p-info-icon:hover {
+  background-image: linear-gradient(90deg, #e27b05 0%, #db0563 100%) !important;
   color: #fff !important;
 }
 
@@ -42,6 +42,45 @@ a {
 /* line 52, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .social-links .btn:hover {
   transition: all 0s;
+}
+
+/* line 59, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+.tab-title h2 {
+  position: relative;
+}
+
+/* line 61, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+.tab-title h2:after {
+  content: "";
+  width: 200px;
+  height: 2px;
+  background: red;
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 1rem);
+}
+
+/* line 72, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+.p-info-icon {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+}
+
+/* line 81, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+.my-services > .row {
+  row-gap: 1rem;
+}
+
+/* line 84, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+.my-services .service-icon {
+  font-size: 3.5rem;
+  display: flex;
+}
+
+/* line 89, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+.my-services :nth-child(1) .service-detail {
+  background-color: transparent;
 }
 
 /*# sourceMappingURL=site.css.map */

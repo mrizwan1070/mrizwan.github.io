@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-$primary-btn: linear-gradient(90deg, rgba(177, 72, 10, 1) 0%, rgba(219, 5, 99, 1) 100%) !important;
+$primary-btn: linear-gradient(90deg, rgb(226, 123, 5) 0%, rgba(219, 5, 99, 1) 100%) !important;
 $link: rgb(37, 26, 26);
 
 body {
@@ -13,7 +13,7 @@ body {
 }
 
 h2 {
-    font-size: 1.2rem;
+    font-size: 2.2rem;
 }
 
 a {
@@ -54,4 +54,40 @@ a {
             transition: all 0s;
         }
     }
+}
+.tab-title{
+ h2{
+    position: relative;
+ &:after {
+    content: "";
+    width: 200px;
+    height: 2px;
+    background: red;
+    position: absolute;
+    top: 50%;
+    left: calc(100% + 1rem);
+}
+ }
+}
+.p-info-icon{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    &:hover{
+        @extend %hover-btn;
+    }
+}
+.my-services{
+    &>.row{
+        row-gap: 1rem;
+    }
+    .service-icon{
+        font-size: 3.5rem;
+        display: flex;
+    }
+    :nth-child(1){
+        .service-detail{
+        background-color: transparent;
+        }
+}
 }

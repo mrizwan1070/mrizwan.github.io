@@ -8,10 +8,10 @@
   <link rel="stylesheet" href="front/css/bootstrap.min.css" />
   <link rel="stylesheet" href="front/style/site.css" />
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
-  <script src="front/js/jquery.slim.min.js" ></script>
+  <script src="front/js/jquery.slim.min.js"></script>
   <script src="front/js/bootstrap.bundle.min.js"></script>
-  <script src="front/js/popper.min.js"></script>
-  <script src="front/js/repeat.js"></script>
+  <!-- <script src="front/js/popper.min.js"></script>
+  <script src="front/js/repeat.js"></script> -->
   <script src="https://kit.fontawesome.com/170a0e0e35.js" crossorigin="anonymous"></script>
 </head>
 
@@ -28,7 +28,7 @@
           <i class="fa-solid fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="myNav">
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav nav ml-auto">
             <li class="nav-item px-lg-3">
               <a href="#home" data-toggle="tab" class="nav-link bg-white rounded px-3"><i
                   class="fa-solid fa-house mr-1"></i>Home</a>
@@ -53,9 +53,9 @@
         </div>
       </nav>
     </header>
-    <section id="main">
+    <section id="main" class="mb-5">
       <div class="tab-content">
-        <div class="tab-pane fade show active" id="home">
+        <div class="tab-pane fade" id="home">
           <div class="row my-3 text-center">
             <div class="col-md-6 mx-auto">
               <div class="user-img mx-auto mb-4">
@@ -84,18 +84,182 @@
           </div>
         </div>
 
-        <div class="tab-pane fade" id="about">
-              <h2 class="user-title">Muhammad Rizwan about section</h2>
-             
+        <div class="tab-pane fade  show active mt-3" id="about">
+          <div class="about-section bg-white p-xl-5 p-2 rounded-lg">
+            <div class="tab-title d-flex">
+              <h2>About Me</h2>
+            </div>
+            <div class="about-detail mt-3">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="about-img">
+                    <img src="front/images/image.jpeg" alt="Muhammad Rizwan" class="img-fluid rounded-lg">
+                  </div>
+                </div>
+                <div class="col-md-8 d-flex flex-column justify-content-between">
+                  <div class="about-me">
+                    <h3>Who am I?</h3>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis, expedita officia explicabo
+                      cupiditate delectus eius aut itaque atque, reiciendis ipsum assumenda vitae consectetur animi
+                      incidunt eaque minima architecto mollitia facere! Iusto et doloribus id veritatis nesciunt,
+                      perspiciatis labore reiciendis sequi nisi odit exercitationem! Eius aliquam alias accusantium ut,
+                      perferendis unde!
+                    </p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto officia unde cupiditate
+                      eligendi, perspiciatis tempore nam nostrum temporibus quasi nisi.</p>
+                  </div>
+                  <div class="personal-info">
+                    <h3>Personal Info</h3>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="p-info-detail mt-3 d-flex">
+                          <span
+                            class="bg-white shadow rounded mr-2 px-3 py-2 d-flex align-items-center justify-content-center p-info-icon">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                          </span>
+                          <span>
+                            <p class="text-secondary mb-1">Phone</p>
+                            <h6>0333-1234567</h6>
+                          </span>
+                        </div>
+                        <div class="p-info-detail mt-3 d-flex">
+                          <span
+                            class="bg-white shadow rounded mr-2 px-3 py-2 d-flex align-items-center justify-content-center p-info-icon">
+                            <i class="fa-regular fa-envelope"></i>
+                          </span>
+                          <span>
+                            <p class="text-secondary mb-1">Email</p>
+                            <h6>mrizwan1070@gmail.com</h6>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="p-info-detail mt-3 d-flex">
+                          <span
+                            class="bg-white shadow rounded mr-2 px-3 py-2 d-flex align-items-center justify-content-center p-info-icon">
+                            <i class="fa-solid fa-location-crosshairs"></i>
+                          </span>
+                          <span>
+                            <p class="text-secondary mb-1">Location</p>
+                            <h6>Lahore, Pakistan</h6>
+                          </span>
+                        </div>
+                        <div class="p-info-detail mt-3 d-flex">
+                          <span
+                            class="bg-white shadow rounded mr-2 px-3 py-2 d-flex align-items-center justify-content-center p-info-icon">
+                            <i class="fa-solid fa-calendar-days"></i>
+                          </span>
+                          <span>
+                            <p class="text-secondary mb-1">Birthday</p>
+                            <h6>June 1988</h6>
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section class="my-services mt-5">
+                  <h2>What I Do?</h2>
+                  <div class="row">
+                    <div class="col-sm-6">
+                      <div class="service-detail p-3 rounded-lg">
+                      <div class="row">
+                        <div class="col-2">
+                          <span class="service-icon">
+                            <i class="fa-solid fa-diagram-project"></i>
+                          </span>
+                        </div>
+                        <div class="col-10">
+                          <h3>
+                            Project Management
+                          </h3>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque non placeat accusantium
+                            minima earum quod aliquid dicta dolore obcaecati? Similique.
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="service-detail p-3 rounded-lg">
+                      <div class="row">
+                        <div class="col-2">
+                          <span class="service-icon">
+                            <i class="fa-solid fa-paint-roller"></i>
+                          </span>
+                        </div>
+                        <div class="col-10">
+                          <h3>
+                            Frontend Development
+                          </h3>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque non placeat accusantium
+                            minima earum quod aliquid dicta dolore obcaecati? Similique.
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="service-detail p-3 rounded-lg">
+                      <div class="row">
+                        <div class="col-2">
+                          <span class="service-icon">
+                            <i class="fa-solid fa-table"></i>
+                          </span>
+                        </div>
+                        <div class="col-10">
+                          <h3>
+                            Data Management
+                          </h3>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque non placeat accusantium
+                            minima earum quod aliquid dicta dolore obcaecati? Similique.
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="service-detail p-3 rounded-lg">
+                      <div class="row">
+                        <div class="col-2">
+                          <span class="service-icon">
+                            <i class="fa-solid fa-circle-check"></i>
+                          </span>
+                        </div>
+                        <div class="col-10">
+                          <h3>
+                            Quality Assurance
+                          </h3>
+                          <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque non placeat accusantium
+                            minima earum quod aliquid dicta dolore obcaecati? Similique.
+                          </p>
+                        </div>
+                      </div>
+                      </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+
+          </div>
         </div>
 
         <div class="tab-pane fade" id="resume">
-          <h2 class="user-title">Muhammad Rizwan resume section</h2>
+          <div class="tab-title d-flex">
+            <h2>this is resume section</h2>
+          </div>
         </div>
+
+
+
       </div>
-  </div>
-  </div>
-  </section>
+    </section>
   </div>
 </body>
 
