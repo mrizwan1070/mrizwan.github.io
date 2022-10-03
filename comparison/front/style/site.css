@@ -294,6 +294,14 @@ input[type="number"] {
   color: #07BEB8 !important;
 }
 
+.listing-icon span {
+  font-size: 2rem;
+}
+
+.listing-icon .active {
+  color: #008080 !important;
+}
+
 .listing-group {
   flex: 0 0 100% !important;
   max-width: 100% !important;

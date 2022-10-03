@@ -259,6 +259,14 @@ input[type="number"] {
         }
     }
 }
+.listing-icon{
+    span{
+        font-size: 2rem;
+    }
+    .active{
+        color: $primary-color;
+    }
+}
 .listing-group {
     flex: 0 0 100% !important;
     max-width: 100% !important;

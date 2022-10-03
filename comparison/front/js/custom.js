@@ -8,6 +8,16 @@ jQuery(document).ready(function () {
     $(document).on("click", "#sidebarprd-prev", function () {
         $("#carouselhomesidebar").carousel("prev");
     });
+    $("#grid").click(function(){
+        $("#products .row > div").addClass("listing-group");
+        $("#grid").addClass("active");
+        $("#list").removeClass("active");
+    })
+    $("#list").click(function(){
+        $("#products .row > div").removeClass("listing-group");
+        $("#grid").removeClass("active");
+        $("#list").addClass("active");
+    })
 });
 
 $(document).on("click", ".change_country", function (e) {

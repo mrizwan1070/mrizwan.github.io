@@ -55,7 +55,9 @@ a {
         }
     }
 }
-
+.my-rounded{
+    border-radius: 1rem;
+}
 .tab-title {
     h2 {
         position: relative;
@@ -89,10 +91,10 @@ a {
     .col-sm-6{
         &:nth-child(1) {
             .service-detail {
-            background-color: #FDEDF2;
+            background-color: #FFEEEB;
 
             .service-icon {
-                color: #EB477B;
+                color: #FF6347;
             }
         }
     }
@@ -100,10 +102,10 @@ a {
     .col-sm-6{
         &:nth-child(2) {
             .service-detail {
-            background-color: #FCF1EE;
+            background-color: #EBF5FF;
 
             .service-icon {
-                color: #DA542F;
+                color: #1E90FF;
             }
         }
     }
@@ -111,10 +113,10 @@ a {
     .col-sm-6{
         &:nth-child(3) {
             .service-detail {
-            background-color: #F2F1F9;
+            background-color: #EFFBEF;
 
             .service-icon {
-                color: #5448AD;
+                color: #32CD32;
             }
         }
     }
@@ -133,5 +135,32 @@ a {
     .service-icon {
         font-size: 3.5rem;
         display: flex;
+    }
+}
+
+.edu-detail{
+    .row{
+        row-gap: 1rem;
+    }
+.col{
+   background-color: #fce7f9;
+}
+}
+.exp-detail{
+    .row{
+        row-gap: 1rem;
+    }
+     .col{
+    background-color: #EBF5FF;
+}
+}
+.edu-title{
+    .fa-solid{
+        color: #e811f0
+    }
+}
+.exp-title{
+    .fa-solid{
+        color: #1E90FF
     }
 }
