@@ -31,30 +31,32 @@ a {
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
+  outline: 2px solid #db0563;
+  outline-offset: 5px;
 }
 
-/* line 44, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 46, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .user-img img {
   object-fit: contain;
   object-position: top;
 }
 
-/* line 52, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 54, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .social-links .btn:hover {
   transition: all 0s;
 }
 
-/* line 58, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 60, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-rounded {
   border-radius: 1rem;
 }
 
-/* line 62, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 64, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .tab-title h2 {
   position: relative;
 }
 
-/* line 65, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 67, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .tab-title h2:after {
   content: "";
   width: 200px;
@@ -65,90 +67,90 @@ a {
   left: calc(100% + 1rem);
 }
 
-/* line 77, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 79, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .p-info-icon {
   width: 3rem;
   height: 3rem;
   font-size: 1.5rem;
 }
 
-/* line 88, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 90, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services > .row {
   row-gap: 1rem;
 }
 
-/* line 93, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 95, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(1) .service-detail {
   background-color: #FFEEEB;
 }
 
-/* line 96, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 98, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(1) .service-detail .service-icon {
   color: #FF6347;
 }
 
-/* line 104, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 106, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(2) .service-detail {
   background-color: #EBF5FF;
 }
 
-/* line 107, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 109, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(2) .service-detail .service-icon {
   color: #1E90FF;
 }
 
-/* line 115, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 117, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(3) .service-detail {
   background-color: #EFFBEF;
 }
 
-/* line 118, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 120, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(3) .service-detail .service-icon {
   color: #32CD32;
 }
 
-/* line 126, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 128, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(4) .service-detail {
   background-color: #fce7f9;
 }
 
-/* line 129, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 131, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .col-sm-6:nth-child(4) .service-detail .service-icon {
   color: #e811f0;
 }
 
-/* line 135, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 137, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .my-services .service-icon {
   font-size: 3.5rem;
   display: flex;
 }
 
-/* line 142, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 144, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .edu-detail .row {
   row-gap: 1rem;
 }
 
-/* line 145, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 147, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .edu-detail .col {
   background-color: #fce7f9;
 }
 
-/* line 150, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 152, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .exp-detail .row {
   row-gap: 1rem;
 }
 
-/* line 153, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 155, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .exp-detail .col {
   background-color: #EBF5FF;
 }
 
-/* line 158, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 160, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .edu-title .fa-solid {
   color: #e811f0;
 }
 
-/* line 163, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
+/* line 165, ../../../Documents/GitHub/mrizwan1070.github.io/front/sass/site.scss */
 .exp-title .fa-solid {
   color: #1E90FF;
 }
