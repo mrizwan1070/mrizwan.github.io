@@ -18,6 +18,11 @@ jQuery(document).ready(function () {
         $("#grid").removeClass("active");
         $("#list").addClass("active");
     })
+    $(".section-title .icon-change").click(function(){
+        const icon = $(this).find("i");
+        icon.toggleClass("fa-plus");
+        
+    })
 });
 
 $(document).on("click", ".change_country", function (e) {
