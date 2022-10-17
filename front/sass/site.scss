@@ -3,7 +3,7 @@
 
 $primary-color-1: rgb(226, 123, 5);
 $primary-color-2: rgba(219, 5, 99, 1);
-$primary-btn: linear-gradient(90deg, $primary-color-1 20%, $primary-color-2 100%) !important;
+$primary-btn: linear-gradient(220deg, $primary-color-1 20%, $primary-color-2 100%) !important;
 $link: rgb(37, 26, 26);
 
 body {
@@ -83,15 +83,15 @@ a {
     h2 {
         position: relative;
 
-        &:after {
-            content: "";
-            width: 200px;
-            height: 2px;
-            background-image: $primary-btn;
-            position: absolute;
-            top: 50%;
-            left: calc(100% + 1rem);
-        }
+        // &:after {
+        //     content: "";
+        //     width: 200px;
+        //     height: 2px;
+        //     background-image: $primary-btn;
+        //     position: absolute;
+        //     top: 50%;
+        //     left: calc(100% + 1rem);
+        // }
     }
 }
 
@@ -180,7 +180,9 @@ a {
         &:nth-child(2) {
             .service-detail {
                 background-color: #EBF5FF;
-
+                &>div{
+                    gap: 1rem;
+                }
                 .service-icon {
                     color: #1E90FF;
                 }
@@ -192,7 +194,9 @@ a {
         &:nth-child(3) {
             .service-detail {
                 background-color: #EFFBEF;
-
+                &>div{
+                    gap: 1rem;
+                }
                 .service-icon {
                     color: #32CD32;
                 }
@@ -204,7 +208,9 @@ a {
         &:nth-child(4) {
             .service-detail {
                 background-color: #fce7f9;
-
+                &>div{
+                    gap: 1rem;
+                }
                 .service-icon {
                     color: #e811f0;
                 }
@@ -246,6 +252,55 @@ a {
 
 .exp-title {
     .fa-solid {
-        color: #1E90FF
+        color: #cdcdce
+    }
+}
+#skills{
+    background: #f7f7f7;
+}
+.skills-bar{
+    position: relative;
+    height: 6px;
+    border-radius: 3px;
+    background-color: #e5e4e4;
+    &.web{
+        &::after{
+            content: "";
+            width: 60%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: #49c949;
+            position: absolute;
+        }
+    }
+    &.data-manage{
+        &::after{
+            content: "";
+            width: 80%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: dodgerblue;
+            position: absolute;
+        }
+    }
+    &.data-quality{
+        &::after{
+            content: "";
+            width: 70%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: crimson;
+            position: absolute;
+        }
+    }
+    &.project{
+        &::after{
+            content: "";
+            width: 50%;
+            height: 100%;
+            border-radius: 3px;
+            background-color: rgb(212, 139, 2);
+            position: absolute;
+        }
     }
 }
