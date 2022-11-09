@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calc.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculator Using HTML, CSS & JavaScript</h1>
+        <div class="calc">
+            <input type="text" name="output" id="output">
+            <div class="row">
+                <button type="button" onclick="Calculator(this)" value="c">C</button>
+                <button type="button" onclick="Calculator(this)" value="<">Del</button>
+                <button type="button" value="M+">M+</button>
+                <button type="button" value="%">%</button>
+            </div>
+            <div class="row">
+                <button type="button" onclick="Calculator(this)" value="7">7</button>
+                <button type="button" onclick="Calculator(this)" value="8">8</button>
+                <button type="button" onclick="Calculator(this)" value="9">9</button>
+                <button type="button" onclick="Calculator(this)" value="/">/</button>
+            </div>
+            <div class="row">
+                <button type="button" onclick="Calculator(this)" value="4">4</button>
+                <button type="button" onclick="Calculator(this)" value="5">5</button>
+                <button type="button" onclick="Calculator(this)" value="6">6</button>
+                <button type="button" onclick="Calculator(this)" value="*">*</button>
+            </div><div class="row">
+                <button type="button" onclick="Calculator(this)" value="1">1</button>
+                <button type="button" onclick="Calculator(this)" value="2">2</button>
+                <button type="button" onclick="Calculator(this)" value="3">3</button>
+                <button type="button" onclick="Calculator(this)" value="-">-</button>
+            </div><div class="row">
+                <button type="button" onclick="Calculator(this)" value="0">0</button>
+                <button type="button" onclick="Calculator(this)" value=".">.</button>
+                <button type="button" onclick="Calculator(this)" value="+">+</button>
+                <button type="button" onclick="Calculator(this)" value="=">=</button>
+            </div>
+        </div>
+    </div>
+    <div class="clock">
+    <span id="houres">houres</span>
+    <span id="minute">minute</span>
+    <span id="second">second</span>
+    <span id="ampm">am/pm</span>
+    </div>
+    <script> 
+    function clock(){ 
+        const t = new Date();
+        let h = t.getHours();
+        let m = t.getMinutes();
+        let s = t.getSeconds();
+        let ampm;
+
+        h > 12 ? ampm = "PM": ampm = "AM";
+        if ( h > 12 ){
+            h = h - 12;
+        }
+        if ( h <= 9 ){
+            h = "0" + h;
+        }
+        if ( m <= 9 ){
+            m = "0" + m;
+        }
+        if ( s <= 9 ){
+            s = "0" + s;
+        }
+        document.getElementById("houres").innerHTML = h + " :";
+        document.getElementById("minute").innerHTML = m + " :";
+        document.getElementById("second").innerHTML = s;
+        document.getElementById("ampm").innerHTML = ampm;
+    }
+    let string = "";  
+    function Calculator(e){
+        let output = document.getElementById("output");
+        let input = e.innerHTML;
+        if ( input == "=" ){
+            string = eval(string);
+            output.value = string;
+        } 
+     else if ( input == "C" ){
+            string = "";
+            output.value = string;
+        } 
+        else if ( input == "Del" ){
+            string = string.substring(string.length - 1);
+            output.value = string;
+            console.log(input);
+        } 
+        else {
+        string = string + e.innerHTML;
+        output.value = string;
+        }
+    }
+    setInterval(clock, 1000);
+   </script>
+</body>
+</html>

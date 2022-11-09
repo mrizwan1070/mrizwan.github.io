@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+a {
+    color: #343a40 !important;
+}
+a.active{
+    color: #dc3545!important;
+}
+body {
+    font-family: poppins, sans-serif;
+}
+
+.carousel-item-text {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-banner .carousel .carousel-inner .carousel-item img {
+    height: 430px;
+    object-fit: cover;
+    object-position: right;
+}
+
+.hero-banner .carousel .carousel-inner .carousel-item h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-banner .carousel .carousel-inner .carousel-item h2::before {
+    content: "";
+    width: 40%;
+    height: 2px;
+    background: red;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.features .feature-icon {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.features .feature-icon i {
+    font-size: 2.5rem;
+}
+
+.features-1 {
+    background-color: #d5f3ff;
+}
+
+.features-2 {
+    background-color: #f7e9ca;
+}
+
+.features-3 {
+    background-color: #ffdbdb;
+}
+
+.home-cat-text {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.2);
+    background-clip: content-box;
+}
+
+.home-cat-text .cat-text-inner {
+    border: 1px ridge rgb(207, 206, 206);
+}
+
+.home-cat-text .cat-text-inner h3 {
+    position: relative;
+}
+
+.home-cat-text .cat-text-inner h3::before {
+    content: "";
+    position: absolute;
+    width: 30%;
+    height: 1px;
+    background-color: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.prd-card-inner{
+    border-color: #d1cfcf !important;
+}
+.prd-types-nav>ul>li {
+    position: relative;
+}
+
+.prd-types-nav>ul>li:not(:last-child)::after {
+    content: "☆";
+    position: absolute;
+    font-size: 2rem;
+    color: #343a40;
+    right: -13px;
+    top: 50%;
+    transform: translateY(-60%);
+}
+.tab-pane .row{
+    row-gap: 2rem;
+}
