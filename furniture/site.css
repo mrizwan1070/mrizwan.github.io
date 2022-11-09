@@ -107,3 +107,10 @@ body {
 .tab-pane .row{
     row-gap: 2rem;
 }
+footer{
+    background-color: #1f1f1f;
+    color: #bababa;
+}
+footer ul li .nav-link{
+    color: #bababa !important;
+}
