@@ -1,0 +1,23 @@
+html{
+    scroll-behavior: smooth;
+}
+.nav-link{
+    color: #fff;
+    font-size: 1.5rem;
+}
+.section-title{
+    position: relative;
+}
+.section-title::after{
+    content: "";
+    width: 60px;
+    height: 10px;
+    border-radius: 3px;
+    background-color: #dc3545;
+    position: absolute;
+    left: 0;
+    top: 60px;
+}
+.designer-name{
+    font-size: 1.3rem;
+}
