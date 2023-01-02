@@ -21,3 +21,9 @@ html{
 .designer-name{
     font-size: 1.3rem;
 }
+#myNav ul li:hover{
+    background-color: #fff;
+}
+#myNav ul li:hover a{
+    color: #dc3545;
+}
