@@ -90,6 +90,7 @@ button:hover {
             -webkit-line-clamp: 2;
             overflow: hidden;
             height: 42px;
+            margin-bottom: 6px;
         }
     }
     &:hover {
@@ -175,14 +176,15 @@ button,
     height: 100%;
 }
 #carouselhomediscountprd {
-    margin-top: -164px;
+    margin-top: -152px;
     .carousel-control-next,
     .carousel-control-prev {
         position: inherit;
     }
 }
-.discount.position-absolute {
+.discount {
     top: 0;
+    border-radius: 2px;
 }
 .home-right {
     .category-tabs:last-child {
@@ -254,6 +256,7 @@ input::-webkit-inner-spin-button {
 }
 input[type="number"] {
     -moz-appearance: textfield;
+    appearance: textfield;
 }
 .sidebar-nav {
     .nav-item {
