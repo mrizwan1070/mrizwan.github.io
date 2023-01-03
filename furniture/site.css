@@ -129,10 +129,41 @@ body {
 .tab-pane .row, #home-top-cats .row{
     row-gap: 1rem;
 }
+#subnewsletter{
+    background: url(images/newsletter.webp);
+    background-position: center;
+}
+.subscription-form input{
+    background-color: transparent;
+}
+.subscription-form input::placeholder{
+    color: #fff;
+}
 footer{
     background-color: #1f1f1f;
     color: #bababa;
 }
 footer ul li .nav-link{
     color: #bababa !important;
+}
+.copy-write-text{
+    background: #1f1f1f;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 0;
+    display: inline-block;
+}
+.social-links a{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transition: all .5s;
+
+}
+.social-links a:hover{
+    background-color: #fff !important;
+    color: #1f1f1f !important;
+    text-decoration: none;
+    cursor:pointer;
 }
