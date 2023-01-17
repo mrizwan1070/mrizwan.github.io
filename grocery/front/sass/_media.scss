@@ -1,0 +1,45 @@
+@media (min-width: 992px) {
+    .home-top-stores{
+        .container-fluid{
+            .row{
+                .col-lg-1{
+                    flex: 0 0 12.5%;
+                    max-width: 12.5%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+}
+@media (min-width: 1200px){
+    .my-container,
+    .width-80 {
+        width: 90%;
+    }
+    .category-tabs .tab-content .tab-pane .col-xl-2, .cat-prodcuts .col-xl-2 {
+        flex: 0 0 20%;
+        max-width: 20%;
+    }
+}
+@media (max-width: 1199px) {
+    .container-fluid {
+        width: 95%;
+    }
+}
+@media (max-width: 767px){
+    #carouselhomediscountprd
+        .carousel-inner
+        .carousel-item
+        .row
+        .col-lg-2:nth-child(1n + 3) {
+        display: none;
+    }
+}
+@media (max-width: 575px){
+    .home-right-banner{
+        &:first-child{
+            margin-bottom: .5rem;
+        }
+    }
+}

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Mart - We have it all!</title>
+    <link rel="stylesheet" href="front/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="front/style/site.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="front/js/bootstrap.bundle.min.js"></script>
+    <script src="front/js/popper.min.js"></script>
+    <!-- <script src="front/js/repeat.js"></script> -->
+    <script src="https://kit.fontawesome.com/170a0e0e35.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header class="py-3">
+        <div class="container-lg">
+            <div class="row align-items-center">
+                <div class="col">
+                    <div class="branding">
+                        <img src="front/images/logo.webp" alt="Site Logo" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-md-6 order-md-0 order-1">
+                    <div class="main-search">
+                        <form action="">
+                            <div class="input-group">
+                                <select name="categories" id="categories" class="bg-light border-0 px-2 text-secondary">
+                                    <option value="1">All Categories</option>
+                                    <option value="2">Fruites & Vegitables</option>
+                                    <option value="3">Meat & Seafood</option>
+                                    <option value="4">Milk & Dairies</option>
+                                    <option value="5">Beverages & Tea</option>
+                                    <option value="6">Backing Essentials</option>
+                                </select>
+                                <input type="search" class="form-control bg-light border-0"
+                                    placeholder="I am looking for...">
+                                <div class="input-group-append px-2 bg-light">
+                                    <button type="button" class="border-0 main-search-btn">
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="text-right support-number">
+                        <span class="font-weight-bold">
+                            8&nbsp;800&nbsp;232&nbsp;61-64
+                        </span>
+                        <span class="text-secondary small">
+                            Support 24/7
+                        </span>
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-end align-items-center">
+                    <div class="user-login mr-3">
+                        <span class="user-icon">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                    </div>
+                    <div class="cart text-right d-flex align-items-end align-items-center">
+                        <span class="cart-icon mr-3 position-relative">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="badge badge-warning small position-absolute">
+                                10
+                            </span>
+                        </span>
+                        <div class="cart-right d-flex flex-column align-items-start">
+                            <span class="small text-secondary">
+                                Your Cart
+                            </span>
+                            <span class="font-weight-bold small">
+                                $100
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <div class="header-banners position-relative">
+        <img src="front/images/header-bg.webp" alt="Header Background Image" class="img-fluid">
+        <div class="container-lg position-absolute" id="header-banners">
+            <div class="row">
+                <div class="col-md-8">
+                    <div class="header-banner-lg">
+                        <img src="front/images/header-lg.webp" alt="Header Large Banner" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col px-1 d-md-block d-none">
+                    <div class="header-banner-sm text-center">
+                        <img src="front/images/header-sm.webp" alt="Header Small Banner" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="top-categories" class="py-4">
+        <div class="container-lg">
+            <div class="home-section-header topcat-header d-flex align-items-center mb-3">
+                <h2>
+                    Browse by Categories
+                </h2>
+                <a href="#" class="ml-3 text-secondary">All Categories <span><i
+                            class="fa-solid fa-chevron-right"></i></span></a>
+            </div>
+            <div class="row">
+                <div class="col-md-2 col-sm-4 position-relative px-2">
+                    <div class="top-cat-img rounded py-3 d-flex justify-content-center">
+                        <img class="img-fluid" src="front/images/cat-icons/breakfast-special.png" alt="">
+                    </div>
+                    <div class="top-cat-title position-absolute w-100">
+                        <p class="text-center">
+                            Breakfast Special
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 position-relative px-2">
+                    <div class="top-cat-img rounded py-3 d-flex justify-content-center">
+                        <img class="img-fluid" src="front/images/cat-icons/dairy.png" alt="">
+                    </div>
+                    <div class="top-cat-title position-absolute w-100">
+                        <p class="text-center">
+                            Dairy
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 position-relative px-2">
+                    <div class="top-cat-img rounded py-3 d-flex justify-content-center">
+                        <img class="img-fluid" src="front/images/cat-icons/fruites-nuts.png" alt="">
+                    </div>
+                    <div class="top-cat-title position-absolute w-100">
+                        <p class="text-center">
+                            Fruites & Nuts
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 position-relative px-2">
+                    <div class="top-cat-img rounded py-3 d-flex justify-content-center">
+                        <img class="img-fluid" src="front/images/cat-icons/fruites.png" alt="">
+                    </div>
+                    <div class="top-cat-title position-absolute w-100">
+                        <p class="text-center">
+                            Fruites
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 position-relative px-2">
+                    <div class="top-cat-img rounded py-3 d-flex justify-content-center">
+                        <img class="img-fluid" src="front/images/cat-icons/snack.png" alt="">
+                    </div>
+                    <div class="top-cat-title position-absolute w-100">
+                        <p class="text-center">
+                            Snackes
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-4 position-relative px-2">
+                    <div class="top-cat-img rounded py-3 d-flex justify-content-center">
+                        <img class="img-fluid" src="front/images/cat-icons/vegitables.png" alt="">
+                    </div>
+                    <div class="top-cat-title position-absolute w-100">
+                        <p class="text-center">
+                            Vegitables
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="feature-brand" class="py-4">
+        <div class="container-lg">
+            <div class="home-section-header feature-header d-flex align-items-center mb-3">
+                <h2>
+                    Featured Brands
+                </h2>
+                <a href="#" class="ml-3 text-secondary">All Brands <span><i
+                            class="fa-solid fa-chevron-right"></i></span></a>
+            </div>
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-sm-6 px-2">
+                    <div class="featured-brand-img">
+                        <img class="img-fluid rounded" src="front/images/brand-dr-will.webp" alt="">
+                    </div>
+                    <div class="brand-detail mt-1">
+                        <p class="text-secondary small mb-1">Food Toppings</p>
+                        <p>Dr. Wills Food Topping Rang</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 px-2">
+                    <div class="featured-brand-img">
+                        <img class="img-fluid rounded" src="front/images/brand-fruita-vital.webp" alt="">
+                    </div>
+                    <div class="brand-detail mt-1">
+                        <p class="text-secondary small mb-1">Seasonal Juices</p>
+                        <p>Enjoy A Range of Seasonal Juices</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 px-2">
+                    <div class="featured-brand-img">
+                        <img class="img-fluid rounded" src="front/images/brand-jacob.webp" alt="">
+                    </div>
+                    <div class="brand-detail mt-1">
+                        <p class="text-secondary small mb-1">Coffee & Tea</p>
+                        <p>100% Organic Tea & Coffee</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6 px-2">
+                    <div class="featured-brand-img">
+                        <img class="img-fluid rounded" src="front/images/brand-smart-sweet.webp" alt="">
+                    </div>
+                    <div class="brand-detail mt-1">
+                        <p class="text-secondary small mb-1">Snacks</p>
+                        <p>Greatest Snacks All The Time</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="top-saver" class="py-4">
+        <div class="container-lg">
+            <div class="home-section-header top-saver-header d-flex align-items-center mb-3">
+                <h2>
+                    Top Saver Today
+                </h2>
+                <a href="#" class="ml-3 text-secondary">All Offers <span><i
+                            class="fa-solid fa-chevron-right"></i></span></a>
+            </div>
+            <div class="row">
+                <div class="col-lg col-sm-6 px-2">
+                    <div class="top-saver-prd-card border border-light shadow-sm rounded p-2">
+                        <div class="top-saver-img">
+                            <img src="front/images/top-saver-1.webp" alt="Top Saver" class="img-fluid">
+                        </div>
+                        <div class="top-saver-detail">
+                            <div class="seller">
+                                <p class="text-secondary mb-1 small">
+                                    MR Mart
+                                </p>
+                            </div>
+                            <div class="top-saver-title">
+                                <p class="mb-1">
+                                    Liptop Yellow Lable Original
+                                </p>
+                            </div>
+                            <div class="pricing-buy-btn d-flex justify-content-between align-items-center">
+                                <div class="price-weight d-flex flex-column">
+                                    <span class="prd-weight small text-secondary">
+                                        500g
+                                    </span>
+                                    <div class="prd-price">
+                                        <span class="sale-price text-danger">
+                                            5.5$
+                                        </span>
+                                        <span class="rrp">
+                                            <del class="text-secondary">8$</del>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="add-cart d-flex align-items-center justify-content-center btn rounded-circle bg-dark text-light p-2 ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6 px-2">
+                    <div class="top-saver-prd-card border border-light shadow-sm rounded p-2">
+                        <div class="top-saver-img">
+                            <img src="front/images/top-saver-2.webp" alt="Top Saver" class="img-fluid">
+                        </div>
+                        <div class="top-saver-detail">
+                            <div class="seller">
+                                <p class="text-secondary mb-1 small">
+                                    MR Mart
+                                </p>
+                            </div>
+                            <div class="top-saver-title">
+                                <p class="mb-1">
+                                    American Harvest Special Honey
+                                </p>
+                            </div>
+                            <div class="pricing-buy-btn d-flex justify-content-between align-items-center">
+                                <div class="price-weight d-flex flex-column">
+                                    <span class="prd-weight small text-secondary">
+                                        500g
+                                    </span>
+                                    <div class="prd-price">
+                                        <span class="sale-price text-danger">
+                                            10$
+                                        </span>
+                                        <span class="rrp d-none">
+                                            <del class="text-secondary">8$</del>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="add-cart d-flex align-items-center justify-content-center btn rounded-circle bg-dark text-light p-2 ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6 px-2">
+                    <div class="top-saver-prd-card border border-light shadow-sm rounded p-2">
+                        <div class="top-saver-img">
+                            <img src="front/images/top-saver-3.webp" alt="Top Saver" class="img-fluid">
+                        </div>
+                        <div class="top-saver-detail">
+                            <div class="seller">
+                                <p class="text-secondary mb-1 small">
+                                    MR Mart
+                                </p>
+                            </div>
+                            <div class="top-saver-title">
+                                <p class="mb-1">
+                                    MR Mart Special Vegitables Box - 1.5kg
+                                </p>
+                            </div>
+                            <div class="pricing-buy-btn d-flex justify-content-between align-items-center">
+                                <div class="price-weight d-flex flex-column">
+                                    <span class="prd-weight small text-secondary">
+                                        1.5kg
+                                    </span>
+                                    <div class="prd-price">
+                                        <span class="sale-price text-danger">
+                                            15$
+                                        </span>
+                                        <span class="rrp">
+                                            <del class="text-secondary">17$</del>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="add-cart d-flex align-items-center justify-content-center btn rounded-circle bg-dark text-light p-2 ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6 px-2">
+                    <div class="top-saver-prd-card border border-light shadow-sm rounded p-2">
+                        <div class="top-saver-img">
+                            <img src="front/images/top-saver-4.webp" alt="Top Saver" class="img-fluid">
+                        </div>
+                        <div class="top-saver-detail">
+                            <div class="seller">
+                                <p class="text-secondary mb-1 small">
+                                    MR Mart
+                                </p>
+                            </div>
+                            <div class="top-saver-title">
+                                <p class="mb-1">
+                                    Nezo Pure Himalayan Pink Table Salt
+                                </p>
+                            </div>
+                            <div class="pricing-buy-btn d-flex justify-content-between align-items-center">
+                                <div class="price-weight d-flex flex-column">
+                                    <span class="prd-weight small text-secondary">
+                                        500g
+                                    </span>
+                                    <div class="prd-price">
+                                        <span class="sale-price text-danger">
+                                            3.5$
+                                        </span>
+                                        <span class="rrp">
+                                            <del class="text-secondary">5$</del>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="add-cart d-flex align-items-center justify-content-center btn rounded-circle bg-dark text-light p-2 ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg col-sm-6 px-2">
+                    <div class="top-saver-prd-card border border-light shadow-sm rounded p-2">
+                        <div class="top-saver-img">
+                            <img src="front/images/top-saver-5.webp" alt="Top Saver" class="img-fluid">
+                        </div>
+                        <div class="top-saver-detail">
+                            <div class="seller">
+                                <p class="text-secondary mb-1 small">
+                                    MR Mart
+                                </p>
+                            </div>
+                            <div class="top-saver-title">
+                                <p class="mb-1">
+                                    Natural Mineral Water 1,5L - Evian
+                                </p>
+                            </div>
+                            <div class="pricing-buy-btn d-flex justify-content-between align-items-center">
+                                <div class="price-weight d-flex flex-column">
+                                    <span class="prd-weight small text-secondary">
+                                        1.5 L
+                                    </span>
+                                    <div class="prd-price">
+                                        <span class="sale-price text-danger">
+                                            6$
+                                        </span>
+                                        <span class="rrp d-none">
+                                            <del class="text-secondary">8$</del>
+                                        </span>
+                                    </div>
+                                </div>
+                                <button
+                                    class="add-cart d-flex align-items-center justify-content-center btn rounded-circle bg-dark text-light p-2 ">
+                                    <i class="fa-solid fa-cart-shopping"></i>
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="top-saver-banner" class="py-4">
+        <div class="container-lg">
+            <div class="banner-bottom-topsaver">
+                <div class="row">
+                    <div class="col-md-4 px-2">
+                        <div class="top-saver-banner-card">
+                            <img src="front/images/top-saver-bottom-1.webp" alt="Banner Under Top Saver" class="rounded-lg img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-2">
+                        <div class="top-saver-banner-card">
+                            <img src="front/images/top-saver-bottom-2.webp" alt="Banner Under Top Saver" class="rounded-lg img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-md-4 px-2">
+                        <div class="top-saver-banner-card">
+                            <img src="front/images/top-saver-bottom-3.webp" alt="Banner Under Top Saver" class="rounded-lg img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+@keyframes discoverButton{
+    from {left: 0px}
+    to {left: 8px}
+}
+@keyframes homePrdcarsousel{
+    0% {
+        transform: translateY(50px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes testing{
+    from{
+        transform: rotate(-180deg);
+        opacity: 0;
+    }
+    to{
+        transform: rotate(0);
+        opacity: 1;
+    }
+}
