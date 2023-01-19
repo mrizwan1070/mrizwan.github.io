@@ -34,19 +34,28 @@ body{
         height: 400px;
         object-fit: cover;
         object-position: center;
-        opacity: .35;
+        opacity: .15;
+    }
+    .header-banner-lg{
+        img{
+            height: 350px;
+            object-fit: cover;
+            object-position: right;
+        }
     }
     .header-banner-sm{
         img{
-            height: 336px;
+            height: 350px;
+            object-fit: cover;
+            object-position: right;
         }
     }
 }
 .top-cat-img{
     background: #f0f0f0;
-    height: 170px;
+    height: 200px;
     img{
-        height: 100px;
+        height: 120px;
     }
 }
 .top-cat-title{
@@ -67,4 +76,20 @@ body{
     line-clamp: 2;
     -webkit-line-clamp: 2;
     overflow: hidden;
+    height: 48px;
+}
+#essentials-prd{
+    background-color: #f3f3f3;
+}
+.why-us-icon{
+    i{
+        font-size: 2.2rem;
+    }
+}
+.footer-subscribe{
+    .input-text{
+        top: 50%;
+        transform: translateY(-50%);
+        left: 10px;
+    }
 }
