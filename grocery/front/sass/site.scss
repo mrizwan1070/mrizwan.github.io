@@ -5,6 +5,12 @@
 body{
     font-family: poppins, sans-serif;
 }
+h2{
+    font-size: 1.75rem;
+}
+h3{
+    font-size: 1.5rem;
+}
 .main-search-btn{
     background: transparent;
 }
@@ -34,7 +40,8 @@ body{
         height: 400px;
         object-fit: cover;
         object-position: center;
-        opacity: .15;
+        opacity: .1;
+        filter: grayscale(1);
     }
     .header-banner-lg{
         img{
@@ -70,7 +77,20 @@ body{
         font-size: .75rem;
     }
 }
-.top-saver-title{
+.carousel-controls{
+    top: -52px;
+    right: 0;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon{
+    width: 15px;
+    height: 15px;
+}
+.prd-img{
+    img{
+        height: 290px;
+    }
+}
+.prd-title, .post-excerpt{
     display: -webkit-box;
     -webkit-box-orient: vertical;
     line-clamp: 2;
@@ -78,7 +98,7 @@ body{
     overflow: hidden;
     height: 48px;
 }
-#essentials-prd{
+#essentials-prd-blog{
     background-color: #f3f3f3;
 }
 .why-us-icon{
@@ -91,5 +111,33 @@ body{
         top: 50%;
         transform: translateY(-50%);
         left: 10px;
+    }
+    input{
+    &:focus{
+        border-color: #d39e00 !important;
+        box-shadow: 0 0 0 0.2rem rgba(222, 170, 12, 0.5) !important;
+    }
+}
+}
+.container-fluid{
+    max-width: 1920px;
+}
+.main-container{
+    padding: 0 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+@media screen and (min-width: 1400px) {
+    .main-container{
+        max-width: 1320px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .header-banners{
+        .header-banner-lg{
+            img{
+                object-position: 90%;
+            }
+        }
     }
 }
