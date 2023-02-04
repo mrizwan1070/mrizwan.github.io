@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+$primary-color: #006D5B !important;
+$a_hover: #004135 !important;
+$link: rgb(37, 26, 26);
+
+body {
+    font-family: Poppins, sans-serif;
+    color: $primary-color;
+}
+a{
+    color: $primary-color;
+    &:hover{
+        color: $a_hover;
+    }
+}
+.default-btn{
+    border-radius: 17px !important;
+    background-color: $primary-color;
+    color: #fff;
+    &:hover{
+        background-color: $a_hover;
+    }
+}
+.navbar-toggler-icon{
+    i{
+        color: $primary-color;
+        font-size: 1.7rem;
+    }
+}
+.my-bg{
+    background-color: $primary-color;
+}
+.container-fluid{
+    max-width: 1920px;
+}
+@media screen and (min-width: 1200px) {
+    .container-padding{
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+.about-us-social{
+    span{
+        padding: 0 10px;
+        font-size: 1.3rem;
+    }
+    a{
+        background-color: $primary-color;
+        color: #fff !important;
+        padding: 3px 8px;
+        border-radius: 4px;
+    }
+}
+.search-social-icons{
+    background-color: $primary-color;
+    span{
+        padding: 0 10px;
+        color: #fff;
+        font-size: 1.3rem;
+    }
+    a{
+        background-color: #fff;
+        padding: 3px 8px;
+        border-radius: 4px;
+    }
+}
+.top-bar-right{
+    background-color: $primary-color;
+    height: 100%;
+    a{
+        width: 100%;
+        background-color: #fff;
+        transition: transform .5s;
+        &:hover{
+            background-color: $primary-color;
+            color: #fff !important;
+            text-decoration: none;
+            transform: translateY(10px);
+        }
+    }
+}
+.navbar-nav{
+    .nav-item{
+        &:hover{
+            border-bottom: 3px solid $primary-color;
+        }
+    }
+}
+.header-video{
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+#header-video{
+    .header-text{
+        animation: headerText 1s linear;
+        z-index: 1;
+        height: 100%;
+    }
+}
+@keyframes headerText{
+    from {
+        row-gap: 100%;
+        visibility: hidden;
+        opacity: 0;
+    }
+    to {
+        row-gap: 0;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.header-overlay{
+    width: 100%;
+    height: 100%;
+    background: url(/dialectica/front/images/top_blur-3.png);
+    top: 0;
+}
+.offer-card{
+    .offer-img{
+        max-height: 160px;
+        overflow: hidden;
+        img{
+        object-fit: cover;
+        object-position: top;
+        }
+    }
+.offer-card-text{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #006D5B 37%, rgba(255, 255, 255, 0));
+    .offer-card-text-content{
+    left: 10px;
+    bottom: 10px;
+}
+}
+}
+.award-gallery{
+    row-gap: 15px;
+.award-img{
+    width: auto;
+    flex: 0 0 auto;
+    img{
+        max-height: 90px;
+    }
+}
+}
+.footer-content{
+    border-top: 1px solid $primary-color;
+}
