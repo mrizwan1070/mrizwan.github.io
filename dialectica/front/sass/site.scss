@@ -83,18 +83,21 @@ a{
 }
 .navbar-nav{
     .nav-item{
+        border-bottom: 3px solid transparent;
         &:hover{
             border-bottom: 3px solid $primary-color;
-        }
+    }
     }
 }
 .header-video{
     video{
         width: 100%;
-        height: auto;
+        height: auto;   
     }
 }
 #header-video{
+    margin-top: -27px;
+    z-index: -1;
     .header-text{
         animation: headerText 1s linear;
         z-index: 1;
@@ -113,11 +116,43 @@ a{
         opacity: 1;
     }
 }
+.client{
+    animation: leftCenter 3s;
+}
+.employee{
+    animation: rightCenter 3s;
+}
+@keyframes leftCenter{
+    from{
+        text-align: left;
+    }
+    to{
+        text-align: center;
+    }
+}
+@keyframes rightCenter{
+    from{
+        text-align: right;
+    }
+    to{
+        text-align: center;
+    }
+}
 .header-overlay{
+    width: 100%;
+    height: 100%;
+    background: url(/dialectica/front/images/backwhite.png);
+    top: 0;
+    background-repeat: no-repeat;
+    background-position: right -4%;
+}
+.header-video-overlay{
     width: 100%;
     height: 100%;
     background: url(/dialectica/front/images/top_blur-3.png);
     top: 0;
+    background-position: left;
+    background-repeat: no-repeat;
 }
 .offer-card{
     .offer-img{
@@ -139,6 +174,19 @@ a{
     bottom: 10px;
 }
 }
+}
+.who-we-are-gallery{
+    .row{
+        .col-sm-4{
+            max-width: 200px;
+        }
+    }
+}
+.who-we-are-gallery-image{
+    text-align: right;
+    img{
+        height: 200px;
+    }
 }
 .award-gallery{
     row-gap: 15px;
