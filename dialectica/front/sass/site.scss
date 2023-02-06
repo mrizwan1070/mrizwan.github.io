@@ -33,7 +33,7 @@ a{
 }
 .navbar-toggler-icon{
     i{
-        color: $primary-color;
+        color: #fff;
         font-size: 1.7rem;
     }
 }
@@ -129,13 +129,19 @@ a{
         }
     }
 }
+.navbar{
+    background-color: $primary-color;
 .navbar-nav{
     .nav-item{
+        .nav-link{
+            color: #fff !important;
+        }
         border-bottom: 3px solid transparent;
         &:hover{
             border-bottom: 3px solid $primary-color;
     }
     }
+}
 }
 .header-video{
     video{
@@ -144,8 +150,8 @@ a{
     }
 }
 #header-video{
-    margin-top: -27px;
-    z-index: -1;
+     margin-top: -1px;
+    // z-index: -1;
     .header-text{
         animation: headerText 1s linear;
         z-index: 1;
@@ -204,7 +210,7 @@ a{
     height: 100%;
     background: url(/dialectica/front/images/top_blur-3.png);
     top: 0;
-    background-position: left bottom;
+    background-position: left 100%;
     background-repeat: no-repeat;
 }
 .offer-card{
