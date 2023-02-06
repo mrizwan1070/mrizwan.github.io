@@ -8,6 +8,13 @@ $link: rgb(37, 26, 26);
 body {
     font-family: Poppins, sans-serif;
     color: $primary-color;
+    position: relative;
+}
+h2{
+    font: 1.75rem;
+}
+h3{
+    font-size: 1.3rem !important;
 }
 a{
     color: $primary-color;
@@ -19,6 +26,7 @@ a{
     border-radius: 17px !important;
     background-color: $primary-color;
     color: #fff;
+    cursor: pointer !important;
     &:hover{
         background-color: $a_hover;
     }
@@ -43,7 +51,7 @@ a{
 }
 .about-us-social{
     span{
-        padding: 0 10px;
+        margin-right: 10px;
         font-size: 1.3rem;
     }
     a{
@@ -53,8 +61,19 @@ a{
         border-radius: 4px;
     }
 }
+.footer-social{
+  @extend .about-us-social
+}
 .search-social-icons{
     background-color: $primary-color;
+    .search-icon{
+        cursor: pointer;
+    }
+    .separator{
+        img{
+            height: 42px;
+        }
+    }
     span{
         padding: 0 10px;
         color: #fff;
@@ -62,8 +81,37 @@ a{
     }
     a{
         background-color: #fff;
-        padding: 3px 8px;
+        padding: 2px 6px;
         border-radius: 4px;
+    }
+}
+.main-search-box{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000c4;
+    z-index: 9999999;
+    .close{
+        right: 5%;
+        top: 10%;
+        font-size: 3rem;
+    }
+    .main-search-inner{
+        width: 100%;
+        input{
+            background-color: transparent;
+            display: block;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            font-size: 2rem;
+            border: none;
+            border-bottom: 1px solid #fff;
+            &:focus{
+                outline: none;
+            }
+        }
     }
 }
 .top-bar-right{
@@ -101,7 +149,12 @@ a{
     .header-text{
         animation: headerText 1s linear;
         z-index: 1;
-        height: 100%;
+    }
+    .signup-button{
+        z-index: 1;
+        a{
+            color: #fff !important;
+        }
     }
 }
 @keyframes headerText{
@@ -151,7 +204,7 @@ a{
     height: 100%;
     background: url(/dialectica/front/images/top_blur-3.png);
     top: 0;
-    background-position: left;
+    background-position: left bottom;
     background-repeat: no-repeat;
 }
 .offer-card{
@@ -170,8 +223,8 @@ a{
     left: 0;
     background-image: linear-gradient(to right, #006D5B 37%, rgba(255, 255, 255, 0));
     .offer-card-text-content{
-    left: 10px;
-    bottom: 10px;
+    left: 0;
+    bottom: 0;
 }
 }
 }
@@ -182,10 +235,22 @@ a{
         }
     }
 }
-.who-we-are-gallery-image{
-    text-align: right;
-    img{
-        height: 200px;
+// .who-we-are-gallery-image{
+//     text-align: right;
+//     img{
+//         height: 200px;
+//         object-fit: cover;
+//     }
+// }
+@media screen and (min-width: 768px) and (max-width: 991px){
+    .who-we-are-gallery{
+        .row{
+            .col-lg-3{
+                &:nth-child(1n+5){
+                    display: none !important;
+                }
+            }
+        }
     }
 }
 .award-gallery{
@@ -196,6 +261,16 @@ a{
     img{
         max-height: 90px;
     }
+}
+}
+.blog-excert{
+    p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    height: 42px;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
 }
 }
 .footer-content{
