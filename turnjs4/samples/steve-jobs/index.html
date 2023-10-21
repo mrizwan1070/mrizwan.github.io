@@ -1,0 +1,799 @@
+<!doctype html>
+<!--[if lt IE 7 ]> <html lang="en" class="ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<script type="text/javascript" src="../../extras/jquery.min.1.7.js"></script>
+<script type="text/javascript" src="../../extras/jquery-ui-1.8.20.custom.min.js"></script>
+<script type="text/javascript" src="../../extras/jquery.mousewheel.min.js"></script>
+<script type="text/javascript" src="../../extras/modernizr.2.5.3.min.js"></script>
+<script type="text/javascript" src="../../lib/hash.js"></script>
+<!-- <style>
+	@font-face {
+    font-family: 'Abril Fatface';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/AbrilFatface-Regular-webfont.woff) format('woff'), url(fonts/abril-fatface.woff2) format('woff2');
+    /* unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; */
+  }
+
+  @font-face {
+    font-family: 'Sanchez';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(fonts/Sanchez-Regular.woff) format('woff'), url(fonts/Sanchez.woff2) format('woff2');
+    /* unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; */
+  }
+
+
+#newpaper-slider{
+    font-family: 'Sanchez', serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+}
+@keyframes load1 {
+0%, 80%, 100% {
+    box-shadow: 0 0;
+    height: 4em;
+}
+40% {
+    box-shadow: 0 -2em;
+    height: 5em;
+}
+}
+.loader-container{
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+.loader {
+    align-self: center;
+    color: #fff;
+    margin: 0 auto;
+    position: relative;
+    font-size: 6px;
+    transform: translateZ(0);
+    animation-delay: -0.16s !important;
+}
+.loader, .loader::before, .loader::after{
+    background: #fff;
+    animation: load1 1s infinite ease-in-out;
+    width: 1em;
+    height: 4em;
+}
+.loader::after, .loader::before{
+    position: absolute;
+    content: "";
+}
+.loader::before{
+    left: -10px;
+    animation-delay: -.32s;
+}
+.loader::after{
+    right: -10px;
+}
+.slider-inner{
+    /* width: 800px;
+    height: 600px;
+    width: 100%; */
+    padding-top: 50px;
+    width: 80%;
+}
+.full {
+    background-color: #fff;
+    position: fixed !important;
+    inset: 0;
+    margin-top: 0 !important;
+}
+.full #slider-controls{
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.magazine, #magazineCanvas {
+    margin: 0 auto 50px;
+    user-select: none;
+    -webkit-transition: margin-left 0.2s ease-in-out;
+    -moz-transition: margin-left 0.2s ease-in-out;
+    -o-transition: margin-left 0.2s ease-in-out;
+    -ms-transition: margin-left 0.2s ease-in-out;
+    transition: margin-left 0.2s ease-in-out;
+}
+.zoomed{
+    scale: 1.5;
+    cursor: pointer;
+    transition: all .5s ease-in-out 0s;
+}
+.page {
+    background-color: #fdf4ef;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-height: 760px;
+}
+.page::after {
+    content: "";
+    width: calc(100% - 20px);
+    height: 1px;
+    position: absolute;
+    background: rgb(179 173 170);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 20px;
+}
+.page .slide img{
+    border: none;
+    height: auto;
+    max-width: 100%;
+}
+.news-header{
+    border-color: rgb(179 173 170) !important;
+    font-size: .7rem;
+    margin-bottom: 10px;
+}
+.content {
+    padding: 20px;
+    text-align: justify;
+    height: 100% !important;
+}
+
+.prev-button, .next-button{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev-button button, .next-button button{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.prev-button button img, .next-button button img{
+    width: 44px;
+    height: 44px;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+.prev-button{
+    left: 0;
+}
+.next-button{
+    right: 0;
+}
+#slider-controls{
+    /* background: rgba(0, 0, 0, .8); */
+    background: transparent;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 200ms ease-in-out 0s;
+    width: 100%;
+    color: #000;
+}
+.slider-controls {
+
+    height: 52px;
+}
+.slide-search{
+    width: 400px;
+    height: 56px;
+    position: absolute;
+    right: 8px;
+    bottom: 66px;
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+}
+.search-input{
+    display: flex;
+    flex: 1 1 0%;
+    padding: 8px;
+}
+.search-close-btn{
+    padding: 8px;
+}
+.search-close-btn button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 25px;
+}
+.search-input input{
+    width: 100%;
+    height: 36px;
+    color: rgb(255, 255, 255);
+    height: 36px;
+    background: transparent;
+    padding: 10px 36px 10px 14px;
+    font-size: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+}
+.ctrl-btn {
+    background: transparent;
+    color: #000;
+    border: none;
+    font-size: 25px;
+}
+.ctrl-btn span, #close-search span {
+    display: flex;
+    padding: 6px;
+    border-radius: 3px;
+    transition: all .1s ease-in-out 0s;
+}
+.ctrl-btn:hover span, #close-search:hover span{
+     background-color: rgba(255, 255, 255, 0.2);
+}
+.slide-progress-bar {
+    background-color: rgba(255, 255, 255, 0.2);
+    width: 98%;
+    height: 8px;
+    position: relative;
+    margin: 0 auto;
+}
+.zoom-bar{
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+    height: 8px;
+    width: 80px;
+}
+.zoom-bar-progress {
+    position: absolute;
+    width: 0%;
+    height: 100%;
+    background: rgb(3, 98, 252);
+    transition: width .2s ease-in-out 0s;
+}
+.zoom-progress-circle {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #000;
+    border-radius: 50%;
+    top: -50%;
+    left: 0;
+    transition: left .2s ease-in-out 0s;
+}
+.progress-line {
+    position: absolute;
+    top: 0;
+    width: 0;
+    background-color: rgb(3, 98, 252);
+    height: 100%;
+}
+.progress-circle {
+    width: 16px;
+    height: 16px;
+    background: #000;
+    border-radius: 50%;
+    top: 0;
+    left: 0;
+}
+#prev-button.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+.disabled {
+    pointer-events: none;
+    opacity: .5;
+}
+#social-share {
+    right: 8px;
+    bottom: 69px;
+    color: rgb(255, 255, 255);
+    backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.8);
+    /* animation: 0.3s ease-out 0s 1 normal backwards running fadeIn; */
+    transition: opacity 0.3s ease-in-out 0s;
+    width: 388px;
+    border-radius: 4px;
+}
+.social-icon button{
+    background: transparent;
+    border: 0px solid transparent;
+    padding: 8px;
+    cursor: pointer;
+    color: #fff;
+    font-size: 26px;
+}
+.social-icon-box{
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+}
+#link-share-btn{
+    transition: all 0.2s linear 0s;
+    background: transparent;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 8px;
+    border: 0px solid transparent;
+    white-space: normal;
+    cursor: pointer;
+}
+.rfm-crnt-pg{
+    padding: 8px;
+}
+#link-share-btn > div{
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+    border-radius: 4px;
+    width: 164px;
+    height: 36px;
+    transition: all .5s ease-in-out 0s;
+}
+.link-icon .bi-link, .link-icon .bi-check2 {
+    font-size: 20px;
+    font-weight: 800;
+}
+#link-copied-btn{
+    top: 8px;
+}
+.all-slides {
+    position: absolute;
+    inset: 0;
+    background: #000;
+    padding: 50px;
+    overflow-y: auto;
+}
+.all-slides-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    height: 100%;
+    gap: 10px;
+    position: relative;
+
+}
+.all-slides-inner .allSlide-close-button {
+    position: absolute;
+    right: 0;
+    top: -27px;
+    border-radius: 50%;
+    font-size: 24px;
+}
+.canvas-page{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.slide-canvas {
+    width: 20%;
+    height: 33%;
+    flex: 0 0 20%;
+    border-radius: 5px;
+    position: relative;
+    cursor: pointer;
+}
+span.slide-number {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    display: block;
+    width: 30px;
+    height: 20px;
+    background: #000;
+    color: #fff;
+    border-radius: 3px;
+    display: grid;
+    place-content: center;
+    font-size: .8rem;
+    z-index: 1;
+}
+.slide-canvas:hover::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(3, 98, 252, 0.35);
+    border: solid 2px rgb(3,98,252);
+    border-radius: 5px;
+}
+.all-slides-inner .page {
+    flex: 0 0 33% !important;
+    width: 33% !important;
+    position: relative !important;
+    cursor: pointer;
+    height: 48%;
+}
+.newspepper-head{
+    font-family: 'Abril Fatface', serif;
+    font-size: 30px;
+}
+p{
+    margin-bottom: .3rem;
+}
+.slide h2{
+    font-size: 1.5rem !important;
+    font-weight: 600;
+}
+.slide h2 span{
+    font-size: 1.5rem !important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.slide h2 em{
+   font-size: .8rem !important;
+}
+.content p{
+    font-size: .5rem;
+}
+
+</style> -->
+</head>
+<body>
+
+<div id="canvas">
+	<div id="book-zoom">
+		<div class="sj-book">
+			<div class="page">
+				<div class="content">
+					<div class="slide" id="slide-1">
+						<h1 class="newspepper-head">World News-Herald</h1>
+						<div
+							class="news-header d-flex justify-content-between border-top border-bottom border-dark py-2">
+							<span class="issu-month">
+								Issue nr. 17. September
+							</span>
+							<span class="issue-frequency">
+								Weekly News
+							</span>
+						</div>
+						<h2>
+							<span>First successful
+								<br>airplan</span> <em>"History made today"</em>
+						</h2>
+						<div class="row mx-0">
+							<div class="col-6 pl-0">
+								<p>
+									See how the first airplane looks like.Lorem ipsum dolor sit amet,
+									consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</div>
+							<div class="col-6 pr-0">
+								<p>
+									SDuis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+									cupidatat non proident, sunt in culpa qui officia deserunt mollit
+									anim id est laborum.
+								</p>
+							</div>
+							<div class="col-12 p-0">
+								<img src="img/airplan.webp" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page">
+				<div class="content">
+					<div class="slide" id="slide-1">
+						<h1 class="newspepper-head">World News-Herald</h1>
+						<div
+							class="news-header d-flex justify-content-between border-top border-bottom border-dark py-2">
+							<span class="issu-month">
+								Issue nr. 17. September
+							</span>
+							<span class="issue-frequency">
+								Weekly News
+							</span>
+						</div>
+						<h2>
+							<span>First successful
+								<br>airplan</span> <em>"History made today"</em>
+						</h2>
+						<div class="row mx-0">
+							<div class="col-6 pl-0">
+								<p>
+									See how the first airplane looks like.Lorem ipsum dolor sit amet,
+									consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+									labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo
+									consequat.
+								</p>
+							</div>
+							<div class="col-6 pr-0">
+								<p>
+									SDuis aute irure dolor in reprehenderit in voluptate velit esse
+									cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+									cupidatat non proident, sunt in culpa qui officia deserunt mollit
+									anim id est laborum.
+								</p>
+							</div>
+							<div class="col-12 p-0">
+								<img src="img/airplan.webp" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div depth="5" class="hard"> <div class="side"></div> </div>
+			<div depth="5" class="hard front-side"> <div class="depth"></div> </div>
+			<div class="own-size"></div>
+			<div class="own-size even"></div>
+			<div class="hard fixed back-side p111"> <div class="depth"></div> </div>
+			<div class="hard p112"></div>
+		</div>
+	</div>
+	<div id="slider-bar" class="turnjs-slider">
+		<div id="slider"></div>
+	</div>
+</div>
+
+
+<script type="text/javascript">
+
+function loadApp() {
+	
+	var flipbook = $('.sj-book');
+
+	// Check if the CSS was already loaded
+	
+	if (flipbook.width()==0 || flipbook.height()==0) {
+		setTimeout(loadApp, 10);
+		return;
+	}
+
+	// Mousewheel
+
+	$('#book-zoom').mousewheel(function(event, delta, deltaX, deltaY) {
+
+		var data = $(this).data(),
+			step = 30,
+			flipbook = $('.sj-book'),
+			actualPos = $('#slider').slider('value')*step;
+
+		if (typeof(data.scrollX)==='undefined') {
+			data.scrollX = actualPos;
+			data.scrollPage = flipbook.turn('page');
+		}
+
+		data.scrollX = Math.min($( "#slider" ).slider('option', 'max')*step,
+			Math.max(0, data.scrollX + deltaX));
+
+		var actualView = Math.round(data.scrollX/step),
+			page = Math.min(flipbook.turn('pages'), Math.max(1, actualView*2 - 2));
+
+		if ($.inArray(data.scrollPage, flipbook.turn('view', page))==-1) {
+			data.scrollPage = page;
+			flipbook.turn('page', page);
+		}
+
+		if (data.scrollTimer)
+			clearInterval(data.scrollTimer);
+		
+		data.scrollTimer = setTimeout(function(){
+			data.scrollX = undefined;
+			data.scrollPage = undefined;
+			data.scrollTimer = undefined;
+		}, 1000);
+
+	});
+
+	// Slider
+
+	$( "#slider" ).slider({
+		min: 1,
+		max: 100,
+
+		start: function(event, ui) {
+
+			if (!window._thumbPreview) {
+				_thumbPreview = $('<div />', {'class': 'thumbnail'}).html('<div></div>');
+				setPreview(ui.value);
+				_thumbPreview.appendTo($(ui.handle));
+			} else
+				setPreview(ui.value);
+
+			moveBar(false);
+
+		},
+
+		slide: function(event, ui) {
+
+			setPreview(ui.value);
+
+		},
+
+		stop: function() {
+
+			if (window._thumbPreview)
+				_thumbPreview.removeClass('show');
+			
+			$('.sj-book').turn('page', Math.max(1, $(this).slider('value')*2 - 2));
+
+		}
+	});
+
+
+	// URIs
+	
+	Hash.on('^page\/([0-9]*)$', {
+		yep: function(path, parts) {
+
+			var page = parts[1];
+
+			if (page!==undefined) {
+				if ($('.sj-book').turn('is'))
+					$('.sj-book').turn('page', page);
+			}
+
+		},
+		nop: function(path) {
+
+			if ($('.sj-book').turn('is'))
+				$('.sj-book').turn('page', 1);
+		}
+	});
+
+	// Arrows
+
+	$(document).keydown(function(e){
+
+		var previous = 37, next = 39;
+
+		switch (e.keyCode) {
+			case previous:
+
+				$('.sj-book').turn('previous');
+
+			break;
+			case next:
+				
+				$('.sj-book').turn('next');
+
+			break;
+		}
+
+	});
+
+
+	// Flipbook
+
+	flipbook.bind(($.isTouch) ? 'touchend' : 'click', zoomHandle);
+
+	flipbook.turn({
+		elevation: 50,
+		acceleration: !isChrome(),
+		autoCenter: true,
+		gradients: true,
+		duration: 1000,
+		pages: 112,
+		when: {
+			turning: function(e, page, view) {
+				
+				var book = $(this),
+					currentPage = book.turn('page'),
+					pages = book.turn('pages');
+
+				if (currentPage>3 && currentPage<pages-3) {
+				
+					if (page==1) {
+						book.turn('page', 2).turn('stop').turn('page', page);
+						e.preventDefault();
+						return;
+					} else if (page==pages) {
+						book.turn('page', pages-1).turn('stop').turn('page', page);
+						e.preventDefault();
+						return;
+					}
+				} else if (page>3 && page<pages-3) {
+					if (currentPage==1) {
+						book.turn('page', 2).turn('stop').turn('page', page);
+						e.preventDefault();
+						return;
+					} else if (currentPage==pages) {
+						book.turn('page', pages-1).turn('stop').turn('page', page);
+						e.preventDefault();
+						return;
+					}
+				}
+
+				updateDepth(book, page);
+				
+				if (page>=2)
+					$('.sj-book .p2').addClass('fixed');
+				else
+					$('.sj-book .p2').removeClass('fixed');
+
+				if (page<book.turn('pages'))
+					$('.sj-book .p111').addClass('fixed');
+				else
+					$('.sj-book .p111').removeClass('fixed');
+
+				Hash.go('page/'+page).update();
+					
+			},
+
+			turned: function(e, page, view) {
+
+				var book = $(this);
+
+				if (page==2 || page==3) {
+					book.turn('peel', 'br');
+				}
+
+				updateDepth(book);
+				
+				$('#slider').slider('value', getViewNumber(book, page));
+
+				book.turn('center');
+
+			},
+
+			start: function(e, pageObj) {
+		
+				moveBar(true);
+
+			},
+
+			end: function(e, pageObj) {
+			
+				var book = $(this);
+
+				updateDepth(book);
+
+				setTimeout(function() {
+					
+					$('#slider').slider('value', getViewNumber(book));
+
+				}, 1);
+
+				moveBar(false);
+
+			},
+
+			missing: function (e, pages) {
+
+				for (var i = 0; i < pages.length; i++) {
+					addPage(pages[i], $(this));
+				}
+
+			}
+		}
+	});
+
+
+	$('#slider').slider('option', 'max', numberOfViews(flipbook));
+
+	flipbook.addClass('animated');
+
+	// Show canvas
+
+	$('#canvas').css({visibility: ''});
+}
+
+// Hide canvas
+
+$('#canvas').css({visibility: 'hidden'});
+
+// Load turn.js
+
+yepnope({
+	test : Modernizr.csstransforms,
+	yep: ['../../lib/turn.min.js'],
+	nope: ['../../lib/turn.html4.min.js', 'css/jquery.ui.html4.css', 'css/steve-jobs-html4.css'],
+	both: ['js/steve-jobs.js', 'css/jquery.ui.css', 'css/steve-jobs.css'],
+	complete: loadApp
+});
+
+</script>
+
+</body>
+</html>

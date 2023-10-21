@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+:root{
+  --primary-color: #006D5B !important;
+  --hover: #004b3d !important;
+  --a_hover-light: #01ffd5 !important;
+  --link: rgb(37, 26, 26);
+}
 body {
   font-family: Poppins, sans-serif;
-  color: #006D5B !important;
+  color: var(--primary-color) !important;
   position: relative;
 }
 
 h2 {
-  font: 1.75rem;
+  font-size: 1.75rem;
 }
 
 h3 {
@@ -15,23 +21,23 @@ h3 {
 }
 
 a {
-  color: #006D5B !important;
+  color: var(--primary-color) !important;
 }
 
 a:hover {
-  color: #004b3d !important;
+  color: var(--hover) !important;
 }
 
 .default-btn {
   border-radius: 17px !important;
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
   color: #fff;
   cursor: pointer !important;
   transition: all .5s;
 }
 
 .default-btn:hover {
-  background-color: #004b3d !important;
+  background-color: var(--hover) !important;
   color: rgba(255, 255, 255, 0.9);
 }
 
@@ -41,7 +47,7 @@ a:hover {
 }
 
 .my-bg {
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
 }
 
 .container-fluid {
@@ -61,14 +67,14 @@ a:hover {
 }
 
 .about-us-social a, .footer-social a {
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
   color: #fff !important;
   padding: 3px 8px;
   border-radius: 4px;
 }
 
 .search-social-icons {
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
 }
 
 .search-social-icons .search-icon {
@@ -126,7 +132,7 @@ a:hover {
 }
 
 .top-bar-right {
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
   height: 100%;
 }
 
@@ -137,14 +143,14 @@ a:hover {
 }
 
 .top-bar-right a:hover {
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
   color: #fff !important;
   text-decoration: none;
   transform: translateY(10px);
 }
 
 .navbar {
-  background-color: #006D5B !important;
+  background-color: var(--primary-color) !important;
 }
 
 .navbar .navbar-nav .nav-item .nav-link {
@@ -153,7 +159,7 @@ a:hover {
 }
 
 .navbar .navbar-nav .nav-item .nav-link:hover {
-  color: #01ffd5 !important;
+  color: var(--a_hover-light) !important;
 }
 
 .header-video {
@@ -162,9 +168,13 @@ a:hover {
 
 .header-video video {
   width: 100%;
-  height: auto;
+  height: 550px;
+  object-fit: cover;
 }
-
+.header-video-text{
+  top: 50%;
+  transform: translateY(-50%);
+}
 #header-video .header-text {
   animation: headerText 1s linear;
   z-index: 1;
@@ -229,7 +239,7 @@ a:hover {
 .header-video-overlay {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(to right, white 5%, transparent 40%), linear-gradient(to left, white 2%, transparent 39%), linear-gradient(to bottom, white 1%, transparent 17%), linear-gradient(to top, white 1%, transparent 17%);
+  background-image: linear-gradient(to right, white 30%, transparent 90%), linear-gradient(to left, white 0%, transparent 29%), linear-gradient(to bottom, white 1%, transparent 17%), linear-gradient(to top, white 1%, transparent 17%);
   top: 0;
   background-position: center;
   background-repeat: no-repeat;
@@ -251,7 +261,7 @@ a:hover {
   height: 100%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(to right, #006D5B 37%, rgba(255, 255, 255, 0));
+  background-image: linear-gradient(to right, var(--primary-color) 37%, rgba(255, 255, 255, 0));
 }
 
 .offer-card .offer-card-text .offer-card-text-content {
@@ -305,7 +315,7 @@ a:hover {
 }
 
 .footer-content {
-  border-top: 1px solid #006D5B !important;
+  border-top: 1px solid var(--primary-color) !important;
 }
 
 .trust-pilot {
@@ -317,7 +327,7 @@ a:hover {
 }
 
 .tp-star__canvas_fill {
-  fill: #006D5B !important;
+  fill: var(--primary-color) !important;
 }
 
 .tp-widget-logo {

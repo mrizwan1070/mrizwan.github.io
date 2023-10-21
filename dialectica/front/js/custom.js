@@ -6,4 +6,8 @@ $(document).ready(function(){
         $(".main-search-box").addClass("d-flex").removeClass("d-none");
         $(".main-search-inner input").focus();
     });
+    AOS.init({
+        duration: 2000,
+        once: true,
+      });
 });

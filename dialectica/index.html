@@ -7,10 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Expertefy Ltd. - Unique insights and untapped expert knowledge</title>
   <link rel="stylesheet" href="front/css/bootstrap.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="front/style/site.css" />
   <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
   <script src="front/js/jquery.slim.min.js"></script>
   <script src="front/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <!-- <script src="front/js/popper.min.js"></script>
   <script src="front/js/repeat.js"></script> -->
   <script src="front/js/custom.js"></script>
@@ -85,27 +87,27 @@
     </div>
   </header>
   <section id="header-video" class="position-relative">
-    <div class="row mx-0">
-      <div class="col-md-5 d-flex flex-column py-md-0 py-5 justify-content-center">
-        <div class="header-text px-lg-4 d-flex flex-column">
-          <h2>
-            Navigate the future with confidence
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero sit nihil itaque iste suscipit
-            facere eaqu!
-          </p>
-        </div>
-        <div class="signup-button d-flex justify-content-center">
-          <a href="#" class="text-uppercase text-center btn default-btn mr-lg-3 mr-2" role="button">become a client</a>
-          <a href="#" class="text-uppercase text-center btn default-btn" role="button">become an expert</a>
-        </div>
+    <div class="d-md-block d-none p-0 position-relative">
+      <div class="header-video-overlay position-absolute">
       </div>
-      <div class="col-md-7 d-md-block d-none p-0 position-relative">
-        <div class="header-video-overlay position-absolute">
-        </div>
-        <div class="header-video">
-          <video src="front/images/Pexels-Videos-2450251.mp4" autoplay loop></video>
+      <div class="header-video">
+        <video src="front/images/Pexels-Videos-2450251.mp4" autoplay loop></video>
+      </div>
+      <div class="row mx-0 position-absolute header-video-text w-100 h-100">
+        <div class="col-md-5 d-flex flex-column py-md-0 container-padding pr-3 justify-content-center">
+          <div class="header-text px-lg-4 d-flex flex-column">
+            <h2>
+              Navigate the future with confidence
+            </h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, libero sit nihil itaque iste suscipit
+              facere eaqu!
+            </p>
+          </div>
+          <div class="signup-button d-flex justify-content-center">
+            <a href="#" class="text-uppercase text-center btn default-btn mr-lg-3 mr-2" role="button">become a client</a>
+            <a href="#" class="text-uppercase text-center btn default-btn" role="button">become an expert</a>
+          </div>
         </div>
       </div>
     </div>
@@ -117,7 +119,7 @@
       <div class="container-fluid container-padding">
         <div class="what-we-section shadow py-4">
           <div class="row mx-0 py-5">
-            <div class="col px-md-4 p2">
+            <div class="col px-md-4 p2" data-aos="fade-up">
               <div class="what-we-do">
                 <h2>
                   What we do
@@ -128,12 +130,12 @@
               </div>
             </div>
             <div class="row mx-0">
-              <div class="col-lg-7 px-md-4 p-2">
+              <div class="col-lg-7 px-md-4 p-2" data-aos="fade-up">
                 <div class="what-we-img">
                   <img src="front/images/what-we.webp" alt="" class="img-fluid">
                 </div>
               </div>
-              <div class="col-lg-5 px-md-4 p-2">
+              <div class="col-lg-5 px-md-4 p-2" data-aos="fade-up">
                 <div class="what-we-do-right">
                   <p>
                     We are here to shape better business decision making worldwide. Partnering with the world’s leading
@@ -164,7 +166,7 @@
     <section id="what-we-offer" class="mb-5">
       <div class="container-fluid container-padding">
         <div class="row">
-          <div class="col-md-6 mb-3 d-flex flex-column justify-content-center">
+          <div class="col-md-6 mb-3 d-flex flex-column justify-content-center" data-aos="fade-up">
             <div class="offer-text">
               <h2>
                 What we offer
@@ -179,7 +181,7 @@
             </div>
           </div>
           <div class="col-md-6">
-            <div class="col mb-3 p-0">
+            <div class="col mb-3 p-0" data-aos="fade-up">
               <div class="offer">
                 <div class="offer-card position-relative">
                   <div class="offer-img">
@@ -198,7 +200,7 @@
                 </div>
               </div>
             </div>
-            <div class="col mb-3 p-0">
+            <div class="col mb-3 p-0" data-aos="fade-up">
               <div class="offer">
                 <div class="offer-card position-relative">
                   <div class="offer-img">
@@ -217,7 +219,7 @@
                 </div>
               </div>
             </div>
-            <div class="col mb-3 p-0">
+            <div class="col mb-3 p-0" data-aos="fade-up">
               <div class="offer">
                 <div class="offer-card position-relative">
                   <div class="offer-img">
@@ -245,16 +247,16 @@
         <div class="row">
           <div class="col-md-6 d-flex align-items-center mb-md-0 mb-3">
             <div class="who-we-are-text">
-              <h2>
+              <h2 data-aos="fade-up">
                 who we are
               </h2>
-              <p>
+              <p data-aos="fade-up">
                 We are an international team of 500+ members across five locations in Europe and North America. Every
                 day
                 we work on our aspiration to be a truly industry-leading organization by attracting and cultivating
                 ambitious talent based in Montreal, Vancouver, New York, London, and Athens.
               </p>
-              <p class="font-weight-bold">
+              <p class="font-weight-bold" data-aos="fade-up">
                 Our aim is to have a strong worldwide presence with more than 1,200 team members in the coming five
                 years.
               </p>
@@ -269,40 +271,80 @@
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-doc.webp" alt="" class="img-fluid">
                   </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Healthcare
+                    </p>
+                  </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-consumer.webp" alt="" class="img-fluid">
+                  </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Consumer Goods & Services
+                    </p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-tmt.webp" alt="" class="img-fluid">
                   </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      TMT
+                    </p>
+                  </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-industry.webp" alt="" class="img-fluid">
+                  </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Industrial & Transportation
+                    </p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-finance.webp" alt="" class="img-fluid">
                   </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Financials & Real Estate
+                    </p>
+                  </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-material.webp" alt="" class="img-fluid">
+                  </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Materials & Natural Resources
+                    </p>
                   </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-tax.webp" alt="" class="img-fluid">
                   </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Public Policy / Tax & Law
+                    </p>
+                  </div>
                 </div>
                 <div class="col-lg-3 col-md-6 col-sm-3 col-6 p-2">
                   <div class="who-we-are-gallery-image">
                     <img src="front/images/industry-img-1.webp" alt="" class="img-fluid">
+                  </div>
+                  <div class="industry-title">
+                    <p class="text-center mb-0">
+                      Energy & Utilities
+                    </p>
                   </div>
                 </div>
               </div>
