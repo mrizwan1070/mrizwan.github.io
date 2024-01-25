@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Welcome to KafCoupons: Your Ultimate Savings Destination</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="front/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="front/js/bootstrap.bundle.min.js"></script>
+    <script src="front/js/popper.min.js"></script>
+    <script src="front/js/custom.js"></script>
+    <script src="front/js/repeat.js"></script>
+    <script src="https://kit.fontawesome.com/a59ab3dbeb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="front/css/style.css">
+</head>
+
+<body class="">
+    <header class="">
+        <div class="header-top">
+            <div class="container">
+                <div class="mx-0 row align-items-center py-2 justify-content-between d-block d-lg-flex text-center">
+                    <div class="col-lg-2 ps-0">
+                        <div class="site-logo">
+                            <div class="text-start">
+                                <img src="front/images/site-logo.webp" class="img-fluid" alt="Kafcoupons Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="site-search">
+                            <div class="searchbar border bg-white d-flex align-items-center px-3">
+                                <span class="search-icon px-2"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                <input type="search" class="border-0 w-100 py-2" placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="d-flex">
+                            <div class="country-lang d-flex">
+                                <div class="lang-selector">
+                                    <div class="dropdown show">
+                                        <a href="javascript:;" class="dropdown-toggle pe-3 py-3 rounded-3"
+                                            data-bs-toggle="dropdown" data-bs-target="langSelector"><img
+                                                src="/front/images/icons/usa-flag.webp" class="img-fluid me-1 flag-icon"
+                                                alt="">English</a>
+                                        <div class="dropdown-menu lang-dropdown border-0" id="langSelector">
+                                            <a href="javascript:;" class="dropdown-item px-1">Arabic</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="country-celector">
+                                        <div class="dropdown show">
+                                            <a href="javascript:;" class="dropdown-toggle pe-3 py-3 rounded-3"
+                                                data-bs-toggle="dropdown" data-bs-target="countrySelector"><img
+                                                    src="/front/images/icons/pak-flag.webp"
+                                                    class="img-fluid me-1 flag-icon" alt="">Pakistan</a>
+                                            <div class="dropdown-menu lang-dropdown border-0" id="countrySelector">
+                                                <a href="javascript:;" class="dropdown-item px-1">Saudi Arabia</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="app-btn text-center py-2 bg-primary-kc rounded-3 mt-3">
+                                    <a href="javascript:;" class="fw-bold">Get the App</a>
+                                </div> -->
+                                </div>
+                            </div>
+                            <div class="login-register">
+                                <div class="d-flex">
+                                    <span class="me-1"><i class="fa fa-user-o" aria-hidden="true"></i></span><a href="#"
+                                        class="text-dark text-decoration-none">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm p-0 bg-secondary-kc my-shadow">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse show" id="mainNav">
+                    <ul class="navbar-nav">
+                        <!-- <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Home</a></li> -->
+                        <li class="nav-item px-3 dropdown"><a href="" class="nav-link fw-bold text-dark dropdown-toggle"
+                                role="button" data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="" class="dropdown-item">Fashion & Clothing</a></li>
+                                <li><a href="" class="dropdown-item">Health & Beauty</a></li>
+                                <li><a href="" class="dropdown-item">Home & Garden</a></li>
+                                <li><a href="" class="dropdown-item">Home Appliances</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Coupons</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Brands</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Fashion & Clothing</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold"><span><i
+                                        class="fa fa-heart text-danger" aria-hidden="true"></i></span>Favourite</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>
+    </header>
+    <div class="header-hero">
+        <div class="container">
+            <div class="row">
+                <div class="col pr_md_0">
+                    <div class="my-2 text-center">
+                        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img src="/front/images/banners/footlocker.webp" alt="" class="img-fluid br_2_">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img src="/front/images/banners/namshi.webp" alt="" class="img-fluid br_2_">
+                                    </a>
+                                </div>
+                                <div class="carousel-item active">
+                                    <a href="">
+                                        <img src="/front/images/banners/rayna-toures.webp" alt=""
+                                            class="img-fluid br_2_">
+                                    </a>
+                                </div>
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                    data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                    data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section id="brandSlider" class="my-4">
+            <div class="brand-slider-container bg-secondary-kc rounded-3">
+                <div class="brand-slider d-flex flex-nowrap p-3">
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/cos.png" class="img-fluid rounded-3" alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/alkhalil.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/Citrusss-02.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/eoutlet-02.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/Fordeal-06.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/likecard-02.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/linzi.png" class="img-fluid rounded-3" alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/namshi.png" class="img-fluid rounded-3" alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/noon-06.png" class="img-fluid rounded-3" alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/pottery-barn.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/saramart.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/styli-02.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/the-moms-co.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/to-the.png" class="img-fluid rounded-3" alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="brand-card-slider mx-2">
+                        <div class="brand-card-slider-inner">
+                            <a href="javascript:;">
+                                <img src="/front/images/brand/vistoria-secret.png" class="img-fluid rounded-3"
+                                    alt="Brand Name">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="homeCategories" class="my-4">
+            <div class="top-categories">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div
+                            class="promo bg-secondary-kc h-100 d-flex align-items-center justify-content-center rounded-3">
+                            <!-- <div class="section-title text-center">
+                                <h2>Promo Video</h2>
+                            </div> -->
+                            <video width="100%" height="100%" autoplay muted>
+                                <source src="https://kafcoupons.com/assets/admin/images/profile/1704050678.mp4">
+                            </video>
+                        </div>
+                    </div>
+                    <div class="col-md-9">
+                        <div class="home-categoreis secondary-color-lt py-4 px-3 rounded-3">
+                            <div class="section-title">
+                                <h2>
+                                    Categories
+                                </h2>
+                            </div>
+                            <div class="category-cards d-flex">
+                                <div class="cat-card">
+                                    <a href="javascript:;">
+                                        <img src="/front/images/categoreis/games.png" alt="Category Title"
+                                            class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                                <div class="cat-card">
+                                    <a href="javascript:;">
+                                        <img src="/front/images/categoreis/grocery.png" alt="Category Title"
+                                            class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                                <div class="cat-card">
+                                    <a href="javascript:;">
+                                        <img src="/front/images/categoreis/games.png" alt="Category Title"
+                                            class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                                <div class="cat-card">
+                                    <a href="javascript:;">
+                                        <img src="/front/images/categoreis/grocery.png" alt="Category Title"
+                                            class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="topBrand" class="my-4">
+            <div class="top-brands">
+                <div class="section-title">
+                    <h2>
+                        Top Brands
+                    </h2>
+                </div>
+                <div class="top-brand-cards py-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/namshi.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Namshi
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/noon-06.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Noon
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/pottery-barn.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Pottery Barn
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/eoutlet-02.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            eoutlet
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/Fordeal-06.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Fordeal
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/styli-02.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Styli
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="btn btn-lg viewAll-btn mx-auto d-block">View All</a>
+                </div>
+            </div>
+        </section>
+        <section id="popularBrand" class="my-4">
+            <div class="popular-brand">
+                <div class="section-title">
+                    <h2>
+                        Popular Brands
+                    </h2>
+                </div>
+                <div class="top-brand-cards py-4">
+                    <div class="row">
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            The Moms Co
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/linzi.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Linzi
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/vistoria-secret.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Vistoria Secret
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/alkhalil.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Al Khalil
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/saramart.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Sara Mart
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/cos.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            cos
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/namshi.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Namshi
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/Citrusss-02.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            Citrus
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-5 d-flex justify-content-center">
+                            <div class="brand-card d-flex">
+                                <div class="brand-card-inner text-center">
+                                    <div class="brand-detail px-4 pt-3">
+                                        <img src="/front/images/brand/to-the.png" alt="Brand Title Logo"
+                                            class="brand-img img-fluid shadow-sm mb-2">
+                                        <h3 class="brand-title mb-1">
+                                            To The
+                                        </h3>
+                                        <p class="brand-cashback">
+                                            up to 5% cashback
+                                        </p>
+                                    </div>
+                                    <div class="visit-button mt-3">
+                                        <a href="javascript:;" role="button" class="kc-btn">Visit Brand</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:;" class="btn btn-lg viewAll-btn mx-auto d-block">View All</a>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="py-5 bg-dark text-white">
+        <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 pe-5">
+                        <div class="newsletter">
+                            <div class="newletter-text">
+                                <p>
+                                    Get your special offers, coupons and more.
+                                </p>
+                            </div>
+                            <input type="email" class="form-control" placeholder="enter your email">
+                            <button class="subscribe-btn mt-3">Subscribe</button>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-links usefull-links">
+                            <h5>
+                                Useful Links
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="py-3"><a href="">Home</a></li>
+                                <li class="py-3"><a href="">Categoreis</a></li>
+                                <li class="py-3"><a href="">Brands</a></li>
+                                <li class="py-3"><a href="">Favourite</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-links my-account">
+                            <h5>
+                                My Account
+                            </h5>
+                            <ul class="list-unstyled">
+                                <li class="py-3"><a href="">Login</a></li>
+                                <li class="py-3"><a href="">Purchase History</a></li>
+                                <li class="py-3"><a href="">My Wishlist</a></li>
+                                <li class="py-3"><a href="">Track Order</a></li>
+                                <li class="py-3"><a href="">My Account</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-links contact-us">
+                            <h5>
+                                Contact Us
+                            </h5>
+                            <address class="footer-text">
+                                <div class="py-3">
+                                    <span class="fw-bold text-white">
+                                        <span class="me-2"><i class="fa-solid fa-house"></i></span>Address
+                                    </span><br>
+                                    QafExpress, Plot 56, DHA Phase II, Islamabad.
+                                </div>
+                                <div class="py-3">
+                                    <span class="fw-bold text-white">
+                                        <span class="me-2"><i class="fa-regular fa-envelope"></i></span>Email
+                                    </span><br>
+                                    <a href="mailto:service@kafcoupons.com">service@kafcoupons.com</a>
+                                </div>
+                                <div class="py-3">
+                                    <span class="fw-bold text-white">
+                                        <span class="me-2"><i class="fa-solid fa-phone"></i></span>Phone
+                                    </span><br>
+                                    <a href="tel:+15551234567">(555) 123-4567</a>
+                                </div>
+                          </address>
+
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-links">
+                            <h5>
+                                Mobile App
+                            </h5>
+                           <div class="app-store-link py-3">
+                            <img src="/front/images/icons/app-store.webp" alt="Kafcoupons app store">
+                           </div>
+                           <div class="app-store-link py-3">
+                            <img src="/front/images/icons/google-play.webp" alt="Kafcoupons play store">
+                           </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="footer-links">
+                            <h5>JOIN US ON</h5>
+                            <ul class="list-unstyled">
+                                <li class="py-3"><a href=""><i class="fa-brands fa-facebook me-2" aria-hidden="true"></i>Facebook</a></li>
+                                <li class="py-3"><a href=""><i class="fa-brands fa-twitter me-2" aria-hidden="true"></i>Twitter</a></li>
+                                <li class="py-3"><a href=""><i class="fa-brands fa-instagram me-2" aria-hidden="true"></i>Instagram</a></li>
+                                <li class="py-3"><a href=""><i class="fa-brands fa-pinterest me-2" aria-hidden="true"></i>Pinterest</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
