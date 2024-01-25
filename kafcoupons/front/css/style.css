@@ -1,9 +1,13 @@
 :root{
     --primary-color: #F8EE15;
+    --primaryu-color-hover: #ebe107;
     --secondary-color: #FFDA7B;
     --sec-light-color: ;
     --font-color: #212529;
     --secondary-color-lt: #FFF5C1;
+}
+body{
+    font-family: "Poppins", sans-serif;;
 }
 .bg-primary-kc{
      background-color: var(--primary-color);
@@ -20,11 +24,23 @@
     font-weight: 600;
     padding: 0.25rem 1.5rem !important;
     border-radius: 0.6rem;
+    transition: all .5s ease-out;
+}
+.kc-btn:hover{
+    background: #FF6B00;
+    border: solid 2px #FF6B00;
+    color: #fff !important;
 }
 .viewAll-btn {
     width: 200px;
     background: var(--primary-color);
+    border: 2px solid var(--primary-color);
     font-weight: 600;
+    transition: all .5s ease-out;
+}
+.viewAll-btn:hover{
+    background: var(--primaryu-color-hover);
+    border: 2px solid var(--primaryu-color-hover);
 }
 body{
     background: linear-gradient(180deg, rgba(255, 233, 37, 0.2) 3.41%, rgba(248, 162, 19, 0) 100%);
@@ -54,6 +70,7 @@ a{
 }
 .site-logo img {
     max-width: 190px;
+    width: 100%;
 }
 .searchbar{
     border: 1px solid #FFA800 !important;
