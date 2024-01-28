@@ -11,6 +11,8 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="front/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="front/owlcarousel/assets/owl.theme.default.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="front/js/bootstrap.bundle.min.js"></script>
@@ -118,7 +120,7 @@
                     <div class="my-2 text-center">
                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
                             <div class="carousel-inner">
-                                <div class="carousel-item">
+                                <div class="carousel-item active">
                                     <a href="">
                                         <img src="front/images/banners/footlocker.webp" alt=""
                                             class="img-fluid rounded-3">
@@ -129,7 +131,7 @@
                                         <img src="front/images/banners/namshi.webp" alt="" class="img-fluid rounded-3">
                                     </a>
                                 </div>
-                                <div class="carousel-item active">
+                                <div class="carousel-item">
                                     <a href="">
                                         <img src="front/images/banners/rayna-toures.webp" alt=""
                                             class="img-fluid rounded-3">
@@ -155,7 +157,7 @@
     <div class="container-lg">
         <div id="brandSlider" class="my-4">
             <div class="brand-slider-container-lg bg-secondary-kc rounded-3">
-                <div class="brand-slider d-flex flex-nowrap p-3">
+                <div class="brand-slider owl-carousel d-flex flex-nowrap p-3">
                     <div class="brand-card-slider mx-2">
                         <div class="brand-card-slider-inner">
                             <a href="javascript:;">
@@ -289,7 +291,7 @@
                                     Categories
                                 </h2>
                             </div>
-                            <div class="category-cards d-flex">
+                            <div class="category-cards owl-carousel d-flex">
                                 <div class="cat-card px-1">
                                     <a href="javascript:;">
                                         <img src="front/images/categoreis/games.png" alt="Category Title"
@@ -731,6 +733,8 @@
                 <li class="nav-item"><a href="" class="nav-link text-white">Complaints</a></li>
             </ul>
         </nav>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="front/owlcarousel/owl.carousel.min.js"></script>
     </footer>
 </body>
 
