@@ -1,0 +1,65 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+<div id="header"></div>
+<div class="container-lg">
+    <div class="page-header">
+        <div class="page-heading">
+            <h1>All Coupons & Offers</h1>
+        </div>
+        <div class="page-banner">
+            <img src="" alt="">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div class="sideBar">
+                <form method="post" id="coupon_filter_form" novalidate="novalidate">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search by keyword" aria-label="Username" aria-describedby="input-group-right">
+                        <span class="input-group-text" id="couponSearch">@</span>
+                      </div>
+                </form>
+                <div class="side-filter">
+                    <div class="" id="storesListAllCouponPage">        
+                        <label class="filter-check d-flex my-3">
+                            AliExpress
+                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="313">
+                            <span class="checkmark">
+                            </span>
+                        </label>
+                        <label class="filter-check d-flex my-3">
+                            TVC-Mall
+                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="482">
+                            <span class="checkmark">
+                            </span>
+                        </label>
+                        <label class="filter-check d-flex my-3">
+                            Cafago
+                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="495">
+                            <span class="checkmark">
+                            </span>
+                        </label>
+                        <label class="filter-check d-flex my-3">
+                            MagicVision
+                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
+                            <span class="checkmark">
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-9">
+
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>

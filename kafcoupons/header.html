@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Welcome to KafCoupons: Your Ultimate Savings Destination</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="front/css/bootstrap.min.css">
+    <link rel="stylesheet" href="front/owlcarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="front/owlcarousel/assets/owl.theme.default.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="front/js/bootstrap.bundle.min.js"></script>
+    <script src="front/js/popper.min.js"></script>
+    <script src="front/js/custom.js"></script>
+    <script src="front/js/repeat.js"></script>
+    <script src="https://kit.fontawesome.com/a59ab3dbeb.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="front/css/style.css">
+</head>
+
+<body class="">
+    <header class="">
+        <div class="header-top">
+            <div class="container-lg">
+                <div class="mx-0 row align-items-center py-2 text-center">
+                    <div class="col-lg-2 ps-lg-0">
+                        <div class="site-logo">
+                            <div class="text-lg-start">
+                                <img src="front/images/site-logo.webp" class="img-fluid" alt="Kafcoupons Logo">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 my-3 my-lg-0">
+                        <div class="site-search">
+                            <div class="searchbar border bg-white d-flex align-items-center px-3">
+                                <span class="search-icon px-2"><i class="fa fa-search" aria-hidden="true"></i></span>
+                                <input type="search" class="border-0 w-100 py-2" placeholder="Search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 px-md-2 px-0">
+                        <div class="d-flex justify-content-lg-start justify-content-center header-top-right">
+                            <div class="country-lang d-flex">
+                                <div class="lang-selector px-1">
+                                    <div class="dropdown show">
+                                        <a href="javascript:;" class="dropdown-toggle pe-3 py-3 rounded-3"
+                                            data-bs-toggle="dropdown" data-bs-target="langSelector"><img
+                                                src="front/images/icons/usa-flag.webp" class="img-fluid me-1 flag-icon"
+                                                alt="">English</a>
+                                        <div class="dropdown-menu lang-dropdown border-0" id="langSelector">
+                                            <a href="javascript:;" class="dropdown-item px-1">Arabic</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="country-celector px-1">
+                                    <div class="dropdown show">
+                                        <a href="javascript:;" class="dropdown-toggle pe-3 py-3 rounded-3"
+                                            data-bs-toggle="dropdown" data-bs-target="countrySelector"><img
+                                                src="front/images/icons/pak-flag.webp" class="img-fluid me-1 flag-icon"
+                                                alt="">Pakistan</a>
+                                        <div class="dropdown-menu lang-dropdown border-0" id="countrySelector">
+                                            <a href="javascript:;" class="dropdown-item px-1">Saudi Arabia</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="login-register">
+                                <div class="d-flex">
+                                    <span class="me-1"><i class="fa fa-user-o" aria-hidden="true"></i></span><a href="#"
+                                        class="text-dark text-decoration-none">Login</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <nav class="navbar navbar-expand-lg p-0 bg-secondary-kc my-shadow">
+            <div class="container-lg">
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                    aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="mainNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item px-3 dropdown"><a href="" class="nav-link fw-bold text-dark dropdown-toggle"
+                                role="button" data-bs-toggle="dropdown">Categories</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="" class="dropdown-item">Fashion & Clothing</a></li>
+                                <li><a href="" class="dropdown-item">Health & Beauty</a></li>
+                                <li><a href="" class="dropdown-item">Home & Garden</a></li>
+                                <li><a href="" class="dropdown-item">Home Appliances</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Coupons</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Brands</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">Fashion & Clothing</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold"><span><i
+                                        class="fa fa-heart text-danger" aria-hidden="true"></i></span>Favourite</a></li>
+                        <li class="nav-item px-3"><a href="" class="nav-link fw-bold">About Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav> -->
+        <nav class="navbar navbar-expand-lg p-0 bg-secondary-kc my-shadow">
+            <div class="container-lg">
+                <!-- Offcanvas toggler button -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                    aria-controls="offcanvasNavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                
+                <!-- Offcanvas content -->
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav">
+                            <!-- Your navigation items go here -->
+                            <li class="nav-item px-3"><a href="" class="nav-link">Home</a></li>
+                            <li class="nav-item px-3 dropdown">
+                                <a href="" class="nav-link text-dark dropdown-toggle" role="button" data-bs-toggle="dropdown">
+                                    Categories
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="" class="dropdown-item">Fashion & Clothing</a></li>
+                                    <li><a href="" class="dropdown-item">Health & Beauty</a></li>
+                                    <li><a href="" class="dropdown-item">Home & Garden</a></li>
+                                    <li><a href="" class="dropdown-item">Home Appliances</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item px-3"><a href="" class="nav-link">Coupons</a></li>
+                            <li class="nav-item px-3"><a href="" class="nav-link">Brands</a></li>
+                            <li class="nav-item px-3"><a href="" class="nav-link"><span class="me-1 text-danger"><i class="fa-solid fa-heart"></i></span>Favourite</a></li>
+                            <li class="nav-item px-3"><a href="" class="nav-link">About Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="brand-popup">
+            <div class="modal fade" tabindex="-1" id="brandPopup">
+                <div class="modal-dialog modal-lg">
+                    <div class="modal-content px-lg-5 px-md-3 rounded-5">
+                        <div class="modal-header border-0 flex-column align-items-center">
+                            <button type="button" class="modal-close" aria-label="Close" data-bs-dismiss="modal"><i class="fa-solid fa-chevron-left"></i></button>
+                            <img src="front/images/brand/namshi.png" alt="" class="img-fluid">
+                            <h5 class="modal-title" id="modalBasicLabel">Namshi</h5>
+                            <p class="fw-bold mb-1">
+                                Up to 5% Cashback
+                            </p>
+                            <p class="mb-0">
+                                Discount: 5%
+                            </p>
+                        </div>
+                        <div class="modal-body text-center">
+                            <p class="text-secondary">
+                                Copy & past this code at <span class="text-kc">Namshi</span>
+                            </p>
+                            <div class="col-lg-8 col-md-10 code-popup copy-code position-relative mx-auto">
+                                <span class="code-overlay position-absolute"></span>
+                            <input type="text" readonly value="kaf" class="form-control text-kc">
+                            <span class="copy-text position-absolute">Copy code</span>
+                            </div>
+                            <p class="my-1 text-kc">
+                                Expires in: <span>
+                                    30days - 13hr : 57min : 2sec
+                                </span>
+                            </p>
+                            <p class="text-secondary">
+                                5% off on men and women fashion accessories
+                            </p>
+                            <div class="cb-offers mt-4">
+                                <div class="cbOffer-card mb-3 my-shadow p-2 rounded-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="front/images/brand/namshi.png" alt="" class="img-fluid me-2">
+                                        <div class="cb-title text-start">
+                                            <h6 class="fw-bold mb-1">
+                                                Get 5% cashback on men fashion
+                                            </h6>
+                                            <p class="text-secondary mb-0">
+                                                5% cashback from Namshi on online shopping
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cbOffer-card mb-3 my-shadow p-2 rounded-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="front/images/brand/namshi.png" alt="" class="img-fluid me-2">
+                                        <div class="cb-title text-start">
+                                            <h6 class="fw-bold mb-1">
+                                                Get 15% cashback on women fashion
+                                            </h6>
+                                            <p class="text-secondary mb-0">
+                                                5% cashback from Namshi on online shopping
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cbOffer-card mb-3 my-shadow p-2 rounded-3">
+                                    <div class="d-flex align-items-center">
+                                        <img src="front/images/brand/namshi.png" alt="" class="img-fluid me-2">
+                                        <div class="cb-title text-start">
+                                            <h6 class="fw-bold mb-1">
+                                                Get 20% cashback on kids fashion
+                                            </h6>
+                                            <p class="text-secondary mb-0">
+                                                5% cashback from Namshi on online shopping
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>

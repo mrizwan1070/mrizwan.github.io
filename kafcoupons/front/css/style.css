@@ -6,10 +6,16 @@
     --anchor-color: #212529;
     --secondary-color-lt: #FFF5C1;
     --footer-text: #FDDF93;
+    --footer-link-hover: #f5c959;
+    --kc-font-color: #FF5e03;
+    --bg-success: #198754;
 }
 body{
     font-family: "Poppins", sans-serif;
     /* background: linear-gradient(180deg, rgba(255, 233, 37, 0.2) 3.41%, rgba(248, 162, 19, 0) 100%); */
+}
+::selection{
+    background: var(--primary-color);
 }
 .bg-primary-kc{
      background-color: var(--primary-color);
@@ -36,6 +42,9 @@ body{
     border: solid 2px #FF6B00;
     color: #fff !important;
 }
+.text-kc{
+    color: var(--kc-font-color);
+}
 .viewAll-btn {
     width: 200px;
     background: var(--primary-color);
@@ -53,6 +62,9 @@ a{
 }
 a:hover{
     color: #15171a;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 400;
 }
 .my-shadow {
     box-shadow: 0px 3px 1px -2px #00000033, 0px 2px 2px 0px #00000024, 0px 1px 5px 0px #0000001f !important;
@@ -90,6 +102,10 @@ a:hover{
     max-width: 35px;
     border-radius: 3px;
 }
+/* .header-hero img {
+    height: 185px;
+    object-fit: cover;
+} */
 .brand-slider {
     overflow: hidden;
 }
@@ -131,16 +147,25 @@ a:hover{
 .footer-links a, .footer-links h5{
     color: var(--footer-text) !important;
 }
+.footer-links a{
+    transition: color .2s ease-out;
+}
+.footer-links a:hover{
+    color: var(--footer-link-hover) !important;
+}
 .footer-outer {
     border: 2px solid var(--footer-text);
 }
-
+.cbtr-text{
+    white-space: nowrap;
+}
 .cbtr-time {
     padding: 0 1rem;
     border: 2px solid lightgray;
     border-radius: 24px;
     color: #FF5e03;
-    /* background-color: #fffce1; */
+    background-color: #fff;
+    white-space: nowrap;
 }
 .cb-tracking .cbtr-detail:not(:first-child) .cbtr-time:before {
     content: "";
@@ -150,6 +175,7 @@ a:hover{
     background: lightgray;
     top: 50%;
     left: -100%;
+    z-index: -1;
 }
 .max-cb {
     border-bottom: 1px solid lightgrey;
@@ -161,9 +187,225 @@ a:hover{
 .similar-title{
     font-size: 1.2rem;
 }
-
+.power-cb-cards{
+    gap: 1rem;
+    overflow: hidden;
+}
+.power-cb-cards .owl-prev, .power-cb-cards .owl-next{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white !important;
+    border: 1px solid lightgray !important;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 2rem !important;
+    display: grid;
+    place-content: center;
+}
+.power-cb-cards .owl-prev {
+    left: 1rem;
+}
+.power-cb-cards .owl-next {
+    right: 1rem;
+}
+.out-rating{
+    font-size: 1.5rem;
+}
+.rate-bar {
+    height: 15px;
+    background: rgb(236, 235, 235);
+    flex: 0 0 95%;
+    margin-left: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.rate-bar::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    background-color: #FF6B00;
+}
+.user-img{
+    width: 100px;
+    height: 100px;
+}
+.user-img img {
+    /* width: 100px;
+    height: 100px; */
+    object-fit: contain;
+}
+.review-card{
+    border-bottom: 1px solid lightgrey;
+}
+#review{
+    resize: none;
+}
+.add-rating{
+    font-size: 1.5rem;
+}
+#uploadDropImg {
+    border: 2px dotted lightgrey;
+}
+#uploadDropImg label{
+    cursor: pointer;
+}
+.copy-code .copy-text {
+    right: 0.7rem;
+    bottom: 50%;
+    transform: translateY(50%);
+    cursor: pointer;
+}
+.copy-code .code-overlay {
+    left: 2rem;
+    bottom: 50%;
+    transform: translateY(50%);
+    height: 60%;
+    background: var(--primary-color);
+    width: 100px;
+    border-radius: 20px;
+}
+.code-popup input {
+    border-radius: 28px;
+    border: 1px solid lightgrey;
+}
+button.modal-close {
+    position: absolute;
+    left: 14px;
+    background: transparent;
+    border: 0;
+    font-size: 1.5rem;
+}
+.cbOffer-card img {
+    width: 65px;
+}
+.cb-progress-circle, .wallet-progress-circle {
+    display: block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 2px solid lightgrey;
+    border-radius: 50%;
+}
+.cb-fill .cb-progress-circle, .cb-fill .wallet-progress-circle{
+    background: var(--bg-success);
+    border: var(--bg-success);
+    position: relative;
+}
+.cb-fill .cb-progress-circle::before, .cb-fill .wallet-progress-circle::before {
+    position: absolute;
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    font-weight: bold;
+    color: white;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.cb-fill .cb-track-line {
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: 4px;
+    background: var(--bg-success);
+    left: 100%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+.cb-fill .wallet-track-line {
+    position: absolute;
+    width: calc(100% - 2rem);
+    /* height: 4px; */
+    /* background: var(--bg-success); */
+    border-top: 3px dotted var(--bg-success);
+    left: 100%;
+    top: 50%;
+    transform: translateX(-50%);
+}
+.cb-progress-text, .wallet-progress-text {
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+.cb-brand-img{
+    width: 80px;
+}
+.cb-categories{
+    max-height: 252px;
+    overflow: auto;
+}
+.filter-check {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.filter-check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+.filter-check input:checked ~ .checkmark:after {
+    display: block;
+}
+.filter-check .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+.filter-check input:checked ~ .checkmark {
+    background-color: var(--primary-color);
+}
+.filter-check:hover input ~ .checkmark {
+    background-color: var(--primaryu-color-hover);
+  }
+  .exit-card{
+    width: 600px;
+    border: 1px solid lightgray;
+  }
+@media screen and (max-width: 992px) {
+    .cb-brand-img{
+        width: 70px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .cb-brand-img{
+        width: 60px;
+    }
+}
 @media screen and (min-width: 768px) {
     .brand-cb-detail-card{
         margin-top: -70%;
+    }
+}
+@media screen and (max-width: 576px){
+    #cbHistory, #userWallet{
+        font-size: 11px;
     }
 }

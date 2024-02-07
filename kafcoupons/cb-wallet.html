@@ -1,0 +1,248 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+        console.log("I am working")
+    });
+</script>
+
+<div id="header"></div>
+
+<div id="cbHistory">
+    <div class="container-lg">
+        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3">
+        <div class="cb-filter">
+            <form action="">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <select name="cb-stores" id="cbStores" class="form-control">
+                            <option value="" selected>All Stores</option>
+                            <option value="">Daraz</option>
+                            <option value="">Foodpanda</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <select name="cb-status" id="cbStatus" class="form-control">
+                            <option value="" selected>All</option>
+                            <option value="">Pending</option>
+                            <option value="">Approved</option>
+                            <option value="">Available</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 mb-3 px-2">
+                        <input type="date" placeholder="Start Date" class="form-control">
+                    </div>
+                    <div class="col-md-2 mb-3 px-2">
+                        <input type="date" placeholder="End Date" class="form-control">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn viewAll-btn w-100">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="cb-history">
+            <div class="cb-history-cards">
+                <div class="cb-history-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="cb-brand-img">
+                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
+                        </div>
+                        <div class="cb-status-detail ms-lg-5 ms-md-4 ms-sm-3 ms-2">
+                            <h3 class="brand-name text-success">Daraz</h3>
+                            <div>
+                                <div class="expected-cb">
+                                    <p class="mb-1 fw-bold text-success">
+                                        Expected Cashback : 70 days left
+                                    </p>
+                                    <p class="mb-1 cb-orderID">
+                                        Order ID : 177371397274201
+                                    </p>
+                                    <p class="mb-1 cb-createDate">
+                                        Created at : 25-01-2024 05:34 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-amout ms-auto">
+                            <span class="fw-bold">Rs: 30</span>
+                        </div>
+                    </div>
+                    <div class="cb-progress mb-4">
+                        <div class="row mx-0">
+                            <div class="col px-0">
+                                <div class="cb-inReview cb-status mx-auto position-relative cb-fill">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        In Review
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-pending cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Pending
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-approved cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Approved
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-available cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Available
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-history-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="cb-brand-img">
+                            <img src="front/images/brand/foodpanda.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
+                        </div>
+                        <div class="cb-status-detail ms-lg-5 ms-md-4 ms-sm-3 ms-2">
+                            <h3 class="brand-name text-success">Foodpanda</h3>
+                            <div>
+                                <div class="expected-cb">
+                                    <p class="mb-1 fw-bold text-success">
+                                        Expected Cashback : 30 days left
+                                    </p>
+                                    <p class="mb-1 cb-orderID">
+                                        Order ID : 177371397274201
+                                    </p>
+                                    <p class="mb-1 cb-createDate">
+                                        Created at : 25-01-2024 05:34 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-amout ms-auto">
+                            <span class="fw-bold">Rs: 362.60</span>
+                        </div>
+                    </div>
+                    <div class="cb-progress mb-4">
+                        <div class="d-flex mx-0">
+                            <div class="col px-0">
+                                <div class="cb-inReview cb-status mx-auto position-relative cb-fill">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        In Review
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-pending cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Pending
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-approved cb-status mx-auto position-relative cb-fill">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Approved
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-available cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Available
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cb-history-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <div class="cb-brand-img">
+                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
+                        </div>
+                        <div class="cb-status-detail ms-lg-5 ms-md-4 ms-sm-3 ms-2">
+                            <h3 class="brand-name text-success">Daraz</h3>
+                            <div>
+                                <div class="expected-cb">
+                                    <p class="mb-1 fw-bold text-success">
+                                        Expected Cashback : 70 days left
+                                    </p>
+                                    <p class="mb-1 cb-orderID">
+                                        Order ID : 177371397274201
+                                    </p>
+                                    <p class="mb-1 cb-createDate">
+                                        Created at : 25-01-2024 05:34 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-amout ms-auto">
+                            <span class="fw-bold">Rs: 120</span>
+                        </div>
+                    </div>
+                    <div class="cb-progress mb-4">
+                        <div class="row mx-0">
+                            <div class="col px-0">
+                                <div class="cb-inReview cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        In Review
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-pending cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Pending
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-approved cb-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Approved
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-available cb-status mx-auto position-relative cb-fill">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Available
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>

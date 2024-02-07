@@ -1,0 +1,258 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+        console.log("I am working")
+    });
+</script>
+
+<div id="header"></div>
+
+<div id="userWallet">
+    <div class="container-lg">
+        <img src="front/images/user-dashbord/wallet-history.webp" alt="" class="img-fluid my-3 rounded-3">
+        <div class="wallet-detail d-flex flex-column align-items-center my-shadow rounded-3 mb-3 py-4">
+            <p class="mb-2">Available to withdraw</p>
+            <span class="text-success">
+                Rs: <span class="fw-bold display-6">1000</span>
+            </span>
+            <button type="button" class="btn viewAll-btn rounded-3 my-3">Withdraw Cash</button>
+            <p class="text-secondary mb-2">Pending Balance</p>
+            <span>
+                Rs: <span class="fw-bold display-6">100</span>
+            </span>
+        </div>
+        <div class="cb-filter">
+            <form action="">
+                <div class="row">
+                    <!-- <div class="col-md-3 mb-3">
+                        <select name="cb-stores" id="cbStores" class="form-control">
+                            <option value="" selected>All Stores</option>
+                            <option value="">Daraz</option>
+                            <option value="">Foodpanda</option>
+                        </select>
+                    </div> -->
+                    <div class="col-md-3 mb-3">
+                        <select name="cb-status" id="cbStatus" class="form-control">
+                            <option value="" selected>All Requests</option>
+                            <option value="">Requested</option>
+                            <option value="">Paid</option>
+                            <!-- <option value="">Available</option> -->
+                        </select>
+                    </div>
+                    <div class="col-md-2 mb-3 px-2">
+                        <input type="date" placeholder="Start Date" class="form-control">
+                    </div>
+                    <div class="col-md-2 mb-3 px-2">
+                        <input type="date" placeholder="End Date" class="form-control">
+                    </div>
+                    <div class="col">
+                        <button type="button" class="btn viewAll-btn w-100">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="wallet-request">
+            <div class="wallet-request-cards">
+                <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <!-- <div class="cb-brand-img">
+                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
+                        </div> -->
+                        <div class="cb-status-detail">
+                            <!-- <h3 class="brand-name text-success">Daraz</h3> -->
+                            <div>
+                                <div class="expected-cb">
+                                    <p class="mb-1 fw-bold text-success">
+                                        Cashback Withdrawn Request
+                                    </p>
+                                    <p class="mb-1 cb-orderID">
+                                        ID : 0343356798
+                                    </p>
+                                    <p class="mb-1 cb-createDate">
+                                        Created at : 25-01-2024 05:34 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-amout ms-auto">
+                            <span class="fw-bold">Rs: 3000</span>
+                        </div>
+                    </div>
+                    <div class="wallet-progress mb-4">
+                        <div class="row mx-0">
+                            <div class="col px-0">
+                                <div class="requested wallet-status mx-auto position-relative cb-fill">
+                                    <span class="wallet-progress-circle mx-auto"></span>
+                                    <span class="wallet-track-line"></span>
+                                    <span class="wallet-progress-text mt-2 position-absolute">
+                                        Requested
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-pending wallet-status mx-auto position-relative">
+                                    <span class="wallet-progress-circle mx-auto"></span>
+                                    <span class="wallet-progress-text mt-2 position-absolute">
+                                        Paid
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- <div class="col px-0">
+                                <div class="cb-approved wallet-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Approved
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-available wallet-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Available
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <!-- <div class="cb-brand-img">
+                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
+                        </div> -->
+                        <div class="cb-status-detail">
+                            <!-- <h3 class="brand-name text-success">Daraz</h3> -->
+                            <div>
+                                <div class="expected-cb">
+                                    <p class="mb-1 fw-bold text-success">
+                                        Cashback Withdrawn Request
+                                    </p>
+                                    <p class="mb-1 cb-orderID">
+                                        ID : 0343356798
+                                    </p>
+                                    <p class="mb-1 cb-createDate">
+                                        Created at : 25-01-2024 05:34 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-amout ms-auto">
+                            <span class="fw-bold">Rs: 3000</span>
+                        </div>
+                    </div>
+                    <div class="wallet-progress mb-4">
+                        <div class="row mx-0">
+                            <div class="col px-0">
+                                <div class="requested wallet-status mx-auto position-relative cb-fill">
+                                    <span class="wallet-progress-circle mx-auto"></span>
+                                    <span class="wallet-track-line"></span>
+                                    <span class="wallet-progress-text mt-2 position-absolute">
+                                        Requested
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-pending wallet-status mx-auto position-relative">
+                                    <span class="wallet-progress-circle mx-auto"></span>
+                                    <span class="wallet-progress-text mt-2 position-absolute">
+                                        Paid
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- <div class="col px-0">
+                                <div class="cb-approved wallet-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Approved
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-available wallet-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Available
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                    <div class="d-flex justify-content-between mb-3">
+                        <!-- <div class="cb-brand-img">
+                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
+                        </div> -->
+                        <div class="cb-status-detail">
+                            <!-- <h3 class="brand-name text-success">Daraz</h3> -->
+                            <div>
+                                <div class="expected-cb">
+                                    <p class="mb-1 fw-bold text-success">
+                                        Cashback Withdrawn Request
+                                    </p>
+                                    <p class="mb-1 cb-orderID">
+                                        ID : 0343356798
+                                    </p>
+                                    <p class="mb-1 cb-createDate">
+                                        Created at : 01-01-2024 04:04 PM
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cb-amout ms-auto">
+                            <span class="fw-bold">Rs: 2500</span>
+                        </div>
+                    </div>
+                    <div class="wallet-progress mb-4">
+                        <div class="row mx-0">
+                            <div class="col px-0">
+                                <div class="requested wallet-status mx-auto position-relative cb-fill">
+                                    <span class="wallet-progress-circle mx-auto"></span>
+                                    <span class="wallet-track-line"></span>
+                                    <span class="wallet-progress-text mt-2 position-absolute">
+                                        Requested
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-pending wallet-status mx-auto position-relative cb-fill">
+                                    <span class="wallet-progress-circle mx-auto"></span>
+                                    <span class="wallet-progress-text mt-2 position-absolute">
+                                        Paid
+                                    </span>
+                                </div>
+                            </div>
+                            <!-- <div class="col px-0">
+                                <div class="cb-approved wallet-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-track-line"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Approved
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="col px-0">
+                                <div class="cb-available wallet-status mx-auto position-relative">
+                                    <span class="cb-progress-circle mx-auto"></span>
+                                    <span class="cb-progress-text mt-2 position-absolute">
+                                        Available
+                                    </span>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="footer"></div>
