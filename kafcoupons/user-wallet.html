@@ -18,7 +18,8 @@
             <span class="text-success">
                 Rs: <span class="fw-bold display-6">1000</span>
             </span>
-            <button type="button" class="btn viewAll-btn rounded-3 my-3">Withdraw Cash</button>
+            <button type="button" class="btn viewAll-btn rounded-3 my-3" data-bs-toggle="modal"
+                data-bs-target="#withdrawCB">Withdraw Cash</button>
             <p class="text-secondary mb-2">Pending Balance</p>
             <span>
                 Rs: <span class="fw-bold display-6">100</span>
@@ -84,7 +85,7 @@
                     <div class="wallet-progress mb-4">
                         <div class="row mx-0">
                             <div class="col px-0">
-                                <div class="requested wallet-status mx-auto position-relative cb-fill">
+                                <div class="wallet-requested wallet-status mx-auto position-relative cb-fill active">
                                     <span class="wallet-progress-circle mx-auto"></span>
                                     <span class="wallet-track-line"></span>
                                     <span class="wallet-progress-text mt-2 position-absolute">
@@ -93,7 +94,7 @@
                                 </div>
                             </div>
                             <div class="col px-0">
-                                <div class="cb-pending wallet-status mx-auto position-relative">
+                                <div class="wallet-paid wallet-status mx-auto position-relative">
                                     <span class="wallet-progress-circle mx-auto"></span>
                                     <span class="wallet-progress-text mt-2 position-absolute">
                                         Paid
@@ -148,7 +149,7 @@
                     <div class="wallet-progress mb-4">
                         <div class="row mx-0">
                             <div class="col px-0">
-                                <div class="requested wallet-status mx-auto position-relative cb-fill">
+                                <div class="wallet-requested wallet-status mx-auto position-relative cb-fill">
                                     <span class="wallet-progress-circle mx-auto"></span>
                                     <span class="wallet-track-line"></span>
                                     <span class="wallet-progress-text mt-2 position-absolute">
@@ -157,7 +158,7 @@
                                 </div>
                             </div>
                             <div class="col px-0">
-                                <div class="cb-pending wallet-status mx-auto position-relative">
+                                <div class="wallet-paid wallet-status mx-auto position-relative">
                                     <span class="wallet-progress-circle mx-auto"></span>
                                     <span class="wallet-progress-text mt-2 position-absolute">
                                         Paid
@@ -212,7 +213,7 @@
                     <div class="wallet-progress mb-4">
                         <div class="row mx-0">
                             <div class="col px-0">
-                                <div class="requested wallet-status mx-auto position-relative cb-fill">
+                                <div class="wallet-requested wallet-status mx-auto position-relative">
                                     <span class="wallet-progress-circle mx-auto"></span>
                                     <span class="wallet-track-line"></span>
                                     <span class="wallet-progress-text mt-2 position-absolute">
@@ -221,7 +222,7 @@
                                 </div>
                             </div>
                             <div class="col px-0">
-                                <div class="cb-pending wallet-status mx-auto position-relative cb-fill">
+                                <div class="wallet-paid wallet-status mx-auto position-relative cb-fill active">
                                     <span class="wallet-progress-circle mx-auto"></span>
                                     <span class="wallet-progress-text mt-2 position-absolute">
                                         Paid
@@ -248,11 +249,55 @@
                         </div>
                     </div>
                 </div>
-               
+
             </div>
         </div>
     </div>
 </div>
-
+<!-- Different sized modals can be used with the help of .modal-{sm|lg|xl} class -->
+<div class="modal" tabindex="-1" id="withdrawCB">
+    <div class="modal-dialog">
+        <div class="modal-content text-center">
+            <div class="modal-header justify-content-center position-relative my-shadow border-0">
+                <button type="button" class="btn-close mx-0 position-absolute cbModalclose" aria-label="Close" data-bs-dismiss="modal"></button>
+                <h5 class="modal-title">Withdraw</h5>
+            </div>
+            <div class="modal-body">
+                <div class="credit-card mx-auto rounded-3 p-4 position-relative mb-4">
+                    <button type="button" id="addBnkAcc" class="btn position-absolute p-0 rounded-circle">
+                        <i class="fa-regular fa-pen-to-square"></i>
+                    </button>
+                    <div class="card-user d-flex flex-column align-items-start mt-4">
+                        <span class="mb-3">
+                            *********
+                        </span>
+                        <span>
+                            ***********
+                        </span>
+                        <span>
+                            **************
+                        </span>
+                    </div>
+                </div>
+                <p>
+                    Available Balance
+                </p>
+                <p class="text-success border-bottom pb-2">
+                    Rs. <span class="fw-bold display-6">3035.50</span>
+                </p>
+                <div class="widthdraw-amount mt-4 mb-5">
+                    <form action="" id="withdrawCashback">
+                    <label class="text-center d-block mb-2" for="widthdraw-amount">Withdraw Amount</label>
+                    <input type="text" class="form-control mb-5" name="widthdraw-amount" id="widthdraw-amount" placeholder="Minimum Amount is Rs. 100">
+                    <input type="checkbox" class="me-2" id="cb-terms" name="cb-terms"><label for="cb-terms">I Agree with <a href="javascript:;">Terms & Conditions</a></label>
+                        </form>
+                </div>
+            </div>
+            <div class="modal-footer p-0 border-0">
+                <button type="submit" class="btn viewAll-btn w-100 m-0 rounded-0">Withdraw</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="footer"></div>

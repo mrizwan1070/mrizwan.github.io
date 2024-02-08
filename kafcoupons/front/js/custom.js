@@ -10,7 +10,7 @@ jQuery(document).ready(function () {
         // Set the width using CSS
         $(this).find('.rate-bar').css('width', totalStars + '%');
     });
-    $(".cb-status.cb-fill").parents(".col").prevAll().find(".cb-status").addClass("cb-fill");
+    $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,
