@@ -11,6 +11,12 @@ jQuery(document).ready(function () {
         $(this).find('.rate-bar').css('width', totalStars + '%');
     });
     $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
+    $("#addBnkAcc").click(function(){
+        $("#addAccount").removeClass("d-none");
+    });
+    $("#addBankClose").click(function(e){
+        $("#addAccount").addClass("d-none");
+    });
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,

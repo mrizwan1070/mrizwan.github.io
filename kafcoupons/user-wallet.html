@@ -28,26 +28,18 @@
         <div class="cb-filter">
             <form action="">
                 <div class="row">
-                    <!-- <div class="col-md-3 mb-3">
-                        <select name="cb-stores" id="cbStores" class="form-control">
-                            <option value="" selected>All Stores</option>
-                            <option value="">Daraz</option>
-                            <option value="">Foodpanda</option>
-                        </select>
-                    </div> -->
                     <div class="col-md-3 mb-3">
                         <select name="cb-status" id="cbStatus" class="form-control">
                             <option value="" selected>All Requests</option>
                             <option value="">Requested</option>
                             <option value="">Paid</option>
-                            <!-- <option value="">Available</option> -->
                         </select>
                     </div>
-                    <div class="col-md-2 mb-3 px-2">
-                        <input type="date" placeholder="Start Date" class="form-control">
+                    <div class="col-md-3 mb-3 px-2">
+                        <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')" placeholder="Start Date" class="form-control">
                     </div>
-                    <div class="col-md-2 mb-3 px-2">
-                        <input type="date" placeholder="End Date" class="form-control">
+                    <div class="col-md-3 mb-3 px-2">
+                        <input type="text" placeholder="End Date" onfocus="(this.type='date')" onblur="(this.type='text')" class="form-control">
                     </div>
                     <div class="col">
                         <button type="button" class="btn viewAll-btn w-100">Submit</button>
@@ -59,11 +51,7 @@
             <div class="wallet-request-cards">
                 <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
                     <div class="d-flex justify-content-between mb-3">
-                        <!-- <div class="cb-brand-img">
-                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
-                        </div> -->
                         <div class="cb-status-detail">
-                            <!-- <h3 class="brand-name text-success">Daraz</h3> -->
                             <div>
                                 <div class="expected-cb">
                                     <p class="mb-1 fw-bold text-success">
@@ -101,33 +89,12 @@
                                     </span>
                                 </div>
                             </div>
-                            <!-- <div class="col px-0">
-                                <div class="cb-approved wallet-status mx-auto position-relative">
-                                    <span class="cb-progress-circle mx-auto"></span>
-                                    <span class="cb-track-line"></span>
-                                    <span class="cb-progress-text mt-2 position-absolute">
-                                        Approved
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col px-0">
-                                <div class="cb-available wallet-status mx-auto position-relative">
-                                    <span class="cb-progress-circle mx-auto"></span>
-                                    <span class="cb-progress-text mt-2 position-absolute">
-                                        Available
-                                    </span>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
                     <div class="d-flex justify-content-between mb-3">
-                        <!-- <div class="cb-brand-img">
-                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
-                        </div> -->
                         <div class="cb-status-detail">
-                            <!-- <h3 class="brand-name text-success">Daraz</h3> -->
                             <div>
                                 <div class="expected-cb">
                                     <p class="mb-1 fw-bold text-success">
@@ -165,33 +132,12 @@
                                     </span>
                                 </div>
                             </div>
-                            <!-- <div class="col px-0">
-                                <div class="cb-approved wallet-status mx-auto position-relative">
-                                    <span class="cb-progress-circle mx-auto"></span>
-                                    <span class="cb-track-line"></span>
-                                    <span class="cb-progress-text mt-2 position-absolute">
-                                        Approved
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col px-0">
-                                <div class="cb-available wallet-status mx-auto position-relative">
-                                    <span class="cb-progress-circle mx-auto"></span>
-                                    <span class="cb-progress-text mt-2 position-absolute">
-                                        Available
-                                    </span>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
                 <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
                     <div class="d-flex justify-content-between mb-3">
-                        <!-- <div class="cb-brand-img">
-                            <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid" alt="Daraz Logo">
-                        </div> -->
                         <div class="cb-status-detail">
-                            <!-- <h3 class="brand-name text-success">Daraz</h3> -->
                             <div>
                                 <div class="expected-cb">
                                     <p class="mb-1 fw-bold text-success">
@@ -229,23 +175,6 @@
                                     </span>
                                 </div>
                             </div>
-                            <!-- <div class="col px-0">
-                                <div class="cb-approved wallet-status mx-auto position-relative">
-                                    <span class="cb-progress-circle mx-auto"></span>
-                                    <span class="cb-track-line"></span>
-                                    <span class="cb-progress-text mt-2 position-absolute">
-                                        Approved
-                                    </span>
-                                </div>
-                            </div>
-                            <div class="col px-0">
-                                <div class="cb-available wallet-status mx-auto position-relative">
-                                    <span class="cb-progress-circle mx-auto"></span>
-                                    <span class="cb-progress-text mt-2 position-absolute">
-                                        Available
-                                    </span>
-                                </div>
-                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -254,17 +183,19 @@
         </div>
     </div>
 </div>
-<!-- Different sized modals can be used with the help of .modal-{sm|lg|xl} class -->
-<div class="modal" tabindex="-1" id="withdrawCB">
+
+<div class="modal" tabindex="-1" id="withdrawCB" data-bs-backdrop="static">
     <div class="modal-dialog">
         <div class="modal-content text-center">
             <div class="modal-header justify-content-center position-relative my-shadow border-0">
-                <button type="button" class="btn-close mx-0 position-absolute cbModalclose" aria-label="Close" data-bs-dismiss="modal"></button>
+                <button type="button" class="btn-close mx-0 position-absolute cbModalclose" aria-label="Close"
+                    data-bs-dismiss="modal" data-bs-target="#withdrawCB"></button>
                 <h5 class="modal-title">Withdraw</h5>
             </div>
             <div class="modal-body">
                 <div class="credit-card mx-auto rounded-3 p-4 position-relative mb-4">
-                    <button type="button" id="addBnkAcc" class="btn position-absolute p-0 rounded-circle">
+                    <button type="button" id="addBnkAcc" class="btn position-absolute p-0 rounded-circle"
+                        data-bs-toggle="d-none" data-bs-target="#addAccount">
                         <i class="fa-regular fa-pen-to-square"></i>
                     </button>
                     <div class="card-user d-flex flex-column align-items-start mt-4">
@@ -287,17 +218,51 @@
                 </p>
                 <div class="widthdraw-amount mt-4 mb-5">
                     <form action="" id="withdrawCashback">
-                    <label class="text-center d-block mb-2" for="widthdraw-amount">Withdraw Amount</label>
-                    <input type="text" class="form-control mb-5" name="widthdraw-amount" id="widthdraw-amount" placeholder="Minimum Amount is Rs. 100">
-                    <input type="checkbox" class="me-2" id="cb-terms" name="cb-terms"><label for="cb-terms">I Agree with <a href="javascript:;">Terms & Conditions</a></label>
-                        </form>
+                        <label class="text-center d-block mb-2" for="widthdraw-amount">Withdraw Amount</label>
+                        <input type="text" class="form-control mb-5" name="widthdraw-amount" id="widthdraw-amount"
+                            placeholder="Minimum Amount is Rs. 100">
+                        <input type="checkbox" class="me-2" id="cb-terms" name="cb-terms"><label for="cb-terms">I Agree
+                            with <a href="javascript:;">Terms & Conditions</a></label>
+                    </form>
                 </div>
             </div>
             <div class="modal-footer p-0 border-0">
                 <button type="submit" class="btn viewAll-btn w-100 m-0 rounded-0">Withdraw</button>
             </div>
+            <div id="addAccount" class="w-100 h-100 d-none position-absolute rounded-3">
+                <div class="modal-header justify-content-center position-relative my-shadow border-0">
+                    <button type="button" class="btn mx-0 position-absolute cbModalclose" id="addBankClose"><i
+                            class="fa-solid fa-arrow-left"></i></button>
+                    <h5 class="modal-title">Edit Account Details</h5>
+                </div>
+                <div class="modal-body text-start">
+                    <div id="editBankForm">
+                        <form action="">
+                            <div class="mb-4">
+                                <label for="" class="mb-2 text-secondary">Select your bank name</label>
+                                <select name="" id="" class="form-control px-0 border-bottom border-0 rounded-0 w-100">
+                                    <option value="" selected>Bank Account</option>
+                                    <option value="">HBL</option>
+                                    <option value="">Easypaisa</option>
+                                    <option value="">Jazz Cash</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Your bank account title</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="">Your bank account number</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="inner-modal-footer p-0 border-0 position-absolute w-100">
+                    <button type="submit" class="btn viewAll-btn w-100 m-0 rounded-0">Save & Continue</button>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 <div id="footer"></div>

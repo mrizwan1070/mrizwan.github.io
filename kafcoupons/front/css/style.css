@@ -45,6 +45,10 @@ body{
 .text-kc{
     color: var(--kc-font-color);
 }
+.btn-kc-outline-rounded{
+    border: 1px solid var(--kc-font-color);
+    border-radius: 20px;
+}
 .viewAll-btn {
     width: 200px;
     background: var(--primary-color);
@@ -68,6 +72,18 @@ h1, h2, h3, h4, h5, h6{
 }
 .my-shadow {
     box-shadow: 0px 3px 1px -2px #00000033, 0px 2px 2px 0px #00000024, 0px 1px 5px 0px #0000001f !important;
+}
+.fw-600{
+    font-weight: 600;
+}
+.form-control:focus {
+    background-color: #fff;
+    border-color: #fed986;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(253 235 13 / 35%);
+}
+select option:hover{
+    background-color: var(--primary-color) !important;
 }
 .header-top{
     background-color: var(--primary-color);
@@ -229,8 +245,8 @@ h1, h2, h3, h4, h5, h6{
     background-color: #FF6B00;
 }
 .user-img{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 .user-img img {
     /* width: 100px;
@@ -410,6 +426,72 @@ button#addBnkAcc {
     width: 2rem;
     height: 2rem;
 }
+#addAccount {
+    inset: 0;
+    background: #fff;
+}
+.inner-modal-footer{
+    bottom: 0;
+}
+.user-setting > div {
+    gap: 3rem;
+}
+.cb-overviewCard{
+    border-top: 5px solid;
+}
+.cb-overviewCard p:first-child{
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+.total-pending p:first-child{
+    color: #b74e4e;;
+}
+.total-approved p:first-child{
+    color: #9c8d49;
+}
+.total-available p:first-child{
+    color: #437987;
+}
+.cb-amount{
+    border-top: 1px solid;
+}
+.pending-amount{
+    border-top-color: #b74e4e;
+}
+.approved-amount{
+    border-top-color: #9c8d49;
+}
+.available-amount{
+    border-top-color: #437987;
+}
+.total-pending{
+    background-color: #fff4f4;
+    border-top-color: #b74e4e;
+}
+.total-approved{
+    background-color: #fffcf0;
+    border-top-color: #9c8d49;
+}
+.total-available{
+    background-color: #f2fcff;
+    border-top-color: #437987;
+}
+#carouselUserAccount .carousel-indicators li{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: grey;
+}
+#carouselUserAccount .carousel-indicators li.active{
+    background-color: rgb(65, 64, 64);
+}
+.social-icons >div {
+    gap: 3rem;
+}
+.modal-logoIcon{
+    width: 60px;
+
+}
 @media screen and (max-width: 992px) {
     .cb-brand-img{
         width: 70px;
@@ -421,9 +503,9 @@ button#addBnkAcc {
     }
 }
 @media screen and (min-width: 768px) {
-    .brand-cb-detail-card{
+    /* .brand-cb-detail-card{
         margin-top: -70%;
-    }
+    } */
 }
 @media screen and (max-width: 576px){
     #cbHistory, #userWallet{

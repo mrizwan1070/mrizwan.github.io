@@ -1,0 +1,408 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+<div id="header"></div>
+
+<div id="useAccount" class="bg-light">
+    <div class="container-lg">
+        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="user-account mb-3 border rounded-3 bg-white">
+                    <div class="user-account-header border-bottom mb-3">
+                        <div class="p-4 d-flex align-items-center flex-column">
+                            <div class="user-img mb-2">
+                                <img src="front/images/mudassar.jpg" alt="Asad Mehmood"
+                                    class="img-fluid rounded-circle">
+                            </div>
+                            <div class="username">
+                                Mudassar Iqbal
+                            </div>
+                            <!-- <button type="button" class="btn ms-auto">
+                                <span class="display-6"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
+                            </button> -->
+                        </div>
+                    </div>
+                    <div class="user-setting px-2">
+                        <ul class="list-unstyled">
+                            <li class="py-1">
+                                <a href="" class="active" data-bs-toggle="tab" data-bs-target="#dashboard">Dashboard</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="" data-bs-toggle="collapse" data-bs-target="#profileSetting"
+                                    class="dropdown-toggle collapsed">
+                                    Account
+                                </a>
+                                <ul class="list-unstyled collapse ps-2" id="profileSetting">
+                                    <li class="py-1">
+                                        <a href="">
+                                            Edit Profile
+                                        </a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="">
+                                            Setting
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="" data-bs-toggle="collapse" data-bs-target="#userCashbacks"
+                                    class="dropdown-toggle collapsed">Cashbacks</a>
+                                <ul class="list-unstyled collapse ps-2" id="userCashbacks">
+                                    <li class="py-1">
+                                        <a href="">Cashback History</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="">Cashback Wallet</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="py-1">
+                                <a href="">Help</a>
+                            </li>
+                            <li class="py-1">
+                                <a href="">Logout</a>
+                            </li>
+                        </ul>
+                        <!-- <div class="bg-white rounded-3 p-4 d-flex align-items-center justify-content-center">
+                            <button type="button" class="btn d-flex flex-column align-items-center">
+                                <span class="mb-2 display-6"><i class="fa-solid fa-user-pen"></i></span>
+                                <span>Edit Profile</span>
+                            </button>
+                            <button type="button" class="btn d-flex flex-column align-items-center">
+                                <span class="mb-2 display-6"><i class="fa-solid fa-circle-question"></i></span>
+                                <span>Help</span>
+                            </button>
+                            <button type="button" class="btn d-flex flex-column align-items-center">
+                                <span class="mb-2 display-6"><i class="fa-solid fa-gear"></i></span>
+                                <span>Setting</span>
+                            </button>
+                        </div> -->
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-md-9">
+                <div>
+                    <div class="cashback-overview mb-3">
+                        <h5 class="mb-3">Your Cashback Savings</h5>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="cb-overviewCard rounded-2 px-3 py-2 total-pending">
+                                    <p class="mb-1">
+                                        Pending
+                                    </p>
+                                    <p class="mb-4">
+                                        Sales are tracked but not yet approved by store
+                                    </p>
+                                    <p class="cb-amount pt-2 pending-amount">
+                                        Rs. 30.00
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                  <div class="cb-overviewCard rounded-2 px-3 py-2 total-approved">
+                                    <p class="mb-1">
+                                        Approved
+                                    </p>
+                                    <p class="mb-4">
+                                        Sales tracked and approved by store
+                                    </p>
+                                    <p class="cb-amount pt-2 approved-amount">
+                                        Rs. 130.00
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="cb-overviewCard rounded-2 px-3 py-2 total-available">
+                                    <p class="mb-1">
+                                        Available
+                                    </p>
+                                    <p class="mb-4">
+                                        Cashback is available to withdraw, minimum limit is Rs. 100
+                                    </p>
+                                    <p class="cb-amount pt-2 available-amount">
+                                        Rs. 100.00
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="mb-3 buy-subscriptions p-5 rounded-3 bg-secondary-kc d-flex justify-content-center align-items-center">
+                        <div>
+                            Buy A Subscription
+                        </div>
+                        <button type="button" class="btn btn-light ms-4">
+                            Subscribe Now
+                        </button>
+                    </div>
+                    <div class="recent-transaction border rounded-3">
+                        <div class="recent-tran-head">
+                            <div class="d-flex justify-content-between border-bottom align-items-center mb-2 p-2">
+                            <h6>
+                                <span class="me-2"><i class="fa-solid fa-clock-rotate-left"></i></span>Recent Transactions
+                            </h6>
+                            <button class="btn btn-kc-outline-rounded">
+                                View All
+                            </button>
+                            </div>
+                            <div class="row fw-600 p-2">
+                                <div class="col-3">
+                                    Order Date
+                                </div>
+                                <div class="col-3">
+                                    Order ID
+                                </div>
+                                <div class="col-2">
+                                    Store
+                                </div>
+                                <div class="col-2">
+                                    Cashback
+                                </div>
+                                <div class="col-1">
+                                    Status
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recent-tran-card mt-3">
+                            <div class="recent border-top p-2">
+                                <div class="row">
+                                    <div class="col-3">
+                                        10:58 AM, Fri Jan 19 2024
+                                    </div>
+                                    <div class="col-3">
+                                        178754343419975
+                                    </div>
+                                    <div class="col-2">
+                                        Daraz
+                                    </div>
+                                    <div class="col-2">
+                                        130.56
+                                    </div>
+                                    <div class="col-1">
+                                        Pending
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent border-top p-2">
+                                <div class="row">
+                                    <div class="col-3">
+                                        10:58 AM, Fri Nav 01 2024
+                                    </div>
+                                    <div class="col-3">
+                                        pw01-wp013e
+                                    </div>
+                                    <div class="col-2">
+                                        Foodpanda
+                                    </div>
+                                    <div class="col-2">
+                                        45.00
+                                    </div>
+                                    <div class="col-1">
+                                        Approved
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent border-top p-2">
+                                <div class="row">
+                                    <div class="col-3">
+                                        10:58 AM, Fri Nav 01 2024
+                                    </div>
+                                    <div class="col-3">
+                                        pw01-wp013e
+                                    </div>
+                                    <div class="col-2">
+                                        Foodpanda
+                                    </div>
+                                    <div class="col-2">
+                                        45.00
+                                    </div>
+                                    <div class="col-1">
+                                        Approved
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent border-top p-2">
+                                <div class="row">
+                                    <div class="col-3">
+                                        10:58 AM, Fri Nav 01 2024
+                                    </div>
+                                    <div class="col-3">
+                                        pw01-wp013e
+                                    </div>
+                                    <div class="col-2">
+                                        Foodpanda
+                                    </div>
+                                    <div class="col-2">
+                                        45.00
+                                    </div>
+                                    <div class="col-1">
+                                        Approved
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="recent border-top p-2">
+                                <div class="row">
+                                    <div class="col-3">
+                                        10:58 AM, Fri Nav 01 2024
+                                    </div>
+                                    <div class="col-3">
+                                        pw01-wp013e
+                                    </div>
+                                    <div class="col-2">
+                                        Foodpanda
+                                    </div>
+                                    <div class="col-2">
+                                        45.00
+                                    </div>
+                                    <div class="col-1">
+                                        Approved
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="userAcc-carousel mb-5">
+                    <div class="row">
+                        <div class="col">
+                            <div class="my-2 text-center">
+                                <div id="carouselUserAccount" class="carousel slide" data-bs-ride="carousel">
+                                    <div class="carousel-inner rounded">
+                                        <div class="carousel-item active">
+                                            <a href="">
+                                                <img src="front/images/banners/footlocker.webp" alt=""
+                                                    class="img-fluid rounded-3">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a href="">
+                                                <img src="front/images/banners/namshi.webp" alt="" class="img-fluid rounded-3">
+                                            </a>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <a href="">
+                                                <img src="front/images/banners/rayna-toures.webp" alt=""
+                                                    class="img-fluid rounded-3">
+                                            </a>
+                                        </div>
+                                        <ol class="carousel-indicators">
+                                            <li data-bs-target="#carouselUserAccount" data-bs-slide-to="0" class="active">
+                                            </li>
+                                            <li data-bs-target="#carouselUserAccount" data-bs-slide-to="1"></li>
+                                            <li data-bs-target="#carouselUserAccount" data-bs-slide-to="2"></li>
+                                        </ol>
+                                        <!-- <a class="carousel-control-prev" href="#carouselUserAccount" role="button"
+                                                data-bs-slide="prev">
+                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Previous</span>
+                                            </a>
+                                            <a class="carousel-control-next" href="#carouselUserAccount" role="button"
+                                                data-bs-slide="next">
+                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                <span class="sr-only">Next</span>
+                                            </a> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="userAcc-carousel mb-5">
+            <div class="row">
+                <div class="col">
+                    <div class="my-2 text-center">
+                        <div id="carouselUserAccount" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner rounded">
+                                <div class="carousel-item active">
+                                    <a href="">
+                                        <img src="front/images/banners/footlocker.webp" alt=""
+                                            class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img src="front/images/banners/namshi.webp" alt="" class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                                <div class="carousel-item">
+                                    <a href="">
+                                        <img src="front/images/banners/rayna-toures.webp" alt=""
+                                            class="img-fluid rounded-3">
+                                    </a>
+                                </div>
+                                <ol class="carousel-indicators">
+                                    <li data-bs-target="#carouselUserAccount" data-bs-slide-to="0" class="active">
+                                    </li>
+                                    <li data-bs-target="#carouselUserAccount" data-bs-slide-to="1"></li>
+                                    <li data-bs-target="#carouselUserAccount" data-bs-slide-to="2"></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <div class="social-icons mb-5">
+            <div class="d-flex justify-content-center">
+                <a href="" class="display-6"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="" class="display-6"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="" class="display-6"><i class="fa-brands fa-square-x-twitter"></i></a>
+                <a href="" class="display-6"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="" class="display-6"><i class="fa-brands fa-square-youtube"></i></a>
+            </div>
+        </div>
+        <div class="own-business text-center">
+            <h4>
+                Own a Business
+            </h4>
+            <button class="btn btn-link text-primary" data-bs-toggle="modal" data-bs-target="#ownBusiness">
+                Register Your Brand
+            </button>
+            <div class="modal fade" id="ownBusiness">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header border-0">
+                            <button type="button" class="modal-close position-relative" aria-label="Close"
+                                data-bs-dismiss="modal"><i class="fa-solid fa-chevron-left"></i></button>
+                            <div class="modal-logoIcon">
+                                <img src="front/images/logo-icon.webp" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="modal-body text-start mb-5">
+                            <p class="px-2">
+                                Fill the form so we can reach you
+                            </p>
+                            <form action="">
+                                <input type="text" class="form-control border-0 border-bottom mb-3"
+                                    placeholder="Full Name">
+                                <input type="email" class="form-control border-0 border-bottom mb-3"
+                                    placeholder="Email">
+                                <input type="text" class="form-control border-0 border-bottom mb-3"
+                                    placeholder="Whatsapp No">
+                                <input type="text" class="form-control border-0 border-bottom mb-3"
+                                    placeholder="Brand Name">
+                            </form>
+                        </div>
+                        <div class="modal-footer justify-content-center border-0">
+                            <button class="btn viewAll-btn">
+                                SUBMIT
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>
