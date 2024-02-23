@@ -48,6 +48,13 @@ body{
 .btn-kc-outline-rounded{
     border: 1px solid var(--kc-font-color);
     border-radius: 20px;
+    transition: background .2s ease-out;
+}
+.btn-kc-outline-rounded:hover{
+    border: 1px solid var(--kc-font-color);
+    background: var(--kc-font-color);
+    color: #fff;
+    border-radius: 20px;
 }
 .viewAll-btn {
     width: 200px;
@@ -94,12 +101,24 @@ select option:hover{
     background: var(--secondary-color);
     border-radius: 0 0 1rem 1rem;
 } */
+.dropdown-item{
+    position: relative;
+}
+ul.dropdown-menu > li:hover > .dropdown-menu {
+    display: block;
+    left: 100%;
+    top: 0;
+}
 .dropdown-toggle::after{
     border: none!important;
     vertical-align: 0;
     font-family: "Font Awesome 5 Free";
     content: "\f078";
     font-weight: bold;
+}
+#navCategory .dropdown-toggle::after{
+    position: absolute;
+    right: .5rem;
 }
 .site-logo img {
     max-width: 190px;
@@ -146,8 +165,6 @@ select option:hover{
 .brand-cashback{
     color: #FF5e03;
 }
-
-/* footer setting */
 .subscribe-btn {
     border: 2px solid var(--footer-text);
     background: transparent;
@@ -169,9 +186,42 @@ select option:hover{
 .footer-links a:hover{
     color: var(--footer-link-hover) !important;
 }
-.footer-outer {
+/* .footer-outer {
     border: 2px solid var(--footer-text);
+} */
+#footer-terms-link{
+    border-color: var(--footer-link-hover) !important;
 }
+.footer-links.app-links img {
+    width: 140px;
+}
+/* .footer-social-link > div {
+    gap: 1rem;
+} */
+/* .footer-social-link a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff !important;
+} */
+/* .fb-icon{
+    background: #3c5a9a;
+}
+.x-icon{
+    background: #073253;
+}
+.ig-icon{
+    background: #dd2a7b;
+}
+.yt-icon{
+    background: #ff0000;
+}
+.in-icon{
+    background: #0a7bba;
+} */
 .cbtr-text{
     white-space: nowrap;
 }
@@ -436,12 +486,18 @@ button#addBnkAcc {
 .user-setting > div {
     gap: 3rem;
 }
+.recent-transaction > div {
+    min-width: 576px;
+}
 .cb-overviewCard{
     border-top: 5px solid;
 }
 .cb-overviewCard p:first-child{
     font-weight: 600;
     margin-bottom: .5rem;
+}
+.cb-overviewCard p:nth-child(2){
+    height: 60px;
 }
 .total-pending p:first-child{
     color: #b74e4e;;
@@ -469,7 +525,7 @@ button#addBnkAcc {
     border-top-color: #b74e4e;
 }
 .total-approved{
-    background-color: #fffcf0;
+    background-color: #fff9df;
     border-top-color: #9c8d49;
 }
 .total-available{
@@ -485,16 +541,101 @@ button#addBnkAcc {
 #carouselUserAccount .carousel-indicators li.active{
     background-color: rgb(65, 64, 64);
 }
-.social-icons >div {
+.social-icons > div {
     gap: 3rem;
 }
 .modal-logoIcon{
     width: 60px;
-
+}
+.plan-type{
+    width: 130px;
+}
+.plan-type img{
+    width: 50px;
+}
+.plan-name{
+    background: #ffc121;
+    color: #fff;
+}
+#silver-plan{
+    background: linear-gradient(#2a92b5 0%, #047e8d 100%);
+}
+#gold-plan{
+    background: linear-gradient(#45a1c6 0%, #2b93b6 100%);
+}
+#platinum-plan{
+    background: linear-gradient(#45a1c6 0%, #556fac 100%);
+}
+#diamond-plan{
+    background: linear-gradient(#674591 0%, #5b3393 100%);
+}
+.edit-profile button[type=submit]{
+    border-radius: 20px;
+}
+.edit-profile input[type=radio]{
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+.img-select {
+    cursor: pointer;
+    right: .5rem;
+    bottom: 0.3rem;
+}
+.img-select label{
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    transition: color .2s ease-out;
+}
+.img-select label:hover{
+    color: var(--primaryu-color-hover);
+}
+.gender-selector label{
+    width: 110px;
+    height: 40px;
+  
+}
+.gender-selector label .gender-checkmark{
+    inset: 0;
+    background: grey;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    transition: background .2s ease-out;
+}
+.gender-selector label input:checked + .gender-checkmark{
+    background-color: #15171a;
+}
+.gender-selector label input:not(:checked):hover + .gender-checkmark{
+    background: rgb(110, 110, 110);
+}
+.nav-userAcc li  a[aria-selected="true"], .dropdown-toggle.active{
+    color: #1d92f9 !important
+}
+.payment-img{
+    max-width: 165px;
+}
+.code-img img {
+    width: 80px;
+}
+.code-title{
+    flex: 0 0 70%;
+}
+.getcode-btn{
+    flex: 0 0 15%;
+}
+.page-cover-img {
+    min-height: 120px;
+    object-fit: cover;
 }
 @media screen and (max-width: 992px) {
     .cb-brand-img{
         width: 70px;
+    }
+    .recent-transaction {
+        overflow-x: auto;
     }
 }
 @media screen and (max-width: 768px) {
@@ -508,7 +649,10 @@ button#addBnkAcc {
     } */
 }
 @media screen and (max-width: 576px){
-    #cbHistory, #userWallet{
+    #cbHistory, #userWallet, #userAccount{
         font-size: 11px;
+    }
+    .plan-type{
+        flex: 0 0 30%;
     }
 }

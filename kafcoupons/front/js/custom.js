@@ -17,6 +17,23 @@ jQuery(document).ready(function () {
     $("#addBankClose").click(function(e){
         $("#addAccount").addClass("d-none");
     });
+    $('#viewAllTrasacHis').on('click', function(){
+        $('#nav-dashboard').removeClass('active');
+        $('#nav-cbHistory').addClass('active');
+        $('#nav-cbHistory').parents('li').find('.dropdown-toggle').addClass('active');
+    });
+    $('.user-setting li a[data-bs-toggle="tab"], #viewAllTrasacHis').on('click', function(event) {
+        // Remove 'active' class from all tab panes
+        $('.tab-content .tab-pane').removeClass('show active');
+        $('.dropdown-toggle').removeClass('active');
+        $(this).parents('li').find('.dropdown-toggle').addClass('active');
+        // Get the target tab pane
+        var targetPaneId = $(this).data('bs-target');
+        var targetPane = $(targetPaneId);
+    
+        // Add 'active' class to the target tab pane
+        targetPane.addClass('show active');
+    });
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,
@@ -117,8 +134,8 @@ $('.category-cards').owlCarousel({
     margin:1,
     autoplay:true,
     slideTransition: 'linear',
-    autoplayTimeout:10000,
-    autoplaySpeed: 10000,
+    autoplayTimeout:3000,
+    autoplaySpeed: 3000,
     autoplayHoverPause:true,
     responsive : {
         0 : {
@@ -126,6 +143,9 @@ $('.category-cards').owlCarousel({
         },
         480 : {
             items : 2
+        },
+        992 : {
+            items : 3
         }
     }
 });

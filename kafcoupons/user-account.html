@@ -9,9 +9,9 @@
 
 <div id="header"></div>
 
-<div id="useAccount" class="bg-light">
+<div id="userAccount" class="bg-light">
     <div class="container-lg">
-        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3">
+        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
         <div class="row">
             <div class="col-md-3">
                 <div class="user-account mb-3 border rounded-3 bg-white">
@@ -29,10 +29,11 @@
                             </button> -->
                         </div>
                     </div>
-                    <div class="user-setting px-2">
-                        <ul class="list-unstyled">
+                    <div class="user-setting px-2" role="tablist">
+                        <ul class="list-unstyled nav-userAcc">
                             <li class="py-1">
-                                <a href="" class="active" data-bs-toggle="tab" data-bs-target="#dashboard">Dashboard</a>
+                                <a href="#dashboard" data-bs-toggle="tab" data-bs-target="#dashboard" id="nav-dashboard"
+                                    role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</a>
                             </li>
                             <li class="py-1">
                                 <a href="" data-bs-toggle="collapse" data-bs-target="#profileSetting"
@@ -41,12 +42,16 @@
                                 </a>
                                 <ul class="list-unstyled collapse ps-2" id="profileSetting">
                                     <li class="py-1">
-                                        <a href="">
+                                        <a href="#edit-profile" data-bs-toggle="tab" data-bs-target="#edit-profile"
+                                            id="nav-editProfile" role="tab" aria-controls="edit-profile"
+                                            aria-selected="false">
                                             Edit Profile
                                         </a>
                                     </li>
                                     <li class="py-1">
-                                        <a href="">
+                                        <a href="" data-bs-toggle="tab" data-bs-target="#user-setting"
+                                            id="nav-userSetting" role="tab" aria-controls="user-setting"
+                                            aria-selected="false">
                                             Setting
                                         </a>
                                     </li>
@@ -57,15 +62,19 @@
                                     class="dropdown-toggle collapsed">Cashbacks</a>
                                 <ul class="list-unstyled collapse ps-2" id="userCashbacks">
                                     <li class="py-1">
-                                        <a href="">Cashback History</a>
+                                        <a href="#cb-history" data-bs-toggle="tab" data-bs-target="#cb-history"
+                                            id="nav-cbHistory" role="tab" aria-controls="cb-history">Cashback
+                                            History</a>
                                     </li>
                                     <li class="py-1">
-                                        <a href="">Cashback Wallet</a>
+                                        <a href="#cb-wallet-tab" data-bs-toggle="tab" data-bs-target="#cb-wallet-tab"
+                                            id="nav-cb-wallet-tab" role="tab" aria-controls="cb-wallet-tab">Cashback
+                                            Wallet</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="py-1">
-                                <a href="">Help</a>
+                                <a href="" data-bs-toggle="modal" data-bs-target="#needHelp" >Help</a>
                             </li>
                             <li class="py-1">
                                 <a href="">Logout</a>
@@ -87,229 +96,839 @@
                         </div> -->
                     </div>
                 </div>
-                
+
             </div>
-            <div class="col-md-9">
-                <div>
-                    <div class="cashback-overview mb-3">
-                        <h5 class="mb-3">Your Cashback Savings</h5>
+            <div class="col-md-9 mb-3">
+                <div class="bg-white p-md-4 p-2 rounded-3">
+                    <div class="tab-content">
+                        <div class="tab-pane fade active show" id="dashboard" role="tabpanel"
+                            aria-labelledby="nav-dashboard">
+                            <div class="cashback-overview mb-3">
+                                <h5 class="mb-3">Your Cashback Savings</h5>
+                                <div class="row">
+                                    <div class="col-md-4 mb-2">
+                                        <div class="cb-overviewCard rounded-2 px-3 py-2 total-pending">
+                                            <p class="mb-1">
+                                                Pending
+                                            </p>
+                                            <p class="mb-4">
+                                                Sales are tracked but not yet approved by store
+                                            </p>
+                                            <p class="cb-amount pt-2 pending-amount">
+                                                Rs. 30.00
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <div class="cb-overviewCard rounded-2 px-3 py-2 total-approved">
+                                            <p class="mb-1">
+                                                Approved
+                                            </p>
+                                            <p class="mb-4">
+                                                Sales tracked and approved by store
+                                            </p>
+                                            <p class="cb-amount pt-2 approved-amount">
+                                                Rs. 130.00
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 mb-2">
+                                        <div class="cb-overviewCard rounded-2 px-3 py-2 total-available">
+                                            <p class="mb-1">
+                                                Available
+                                            </p>
+                                            <p class="mb-4">
+                                                Cashback is available to withdraw, minimum limit is Rs. 100
+                                            </p>
+                                            <p class="cb-amount pt-2 available-amount">
+                                                Rs. 100.00
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="mb-3 buy-subscriptions p-md-5 p-3 rounded-3 bg-secondary-kc d-flex justify-content-center align-items-center">
+                                <div>
+                                    Buy A Subscription
+                                </div>
+                                <a href="subscriptions.html" class="btn btn-light ms-4">
+                                    Subscribe Now
+                                </a>
+                            </div>
+                            <div class="recent-transaction border rounded-3">
+                                <div>
+                                    <div class="recent-tran-head">
+                                        <div
+                                            class="d-flex justify-content-between border-bottom align-items-center mb-2 p-2">
+                                            <h6>
+                                                <span class="me-2"><i
+                                                        class="fa-solid fa-clock-rotate-left"></i></span>Recent
+                                                Transactions
+                                            </h6>
+                                            <button class="btn btn-kc-outline-rounded" id="viewAllTrasacHis" data-bs-toggle="tab" data-bs-target="#cb-history" role="tab" aria-controls="cb-history">
+                                                View All
+                                            </button>
+                                        </div>
+                                        <div class="row fw-600 p-2">
+                                            <div class="col-3">
+                                                Order Date
+                                            </div>
+                                            <div class="col-3">
+                                                Order ID
+                                            </div>
+                                            <div class="col-2">
+                                                Store
+                                            </div>
+                                            <div class="col-2">
+                                                Cashback
+                                            </div>
+                                            <div class="col-1">
+                                                Status
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="recent-tran-card mt-3">
+                                        <div class="recent border-top p-2">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    10:58 AM, Fri Jan 19 2024
+                                                </div>
+                                                <div class="col-3">
+                                                    178754343419975
+                                                </div>
+                                                <div class="col-2">
+                                                    Daraz
+                                                </div>
+                                                <div class="col-2">
+                                                    130.56
+                                                </div>
+                                                <div class="col-1">
+                                                    Pending
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent border-top p-2">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    10:58 AM, Fri Nav 01 2024
+                                                </div>
+                                                <div class="col-3">
+                                                    pw01-wp013e
+                                                </div>
+                                                <div class="col-2">
+                                                    Foodpanda
+                                                </div>
+                                                <div class="col-2">
+                                                    45.00
+                                                </div>
+                                                <div class="col-1">
+                                                    Approved
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent border-top p-2">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    10:58 AM, Fri Nav 01 2024
+                                                </div>
+                                                <div class="col-3">
+                                                    pw01-wp013e
+                                                </div>
+                                                <div class="col-2">
+                                                    Foodpanda
+                                                </div>
+                                                <div class="col-2">
+                                                    45.00
+                                                </div>
+                                                <div class="col-1">
+                                                    Approved
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent border-top p-2">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    10:58 AM, Fri Nav 01 2024
+                                                </div>
+                                                <div class="col-3">
+                                                    pw01-wp013e
+                                                </div>
+                                                <div class="col-2">
+                                                    Foodpanda
+                                                </div>
+                                                <div class="col-2">
+                                                    45.00
+                                                </div>
+                                                <div class="col-1">
+                                                    Approved
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="recent border-top p-2">
+                                            <div class="row">
+                                                <div class="col-3">
+                                                    10:58 AM, Fri Nav 01 2024
+                                                </div>
+                                                <div class="col-3">
+                                                    pw01-wp013e
+                                                </div>
+                                                <div class="col-2">
+                                                    Foodpanda
+                                                </div>
+                                                <div class="col-2">
+                                                    45.00
+                                                </div>
+                                                <div class="col-1">
+                                                    Approved
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="edit-profile" role="tabpanel" aria-labelledby="nav-editProfile">
+                            <div class="edit-profile">
+                                <h5>Edit Profile</h5>
+                                <form action="">
+                                    <div class="user-img mb-2 mx-auto position-relative">
+                                        <img src="front/images/mudassar.jpg" alt="Asad Mehmood"
+                                            class="img-fluid rounded-circle">
+                                        <div class="position-absolute img-select">
+                                            <label for="userImgselector"><i class="fa-solid fa-camera"></i></label>
+                                            <input type="file" class="d-none" value="" id="userImgselector"
+                                                accept="image/*">
+                                            <div class="inner-circle position-absolute rounded-circle"></div>
+                                        </div>
+
+                                    </div>
+                                    <label for="fullname" class="text-secondary ms-2">Full Name</label>
+                                    <input type="text" id="fullname" class="form-control border-0 border-bottom mb-3"
+                                        placeholder="Full Name" value="Mudassar Iqbal">
+                                    <label for="mobile-no" class="text-secondary ms-2">Mobile No</label>
+                                    <input type="text" id="mobile-no" class="form-control border-0 border-bottom mb-3"
+                                        placeholder="Mobile Number" value="+9231545464748">
+                                    <label for="email" class="text-secondary ms-2">Email</label>
+                                    <input type="email" id="email" class="form-control border-0 border-bottom mb-3"
+                                        placeholder="Email" value="mudassar@qafexpress.com">
+                                    <label for="city" class="text-secondary ms-2">City</label>
+                                    <input type="text" id="city" class="form-control border-0 border-bottom mb-3"
+                                        placeholder="City" value="Sarghoda">
+                                    <div class="gender-selector">
+                                        <p>Gender (Optional)</p>
+                                        <label for="male" class="position-relative me-3">
+                                            <input type="radio" value="male" name="gender" id="male"
+                                                class="position-absolute" checked>
+                                            <span class="gender-checkmark position-absolute"><span class="me-2"><i
+                                                        class="fa-solid fa-mars"></i></span> Male</span>
+                                        </label>
+                                        <label for="female" class="position-relative">
+                                            <input type="radio" value="female" name="gender" id="female"
+                                                class="position-absolute">
+                                            <span class="gender-checkmark position-absolute"><span class="me-2"><i
+                                                        class="fa-solid fa-venus"></i></span> Female</span>
+                                        </label>
+                                    </div>
+                                    <button class="btn viewAll-btn mt-5 d-block mx-auto" type="submit">Update
+                                        Profile</button>
+                                </form>
+                                <button type="button" class="btn btn-link text-danger d-block mx-auto">Delete Your
+                                    Account</button>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="user-setting" role="tabpanel" aria-labelledby="nav-userSetting">
+                            <div class="user-setting">
+                                <h5>User Setting</h5>
+                            </div>
+                            <form action="" class="d-flex">
+                                <div class="country-selector col-sm-6">
+                                    <!-- <p class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#selectCountry"><span>Country</span></p>
+                                    <div class="collapse" id="selectCountry">
+                                        <label for="pakistan">Pakistan</label><input type="radio" name="country" value="pakistan">
+                                        <label for="saudi-arabia">Saudi Arabia</label><input type="radio" name="country" value="saudi arabia">
+                                    </div> -->
+                                    <div class="pe-3">
+                                        <select name="country" id="selectCountry" class="form-control">
+                                            <option value="pakistan" selected>Pakistan</option>
+                                            <option value="saudi-arabia">Saudi Arabia</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="lang-selector col-sm-6">
+                                    <!-- <p class="dropdown-toggle" data-bs-toggle="collapse" data-bs-target="#selectLang"><span>Language</span></p>
+                                    <div class="collapse" id="selectLang">
+                                        <label for="English">English</label><input type="radio" name="lang" value="english">
+                                        <label for="saudi-arabia">Saudi Arabia</label><input type="radio" name="lang" value="Arabic">
+                                    </div> -->
+                                    <div class="ps-3">
+                                        <select name="lang" id="selectLang" class="form-control">
+                                            <option value="eng" selected>English</option>
+                                            <option value="arabic">Arabic</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="cb-history" role="tabpanel" aria-labelledby="nav-cbHistory">
+                            <div class="cb-history">
+                                <h5>Cashback History</h5>
+                                <div class="cb-filter">
+                                    <form action="">
+                                        <div class="row">
+                                            <div class="col-md-3 mb-3">
+                                                <select name="cb-stores" id="cbStores" class="form-control">
+                                                    <option value="" selected>All Stores</option>
+                                                    <option value="">Daraz</option>
+                                                    <option value="">Foodpanda</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 mb-3">
+                                                <select name="cb-status" id="cbStatus" class="form-control">
+                                                    <option value="" selected>All Status</option>
+                                                    <option value="">Pending</option>
+                                                    <option value="">Approved</option>
+                                                    <option value="">Available</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-2 mb-3 px-2">
+                                                <input type="text" onfocus="(this.type='date')"
+                                                    onblur="(this.type='text')" placeholder="Start Date"
+                                                    class="form-control">
+                                            </div>
+                                            <div class="col-md-2 mb-3 px-2">
+                                                <input type="text" onfocus="(this.type='date')"
+                                                    onblur="(this.type='text')" placeholder="End Date"
+                                                    class="form-control">
+                                            </div>
+                                            <div class="col">
+                                                <button type="button" class="btn viewAll-btn w-100">Submit</button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="cb-history">
+                                    <div class="cb-history-cards">
+                                        <div class="cb-history-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="cb-brand-img">
+                                                    <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid"
+                                                        alt="Daraz Logo">
+                                                </div>
+                                                <div class="cb-status-detail ms-lg-5 ms-md-4 ms-sm-3 ms-2">
+                                                    <h3 class="brand-name text-success">Daraz</h3>
+                                                    <div>
+                                                        <div class="expected-cb">
+                                                            <p class="mb-1 fw-bold text-success">
+                                                                Expected Cashback : 70 days left
+                                                            </p>
+                                                            <p class="mb-1 cb-orderID">
+                                                                Order ID : 177371397274201
+                                                            </p>
+                                                            <p class="mb-1 cb-createDate">
+                                                                Created at : 25-01-2024 05:34 PM
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cb-amout ms-auto">
+                                                    <span class="fw-bold">Rs: 30</span>
+                                                </div>
+                                            </div>
+                                            <div class="cb-progress mb-4">
+                                                <div class="row mx-0">
+                                                    <div class="col px-0">
+                                                        <div
+                                                            class="cb-inReview cb-status mx-auto position-relative cb-fill active">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                In Review
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-pending cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Pending
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-approved cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Approved
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-available cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Available
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cb-history-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="cb-brand-img">
+                                                    <img src="front/images/brand/foodpanda.webp"
+                                                        class="rounded-3 img-fluid" alt="Daraz Logo">
+                                                </div>
+                                                <div class="cb-status-detail ms-lg-5 ms-md-4 ms-sm-3 ms-2">
+                                                    <h3 class="brand-name text-success">Foodpanda</h3>
+                                                    <div>
+                                                        <div class="expected-cb">
+                                                            <p class="mb-1 fw-bold text-success">
+                                                                Expected Cashback : 30 days left
+                                                            </p>
+                                                            <p class="mb-1 cb-orderID">
+                                                                Order ID : 177371397274201
+                                                            </p>
+                                                            <p class="mb-1 cb-createDate">
+                                                                Created at : 25-01-2024 05:34 PM
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cb-amout ms-auto">
+                                                    <span class="fw-bold">Rs: 362.60</span>
+                                                </div>
+                                            </div>
+                                            <div class="cb-progress mb-4">
+                                                <div class="d-flex mx-0">
+                                                    <div class="col px-0">
+                                                        <div
+                                                            class="cb-inReview cb-status mx-auto position-relative cb-fill active">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                In Review
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-pending cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Pending
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div
+                                                            class="cb-approved cb-status mx-auto position-relative cb-fill active">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Approved
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-available cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Available
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="cb-history-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                                            <div class="d-flex justify-content-between mb-3">
+                                                <div class="cb-brand-img">
+                                                    <img src="front/images/brand/daraz.webp" class="rounded-3 img-fluid"
+                                                        alt="Daraz Logo">
+                                                </div>
+                                                <div class="cb-status-detail ms-lg-5 ms-md-4 ms-sm-3 ms-2">
+                                                    <h3 class="brand-name text-success">Daraz</h3>
+                                                    <div>
+                                                        <div class="expected-cb">
+                                                            <p class="mb-1 fw-bold text-success">
+                                                                Expected Cashback : 70 days left
+                                                            </p>
+                                                            <p class="mb-1 cb-orderID">
+                                                                Order ID : 177371397274201
+                                                            </p>
+                                                            <p class="mb-1 cb-createDate">
+                                                                Created at : 25-01-2024 05:34 PM
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="cb-amout ms-auto">
+                                                    <span class="fw-bold">Rs: 120</span>
+                                                </div>
+                                            </div>
+                                            <div class="cb-progress mb-4">
+                                                <div class="row mx-0">
+                                                    <div class="col px-0">
+                                                        <div class="cb-inReview cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                In Review
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-pending cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Pending
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div class="cb-approved cb-status mx-auto position-relative">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-track-line"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Approved
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col px-0">
+                                                        <div
+                                                            class="cb-available cb-status mx-auto position-relative cb-fill active">
+                                                            <span class="cb-progress-circle mx-auto"></span>
+                                                            <span class="cb-progress-text mt-2 position-absolute">
+                                                                Available
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="cb-wallet-tab" role="tabpanel"
+                            area-labelledby="nav-cb-wallet-tab">
+                            <div
+                                class="wallet-detail d-flex flex-column align-items-center my-shadow rounded-3 mb-3 py-4">
+                                <p class="mb-2">Available to withdraw</p>
+                                <span class="text-success">
+                                    Rs: <span class="fw-bold display-6">1000</span>
+                                </span>
+                                <button type="button" class="btn viewAll-btn rounded-3 my-3" data-bs-toggle="modal"
+                                    data-bs-target="#withdrawCB">Withdraw Cash</button>
+                                <p class="text-secondary mb-2">Pending Balance</p>
+                                <span>
+                                    Rs: <span class="fw-bold display-6">100</span>
+                                </span>
+                            </div>
+                            <div class="cb-filter">
+                                <form action="">
+                                    <div class="row">
+                                        <div class="col-md-3 mb-3">
+                                            <select name="cb-status" id="cbStatus" class="form-control">
+                                                <option value="" selected>All Requests</option>
+                                                <option value="">Requested</option>
+                                                <option value="">Paid</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 mb-3 px-2">
+                                            <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                                                placeholder="Start Date" class="form-control">
+                                        </div>
+                                        <div class="col-md-3 mb-3 px-2">
+                                            <input type="text" placeholder="End Date" onfocus="(this.type='date')"
+                                                onblur="(this.type='text')" class="form-control">
+                                        </div>
+                                        <div class="col">
+                                            <button type="button" class="btn viewAll-btn w-100">Submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="wallet-request">
+                                <div class="wallet-request-cards">
+                                    <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="cb-status-detail">
+                                                <div>
+                                                    <div class="expected-cb">
+                                                        <p class="mb-1 fw-bold text-success">
+                                                            Cashback Withdrawn Request
+                                                        </p>
+                                                        <p class="mb-1 cb-orderID">
+                                                            ID : 0343356798
+                                                        </p>
+                                                        <p class="mb-1 cb-createDate">
+                                                            Created at : 25-01-2024 05:34 PM
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cb-amout ms-auto">
+                                                <span class="fw-bold">Rs: 3000</span>
+                                            </div>
+                                        </div>
+                                        <div class="wallet-progress mb-4">
+                                            <div class="row mx-0">
+                                                <div class="col px-0">
+                                                    <div
+                                                        class="wallet-requested wallet-status mx-auto position-relative cb-fill active">
+                                                        <span class="wallet-progress-circle mx-auto"></span>
+                                                        <span class="wallet-track-line"></span>
+                                                        <span class="wallet-progress-text mt-2 position-absolute">
+                                                            Requested
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col px-0">
+                                                    <div class="wallet-paid wallet-status mx-auto position-relative">
+                                                        <span class="wallet-progress-circle mx-auto"></span>
+                                                        <span class="wallet-progress-text mt-2 position-absolute">
+                                                            Paid
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="cb-status-detail">
+                                                <div>
+                                                    <div class="expected-cb">
+                                                        <p class="mb-1 fw-bold text-success">
+                                                            Cashback Withdrawn Request
+                                                        </p>
+                                                        <p class="mb-1 cb-orderID">
+                                                            ID : 0343356798
+                                                        </p>
+                                                        <p class="mb-1 cb-createDate">
+                                                            Created at : 25-01-2024 05:34 PM
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cb-amout ms-auto">
+                                                <span class="fw-bold">Rs: 3000</span>
+                                            </div>
+                                        </div>
+                                        <div class="wallet-progress mb-4">
+                                            <div class="row mx-0">
+                                                <div class="col px-0">
+                                                    <div
+                                                        class="wallet-requested wallet-status mx-auto position-relative cb-fill">
+                                                        <span class="wallet-progress-circle mx-auto"></span>
+                                                        <span class="wallet-track-line"></span>
+                                                        <span class="wallet-progress-text mt-2 position-absolute">
+                                                            Requested
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col px-0">
+                                                    <div class="wallet-paid wallet-status mx-auto position-relative">
+                                                        <span class="wallet-progress-circle mx-auto"></span>
+                                                        <span class="wallet-progress-text mt-2 position-absolute">
+                                                            Paid
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="wallet-request-card mb-4 my-shadow rounded-3 p-md-3 p-2">
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div class="cb-status-detail">
+                                                <div>
+                                                    <div class="expected-cb">
+                                                        <p class="mb-1 fw-bold text-success">
+                                                            Cashback Withdrawn Request
+                                                        </p>
+                                                        <p class="mb-1 cb-orderID">
+                                                            ID : 0343356798
+                                                        </p>
+                                                        <p class="mb-1 cb-createDate">
+                                                            Created at : 01-01-2024 04:04 PM
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cb-amout ms-auto">
+                                                <span class="fw-bold">Rs: 2500</span>
+                                            </div>
+                                        </div>
+                                        <div class="wallet-progress mb-4">
+                                            <div class="row mx-0">
+                                                <div class="col px-0">
+                                                    <div
+                                                        class="wallet-requested wallet-status mx-auto position-relative">
+                                                        <span class="wallet-progress-circle mx-auto"></span>
+                                                        <span class="wallet-track-line"></span>
+                                                        <span class="wallet-progress-text mt-2 position-absolute">
+                                                            Requested
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="col px-0">
+                                                    <div
+                                                        class="wallet-paid wallet-status mx-auto position-relative cb-fill active">
+                                                        <span class="wallet-progress-circle mx-auto"></span>
+                                                        <span class="wallet-progress-text mt-2 position-absolute">
+                                                            Paid
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="modal" tabindex="-1" id="withdrawCB" data-bs-backdrop="static">
+                                <div class="modal-dialog">
+                                    <div class="modal-content text-center">
+                                        <div
+                                            class="modal-header justify-content-center position-relative my-shadow border-0">
+                                            <button type="button" class="btn-close mx-0 position-absolute cbModalclose"
+                                                aria-label="Close" data-bs-dismiss="modal"
+                                                data-bs-target="#withdrawCB"></button>
+                                            <h5 class="modal-title">Withdraw</h5>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="credit-card mx-auto rounded-3 p-4 position-relative mb-4">
+                                                <button type="button" id="addBnkAcc"
+                                                    class="btn position-absolute p-0 rounded-circle"
+                                                    data-bs-toggle="d-none" data-bs-target="#addAccount">
+                                                    <i class="fa-regular fa-pen-to-square"></i>
+                                                </button>
+                                                <div class="card-user d-flex flex-column align-items-start mt-4">
+                                                    <span class="mb-3">
+                                                        *********
+                                                    </span>
+                                                    <span>
+                                                        ***********
+                                                    </span>
+                                                    <span>
+                                                        **************
+                                                    </span>
+                                                </div>
+                                            </div>
+                                            <p>
+                                                Available Balance
+                                            </p>
+                                            <p class="text-success border-bottom pb-2">
+                                                Rs. <span class="fw-bold display-6">3035.50</span>
+                                            </p>
+                                            <div class="widthdraw-amount mt-4 mb-5">
+                                                <form action="" id="withdrawCashback">
+                                                    <label class="text-center d-block mb-2"
+                                                        for="widthdraw-amount">Withdraw
+                                                        Amount</label>
+                                                    <input type="text" class="form-control mb-5" name="widthdraw-amount"
+                                                        id="widthdraw-amount" placeholder="Minimum Amount is Rs. 100">
+                                                    <input type="checkbox" class="me-2" id="cb-terms"
+                                                        name="cb-terms"><label for="cb-terms">I Agree
+                                                        with <a href="javascript:;">Terms & Conditions</a></label>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer p-0 border-0">
+                                            <button type="submit"
+                                                class="btn viewAll-btn w-100 m-0 rounded-0">Withdraw</button>
+                                        </div>
+                                        <div id="addAccount" class="w-100 h-100 d-none position-absolute rounded-3">
+                                            <div
+                                                class="modal-header justify-content-center position-relative my-shadow border-0">
+                                                <button type="button" class="btn mx-0 position-absolute cbModalclose"
+                                                    id="addBankClose"><i class="fa-solid fa-arrow-left"></i></button>
+                                                <h5 class="modal-title">Edit Account Details</h5>
+                                            </div>
+                                            <div class="modal-body text-start">
+                                                <div id="editBankForm">
+                                                    <form action="">
+                                                        <div class="mb-4">
+                                                            <label for="" class="mb-2 text-secondary">Select your bank
+                                                                name</label>
+                                                            <select name="" id=""
+                                                                class="form-control px-0 border-bottom border-0 rounded-0 w-100">
+                                                                <option value="" selected>Bank Account</option>
+                                                                <option value="">HBL</option>
+                                                                <option value="">Easypaisa</option>
+                                                                <option value="">Jazz Cash</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="">Your bank account title</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                        <div class="mb-3">
+                                                            <label for="">Your bank account number</label>
+                                                            <input type="text" class="form-control">
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="inner-modal-footer p-0 border-0 position-absolute w-100">
+                                                <button type="submit" class="btn viewAll-btn w-100 m-0 rounded-0">Save &
+                                                    Continue</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="userAcc-carousel mb-5">
                         <div class="row">
-                            <div class="col-md-4">
-                                <div class="cb-overviewCard rounded-2 px-3 py-2 total-pending">
-                                    <p class="mb-1">
-                                        Pending
-                                    </p>
-                                    <p class="mb-4">
-                                        Sales are tracked but not yet approved by store
-                                    </p>
-                                    <p class="cb-amount pt-2 pending-amount">
-                                        Rs. 30.00
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                  <div class="cb-overviewCard rounded-2 px-3 py-2 total-approved">
-                                    <p class="mb-1">
-                                        Approved
-                                    </p>
-                                    <p class="mb-4">
-                                        Sales tracked and approved by store
-                                    </p>
-                                    <p class="cb-amount pt-2 approved-amount">
-                                        Rs. 130.00
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="cb-overviewCard rounded-2 px-3 py-2 total-available">
-                                    <p class="mb-1">
-                                        Available
-                                    </p>
-                                    <p class="mb-4">
-                                        Cashback is available to withdraw, minimum limit is Rs. 100
-                                    </p>
-                                    <p class="cb-amount pt-2 available-amount">
-                                        Rs. 100.00
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        class="mb-3 buy-subscriptions p-5 rounded-3 bg-secondary-kc d-flex justify-content-center align-items-center">
-                        <div>
-                            Buy A Subscription
-                        </div>
-                        <button type="button" class="btn btn-light ms-4">
-                            Subscribe Now
-                        </button>
-                    </div>
-                    <div class="recent-transaction border rounded-3">
-                        <div class="recent-tran-head">
-                            <div class="d-flex justify-content-between border-bottom align-items-center mb-2 p-2">
-                            <h6>
-                                <span class="me-2"><i class="fa-solid fa-clock-rotate-left"></i></span>Recent Transactions
-                            </h6>
-                            <button class="btn btn-kc-outline-rounded">
-                                View All
-                            </button>
-                            </div>
-                            <div class="row fw-600 p-2">
-                                <div class="col-3">
-                                    Order Date
-                                </div>
-                                <div class="col-3">
-                                    Order ID
-                                </div>
-                                <div class="col-2">
-                                    Store
-                                </div>
-                                <div class="col-2">
-                                    Cashback
-                                </div>
-                                <div class="col-1">
-                                    Status
-                                </div>
-                            </div>
-                        </div>
-                        <div class="recent-tran-card mt-3">
-                            <div class="recent border-top p-2">
-                                <div class="row">
-                                    <div class="col-3">
-                                        10:58 AM, Fri Jan 19 2024
-                                    </div>
-                                    <div class="col-3">
-                                        178754343419975
-                                    </div>
-                                    <div class="col-2">
-                                        Daraz
-                                    </div>
-                                    <div class="col-2">
-                                        130.56
-                                    </div>
-                                    <div class="col-1">
-                                        Pending
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent border-top p-2">
-                                <div class="row">
-                                    <div class="col-3">
-                                        10:58 AM, Fri Nav 01 2024
-                                    </div>
-                                    <div class="col-3">
-                                        pw01-wp013e
-                                    </div>
-                                    <div class="col-2">
-                                        Foodpanda
-                                    </div>
-                                    <div class="col-2">
-                                        45.00
-                                    </div>
-                                    <div class="col-1">
-                                        Approved
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent border-top p-2">
-                                <div class="row">
-                                    <div class="col-3">
-                                        10:58 AM, Fri Nav 01 2024
-                                    </div>
-                                    <div class="col-3">
-                                        pw01-wp013e
-                                    </div>
-                                    <div class="col-2">
-                                        Foodpanda
-                                    </div>
-                                    <div class="col-2">
-                                        45.00
-                                    </div>
-                                    <div class="col-1">
-                                        Approved
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent border-top p-2">
-                                <div class="row">
-                                    <div class="col-3">
-                                        10:58 AM, Fri Nav 01 2024
-                                    </div>
-                                    <div class="col-3">
-                                        pw01-wp013e
-                                    </div>
-                                    <div class="col-2">
-                                        Foodpanda
-                                    </div>
-                                    <div class="col-2">
-                                        45.00
-                                    </div>
-                                    <div class="col-1">
-                                        Approved
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="recent border-top p-2">
-                                <div class="row">
-                                    <div class="col-3">
-                                        10:58 AM, Fri Nav 01 2024
-                                    </div>
-                                    <div class="col-3">
-                                        pw01-wp013e
-                                    </div>
-                                    <div class="col-2">
-                                        Foodpanda
-                                    </div>
-                                    <div class="col-2">
-                                        45.00
-                                    </div>
-                                    <div class="col-1">
-                                        Approved
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="userAcc-carousel mb-5">
-                    <div class="row">
-                        <div class="col">
-                            <div class="my-2 text-center">
-                                <div id="carouselUserAccount" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner rounded">
-                                        <div class="carousel-item active">
-                                            <a href="">
-                                                <img src="front/images/banners/footlocker.webp" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </a>
+                            <div class="col">
+                                <div class="my-2 text-center">
+                                    <div id="carouselUserAccount" class="carousel slide" data-bs-ride="carousel">
+                                        <div class="carousel-inner rounded">
+                                            <div class="carousel-item active">
+                                                <a href="">
+                                                    <img src="front/images/banners/footlocker.webp" alt=""
+                                                        class="img-fluid rounded-3">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <a href="">
+                                                    <img src="front/images/banners/namshi.webp" alt=""
+                                                        class="img-fluid rounded-3">
+                                                </a>
+                                            </div>
+                                            <div class="carousel-item">
+                                                <a href="">
+                                                    <img src="front/images/banners/rayna-toures.webp" alt=""
+                                                        class="img-fluid rounded-3">
+                                                </a>
+                                            </div>
+                                            <ol class="carousel-indicators">
+                                                <li data-bs-target="#carouselUserAccount" data-bs-slide-to="0"
+                                                    class="active">
+                                                </li>
+                                                <li data-bs-target="#carouselUserAccount" data-bs-slide-to="1"></li>
+                                                <li data-bs-target="#carouselUserAccount" data-bs-slide-to="2"></li>
+                                            </ol>
+                                            <!-- <a class="carousel-control-prev" href="#carouselUserAccount" role="button"
+                                                            data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                                            <span class="sr-only">Previous</span>
+                                                        </a>
+                                                        <a class="carousel-control-next" href="#carouselUserAccount" role="button"
+                                                            data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                                            <span class="sr-only">Next</span>
+                                                        </a> -->
                                         </div>
-                                        <div class="carousel-item">
-                                            <a href="">
-                                                <img src="front/images/banners/namshi.webp" alt="" class="img-fluid rounded-3">
-                                            </a>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <a href="">
-                                                <img src="front/images/banners/rayna-toures.webp" alt=""
-                                                    class="img-fluid rounded-3">
-                                            </a>
-                                        </div>
-                                        <ol class="carousel-indicators">
-                                            <li data-bs-target="#carouselUserAccount" data-bs-slide-to="0" class="active">
-                                            </li>
-                                            <li data-bs-target="#carouselUserAccount" data-bs-slide-to="1"></li>
-                                            <li data-bs-target="#carouselUserAccount" data-bs-slide-to="2"></li>
-                                        </ol>
-                                        <!-- <a class="carousel-control-prev" href="#carouselUserAccount" role="button"
-                                                data-bs-slide="prev">
-                                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Previous</span>
-                                            </a>
-                                            <a class="carousel-control-next" href="#carouselUserAccount" role="button"
-                                                data-bs-slide="next">
-                                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                                <span class="sr-only">Next</span>
-                                            </a> -->
                                     </div>
                                 </div>
                             </div>
@@ -318,7 +937,10 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="userAcc-carousel mb-5">
+
+    </div>
+</div>
+<!-- <div class="userAcc-carousel mb-5">
             <div class="row">
                 <div class="col">
                     <div class="my-2 text-center">
@@ -353,56 +975,81 @@
                 </div>
             </div>
         </div> -->
-        <div class="social-icons mb-5">
-            <div class="d-flex justify-content-center">
-                <a href="" class="display-6"><i class="fa-brands fa-square-facebook"></i></a>
-                <a href="" class="display-6"><i class="fa-brands fa-square-instagram"></i></a>
-                <a href="" class="display-6"><i class="fa-brands fa-square-x-twitter"></i></a>
-                <a href="" class="display-6"><i class="fa-brands fa-linkedin"></i></a>
-                <a href="" class="display-6"><i class="fa-brands fa-square-youtube"></i></a>
-            </div>
-        </div>
-        <div class="own-business text-center">
-            <h4>
-                Own a Business
-            </h4>
-            <button class="btn btn-link text-primary" data-bs-toggle="modal" data-bs-target="#ownBusiness">
-                Register Your Brand
-            </button>
-            <div class="modal fade" id="ownBusiness">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <button type="button" class="modal-close position-relative" aria-label="Close"
-                                data-bs-dismiss="modal"><i class="fa-solid fa-chevron-left"></i></button>
-                            <div class="modal-logoIcon">
-                                <img src="front/images/logo-icon.webp" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                        <div class="modal-body text-start mb-5">
-                            <p class="px-2">
-                                Fill the form so we can reach you
-                            </p>
-                            <form action="">
-                                <input type="text" class="form-control border-0 border-bottom mb-3"
-                                    placeholder="Full Name">
-                                <input type="email" class="form-control border-0 border-bottom mb-3"
-                                    placeholder="Email">
-                                <input type="text" class="form-control border-0 border-bottom mb-3"
-                                    placeholder="Whatsapp No">
-                                <input type="text" class="form-control border-0 border-bottom mb-3"
-                                    placeholder="Brand Name">
-                            </form>
-                        </div>
-                        <div class="modal-footer justify-content-center border-0">
-                            <button class="btn viewAll-btn">
-                                SUBMIT
-                            </button>
-                        </div>
+<div class="social-icons py-4">
+    <div class="d-flex justify-content-center">
+        <a href="" class="display-6"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="" class="display-6"><i class="fa-brands fa-square-instagram"></i></a>
+        <a href="" class="display-6"><i class="fa-brands fa-square-x-twitter"></i></a>
+        <a href="" class="display-6"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="" class="display-6"><i class="fa-brands fa-square-youtube"></i></a>
+    </div>
+</div>
+<div class="own-business text-center">
+    <h4>
+        Own a Business
+    </h4>
+    <button class="btn btn-link text-primary" data-bs-toggle="modal" data-bs-target="#ownBusiness">
+        Register Your Brand
+    </button>
+    <div class="modal fade" id="ownBusiness">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="modal-close position-relative" aria-label="Close"
+                        data-bs-dismiss="modal"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="modal-logoIcon">
+                        <img src="front/images/logo-icon.webp" alt="" class="img-fluid">
                     </div>
+                </div>
+                <div class="modal-body text-start mb-5">
+                    <p class="px-2">
+                        Fill the form so we can reach you
+                    </p>
+                    <form action="">
+                        <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Full Name">
+                        <input type="email" class="form-control border-0 border-bottom mb-3" placeholder="Email">
+                        <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Whatsapp No">
+                        <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Brand Name">
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center border-0">
+                    <button class="btn viewAll-btn">
+                        SUBMIT
+                    </button>
                 </div>
             </div>
         </div>
     </div>
+</div>
+<div class="modal fade" id="needHelp">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header border-0">
+                <button type="button" class="modal-close position-relative" aria-label="Close"
+                    data-bs-dismiss="modal"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="modal-logoIcon">
+                    <img src="front/images/logo-icon.webp" alt="" class="img-fluid">
+                </div>
+            </div>
+            <div class="modal-body text-start mb-5">
+                <p class="px-2">
+                    Need help? Fill the form so we can reach you.
+                </p>
+                <form action="">
+                    <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Full Name">
+                    <input type="email" class="form-control border-0 border-bottom mb-3" placeholder="Email">
+                    <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Whatsapp No">
+                    <input type="text" class="form-control border-0 border-bottom mb-3" placeholder="Problem Description">
+                </form>
+            </div>
+            <div class="modal-footer justify-content-center border-0">
+                <button class="btn viewAll-btn">
+                    SUBMIT
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 </div>
 <div id="footer"></div>

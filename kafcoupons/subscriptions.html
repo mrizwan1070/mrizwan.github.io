@@ -1,0 +1,174 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+<div id="header"></div>
+<div id="subscription" class="bg-light">
+    <div class="container-lg">
+        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <div class="subscription-text text-center">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                    <h2>Choose Your Perfect Subscription</h2>
+                    <p>We believe in rewarding our loyal customers with even more benefits. Our subscription plans offer
+                        exclusive perks and higher cashback rates, allowing you to maximize your savings while shopping
+                        online.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row py-4">
+            <div class="col-md-3 col-sm-6 px-lg-4 px-3 mb-3">
+                <div data-bs-toggle="modal" data-bs-target="#paymentMethod"
+                    class="subscription-card d-sm-block d-flex p-sm-3 p-2 rounded-3 text-white text-center align-items-center"
+                    id="silver-plan">
+                    <div class="plan-type bg-white my-shadow rounded-2 mx-auto text-center">
+                        <img src="front/images/logo-icon.webp" alt="kafcoupons logo icon" class="img-fluid">
+                        <p class="plan-name my-2">Silver</p>
+                        <p class="text-dark">1 Month</p>
+                    </div>
+                    <div class="plan-text">
+                        <p>
+                            Exclusive cashback on your online shopping
+                        </p>
+                    </div>
+                    <div class="plan-price">
+                        <p class="display-6">
+                            RS. 299
+                        </p>
+                    </div>
+                    <a href="javascript:;" role="button" class="d-sm-block d-none btn viewAll-btn w-100">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 px-lg-4 px-3 mb-3">
+                <div data-bs-toggle="modal" data-bs-target="#paymentMethod"
+                    class="subscription-card d-sm-block d-flex p-sm-3 p-2 rounded-3 text-white text-center align-items-center"
+                    id="gold-plan">
+                    <div class="plan-type bg-white my-shadow rounded-2 mx-auto text-center">
+                        <img src="front/images/logo-icon.webp" alt="kafcoupons logo icon" class="img-fluid">
+                        <p class="plan-name my-2">Gold</p>
+                        <p class="text-dark">3 Month</p>
+                    </div>
+                    <div class="plan-text">
+                        <p>
+                            Exclusive cashback on your online shopping
+                        </p>
+                    </div>
+                    <div class="plan-price">
+                        <p class="display-6">
+                            RS. 699
+                        </p>
+                    </div>
+                    <a href="javascript:;" role="button" class="d-sm-block d-none btn viewAll-btn w-100">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 px-lg-4 px-3 mb-3">
+                <div data-bs-toggle="modal" data-bs-target="#paymentMethod"
+                    class="subscription-card d-sm-block d-flex p-sm-3 p-2 rounded-3 text-white text-center align-items-center"
+                    id="platinum-plan">
+                    <div class="plan-type bg-white my-shadow rounded-2 mx-auto text-center">
+                        <img src="front/images/logo-icon.webp" alt="kafcoupons logo icon" class="img-fluid">
+                        <p class="plan-name my-2">Platinum</p>
+                        <p class="text-dark">6 Month</p>
+                    </div>
+                    <div class="plan-text">
+                        <p>
+                            Exclusive cashback on your online shopping
+                        </p>
+                    </div>
+                    <div class="plan-price">
+                        <p class="display-6">
+                            RS. 999
+                        </p>
+                    </div>
+                    <a href="javascript:;" role="button" class="d-sm-block d-none btn viewAll-btn w-100">Get Started</a>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 px-lg-4 px-3 mb-3">
+                <div data-bs-toggle="modal" data-bs-target="#paymentMethod"
+                    class="subscription-card d-sm-block d-flex p-sm-3 p-2 rounded-3 text-white text-center align-items-center"
+                    id="diamond-plan">
+                    <div class="plan-type bg-white my-shadow rounded-2 mx-auto text-center">
+                        <img src="front/images/logo-icon.webp" alt="kafcoupons logo icon" class="img-fluid">
+                        <p class="plan-name my-2">Diamond</p>
+                        <p class="text-dark">1 Year</p>
+                    </div>
+                    <div class="plan-text">
+                        <p>
+                            Exclusive cashback on your online shopping
+                        </p>
+                    </div>
+                    <div class="plan-price">
+                        <p class="display-6">
+                            RS. 1499
+                        </p>
+                    </div>
+                    <a href="javascript:;" role="button" class="d-sm-block d-none btn viewAll-btn w-100">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="paymentMethod">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="modal-close position-relative" aria-label="Close"
+                        data-bs-dismiss="modal"><i class="fa-solid fa-chevron-left"></i></button>
+                    <div class="modal-logoIcon">
+                        <img src="front/images/logo-icon.webp" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="modal-body text-start mb-5">
+                    <p class="px-2 text-center">
+                        Payment Methods
+                    </p>
+                    <div class="payment-provider">
+                        <div class="row">
+                            <div class="col-6">
+                                <div class="payment-method-card text-center">
+                                    <a href="javascript:;">
+                                        <img src="front/images/payment/easypaisa.png" alt=""
+                                            class="img-fluid payment-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="payment-method-card text-center">
+                                    <a href="javascript:;">
+                                        <img src="front/images/payment/jazzcash.png" alt=""
+                                            class="img-fluid payment-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="payment-method-card text-center">
+                                    <a href="javascript:;">
+                                        <img src="front/images/payment/credit-card.png" alt=""
+                                            class="img-fluid payment-img">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="payment-method-card text-center">
+                                    <a href="javascript:;">
+                                        <img src="front/images/payment/faysal-bank.png" alt=""
+                                            class="img-fluid payment-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="footer"></div>
