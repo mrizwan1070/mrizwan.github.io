@@ -9,55 +9,348 @@
 
 <div id="header"></div>
 <div class="container-lg">
-    <div class="page-header">
-        <div class="page-heading">
-            <h1>All Coupons & Offers</h1>
-        </div>
-        <div class="page-banner">
-            <img src="" alt="">
-        </div>
-    </div>
+    <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
     <div class="row">
         <div class="col-md-3">
             <div class="sideBar">
+                <h5>Refine Search</h5>
                 <form method="post" id="coupon_filter_form" novalidate="novalidate">
                     <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search by keyword" aria-label="Username" aria-describedby="input-group-right">
-                        <span class="input-group-text" id="couponSearch"><i class="fa fa-search" aria-hidden="true"></i></span>
-                      </div>
+                        <input type="text" class="form-control" placeholder="Search by keyword" aria-label="Username"
+                            aria-describedby="input-group-right">
+                        <span class="input-group-text" id="couponSearch"><i class="fa fa-search"
+                                aria-hidden="true"></i></span>
+                    </div>
                 </form>
-                <div class="side-filter">
-                    <div class="" id="storesListAllCouponPage">        
+                <div class="side-filter mb-4">
+                    <div class="" id="AllCouponCategories">
+                        <h6>Categories</h6>
                         <label class="filter-check d-flex my-3">
-                            AliExpress
+                            Fashion & Clothing
                             <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="313">
                             <span class="checkmark">
                             </span>
                         </label>
                         <label class="filter-check d-flex my-3">
-                            TVC-Mall
+                            Health & Beauty
                             <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="482">
                             <span class="checkmark">
                             </span>
                         </label>
                         <label class="filter-check d-flex my-3">
-                            Cafago
+                            Computers & Laptops
                             <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="495">
                             <span class="checkmark">
                             </span>
                         </label>
                         <label class="filter-check d-flex my-3">
-                            MagicVision
+                            Mobile & Accessories
+                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
+                            <span class="checkmark">
+                            </span>
+                        </label>
+                        <label class="filter-check d-flex my-3">
+                            Home & Garden
+                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
+                            <span class="checkmark">
+                            </span>
+                        </label>
+                        <label class="filter-check d-flex my-3">
+                            Financial Services
                             <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
                             <span class="checkmark">
                             </span>
                         </label>
                     </div>
                 </div>
+                <div class="side-filter mb-4">
+                    <div class="popular-brands">
+                        <h5>Popular Brands</h5>
+                        <div class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="brand-logo me-2">
+                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo" class="img-fluid">
+                                </div>
+                                <div class="right">
+                                    <h3 class="mb-0 similar-title">eoutlet</h3>
+                                    <div class="rating">
+                                        <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Up to 5% Cashback
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                        </div>
+                        <div class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="brand-logo me-2">
+                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo" class="img-fluid">
+                                </div>
+                                <div class="right">
+                                    <h3 class="mb-0 similar-title">eoutlet</h3>
+                                    <div class="rating">
+                                        <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        2 Coupons
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                        </div>
+                        <div class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="brand-logo me-2">
+                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo" class="img-fluid">
+                                </div>
+                                <div class="right">
+                                    <h3 class="mb-0 similar-title">eoutlet</h3>
+                                    <div class="rating">
+                                        <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                    </div>
+                                    <p class="mb-0">
+                                        Up to 5% Cashback
+                                    </p>
+                                </div>
+                            </div>
+                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-md-9">
-
+            <div class="code-offer" id="allCoupon">
+                <div class="page-heading d-flex justify-content-between align-items-center mb-2">
+                    <h1 class="mb-0">All Coupons & Offers</h1>
+                    <div>
+                        <select name="code-offer" id="" class="form-control">
+                            <option value="all" selected>All</option>
+                            <option value="codes">Codes</option>
+                            <option value="offers">Offers</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="all-coupon">
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Offer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Offer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="code-offer-card">
+                        <div class="code-card-inner p-3 my-shadow mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="">
+                                    <div class="code-img">
+                                        <img src="front/images/brand/namshi.png" alt="Namshi" class="img-fluid">
+                                    </div>
+                                </div>
+                                <div class="ms-3 code-title">
+                                    <p>
+                                        Get 10% off on fashion accessories on orders over AED 100
+                                    </p>
+                                </div>
+                                <div class="ms-3 getcode-btn">
+                                    <button class="code-btn btn viewAll-btn w-100" data-bs-toggle="modal"
+                                        data-bs-target="#getcodePopup">
+                                        Get Code
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="" id="allCoupons-nav" class="mt-4">
+                    <ul class="pagination pagination-lg justify-content-center">
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Previous">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="#" aria-label="Next">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </div>
 </div>
