@@ -18,9 +18,11 @@ jQuery(document).ready(function () {
         $("#addAccount").addClass("d-none");
     });
     $('#viewAllTrasacHis').on('click', function(){
+        console.log("clicked")
         $('#nav-dashboard').removeClass('active');
         $('#nav-cbHistory').addClass('active');
         $('#nav-cbHistory').parents('li').find('.dropdown-toggle').addClass('active');
+        console.log("clicked")
     });
     $('.user-setting li a[data-bs-toggle="tab"], #viewAllTrasacHis').on('click', function(event) {
         // Remove 'active' class from all tab panes
@@ -34,6 +36,10 @@ jQuery(document).ready(function () {
         // Add 'active' class to the target tab pane
         targetPane.addClass('show active');
     });
+    $(".addFavIcons").on('click', function(){
+        $(this).find(".addFavCode i").toggleClass("fa-solid text-danger");
+    });
+    
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,
