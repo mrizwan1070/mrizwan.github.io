@@ -65,6 +65,20 @@ body{
     font-weight: 600;
     transition: all .5s ease-out;
 }
+.addFavCode, .removeFavCode{
+    cursor: pointer;
+}
+.addFavIcons, .removeFavIcon{
+    top: -1.3rem;
+    left: -0.5rem;
+}
+.addFavCodeHover{
+    display: none;
+}
+.addFavIcons:hover .addFavCodeHover{
+    display: block;
+    cursor: pointer;
+}
 .viewAll-btn:hover{
     background: var(--primaryu-color-hover);
     border: 2px solid var(--primaryu-color-hover);
@@ -636,13 +650,17 @@ button#addBnkAcc {
     max-width: 165px;
 }
 .code-img img {
+    min-width: 80px;
     width: 80px;
 }
 .code-title{
-    flex: 0 0 70%;
+    flex: 1 1 70%;
 }
 .getcode-btn{
     flex: 0 0 15%;
+}
+.code-btn{
+    text-wrap: nowrap;
 }
 .page-cover-img {
     min-height: 120px;
