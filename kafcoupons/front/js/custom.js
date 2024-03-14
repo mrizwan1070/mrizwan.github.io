@@ -10,6 +10,9 @@ jQuery(document).ready(function () {
         // Set the width using CSS
         $(this).find('.rate-bar').css('width', totalStars + '%');
     });
+
+    var userSide = $('#useAccSidebar');
+
     $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
     $("#addBnkAcc").click(function(){
         $("#addAccount").removeClass("d-none");
@@ -25,6 +28,7 @@ jQuery(document).ready(function () {
         console.log("clicked")
     });
     $('.user-setting li a[data-bs-toggle="tab"], #viewAllTrasacHis').on('click', function(event) {
+        $('#useAccSidebar').removeClass('showUserAcc');
         // Remove 'active' class from all tab panes
         $('.tab-content .tab-pane').removeClass('show active');
         $('.dropdown-toggle').removeClass('active');
@@ -39,7 +43,12 @@ jQuery(document).ready(function () {
     $(".addFavIcons").on('click', function(){
         $(this).find(".addFavCode i").toggleClass("fa-solid text-danger");
     });
-    
+    $("#uAccSideClose").on('click', function(){
+        userSide.removeClass('showUserAcc')
+    });
+    $("#showUserAccSide").on('click', function(){
+        userSide.addClass('showUserAcc');
+    })
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,

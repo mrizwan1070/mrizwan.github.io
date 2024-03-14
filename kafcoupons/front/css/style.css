@@ -119,13 +119,7 @@ select option:hover{
 }
 .header-top{
     background-color: var(--primary-color);
-    /* border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem; */
 }
-/* #mainNav .navbar-nav{
-    background: var(--secondary-color);
-    border-radius: 0 0 1rem 1rem;
-} */
 .dropdown-item{
     position: relative;
 }
@@ -227,33 +221,6 @@ ul.dropdown-menu > li:hover > .dropdown-menu {
 .footer-links.app-links img {
     width: 140px;
 }
-/* .footer-social-link > div {
-    gap: 1rem;
-} */
-/* .footer-social-link a {
-    width: 30px;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color: #fff !important;
-} */
-/* .fb-icon{
-    background: #3c5a9a;
-}
-.x-icon{
-    background: #073253;
-}
-.ig-icon{
-    background: #dd2a7b;
-}
-.yt-icon{
-    background: #ff0000;
-}
-.in-icon{
-    background: #0a7bba;
-} */
 .cbtr-text{
     white-space: nowrap;
 }
@@ -666,6 +633,17 @@ button#addBnkAcc {
     min-height: 120px;
     object-fit: cover;
 }
+#useAccSidebar{
+    position: relative;
+    overflow: auto;
+}
+.showUserAcc{
+    left: 0 !important;
+}
+#uAccSideClose {
+    right: 10px;
+    top: 5px;
+}
 @media screen and (max-width: 992px) {
     .cb-brand-img{
         width: 70px;
@@ -674,10 +652,23 @@ button#addBnkAcc {
         overflow-x: auto;
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .cb-brand-img{
         width: 60px;
     }
+    #useAccSidebar{
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        transition: left .5s ease-in-out;
+        width: 300px;
+        height: 100%;
+        max-width: 300px;
+        z-index: 2;
+        border-radius: 0 !important;
+    }
+
 }
 @media screen and (min-width: 768px) {
     /* .brand-cb-detail-card{
@@ -685,7 +676,7 @@ button#addBnkAcc {
     } */
 }
 @media screen and (max-width: 576px){
-    #cbHistory, #userWallet, #userAccount{
+    #cbHistory, #userWallet, #userAccTab{
         font-size: 11px;
     }
     .plan-type{

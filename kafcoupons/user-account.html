@@ -11,14 +11,16 @@
 
 <div id="userAccount" class="bg-light">
     <div class="container-lg">
-        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid mt-3 rounded-3 page-cover-img">
+        <button class="btn btn-kc-outline-rounded my-3" id="showUserAccSide"><span><i class="fa-solid fa-bars"></i></span> Menu</button>
         <div class="row">
             <div class="col-md-3">
-                <div class="user-account mb-3 border rounded-3 bg-white">
+                <div class="user-account mb-3 border rounded-3 bg-white" id="useAccSidebar">
+                    <button class="btn-close position-absolute" type="button" id="uAccSideClose"></button>
                     <div class="user-account-header border-bottom mb-3">
                         <div class="p-4 d-flex align-items-center flex-column">
                             <div class="user-img mb-2">
-                                <img src="front/images/mudassar.jpg" alt="Asad Mehmood"
+                                <img src="front/images/mudassar.jpg" alt="Mudassar Iqbal"
                                     class="img-fluid rounded-circle">
                             </div>
                             <div class="username">
@@ -99,7 +101,7 @@
 
             </div>
             <div class="col-md-9 mb-3">
-                <div class="bg-white p-md-4 p-2 rounded-3">
+                <div class="bg-white p-md-4 p-2 rounded-3" id="userAccTab">
                     <div class="tab-content">
                         <div class="tab-pane fade active show" id="dashboard" role="tabpanel"
                             aria-labelledby="nav-dashboard">
@@ -887,7 +889,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="userAcc-carousel mb-5">
+                    <div class="userAcc-carousel">
                         <div class="row">
                             <div class="col">
                                 <div class="my-2 text-center">
