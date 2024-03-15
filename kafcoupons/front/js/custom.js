@@ -11,7 +11,7 @@ jQuery(document).ready(function () {
         $(this).find('.rate-bar').css('width', totalStars + '%');
     });
 
-    var userSide = $('#useAccSidebar');
+    var userSide = $('.mobile-sidebar');
 
     $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
     $("#addBnkAcc").click(function(){
@@ -28,7 +28,7 @@ jQuery(document).ready(function () {
         console.log("clicked")
     });
     $('.user-setting li a[data-bs-toggle="tab"], #viewAllTrasacHis').on('click', function(event) {
-        $('#useAccSidebar').removeClass('showUserAcc');
+        $('.mobile-sidebar').removeClass('show-sidebar');
         // Remove 'active' class from all tab panes
         $('.tab-content .tab-pane').removeClass('show active');
         $('.dropdown-toggle').removeClass('active');
@@ -43,11 +43,11 @@ jQuery(document).ready(function () {
     $(".addFavIcons").on('click', function(){
         $(this).find(".addFavCode i").toggleClass("fa-solid text-danger");
     });
-    $("#uAccSideClose").on('click', function(){
-        userSide.removeClass('showUserAcc')
+    $("#sideCloseBtn").on('click', function(){
+        userSide.removeClass('show-sidebar')
     });
-    $("#showUserAccSide").on('click', function(){
-        userSide.addClass('showUserAcc');
+    $("#showSideBarBtn").on('click', function(){
+        userSide.addClass('show-sidebar');
     })
  // brand slider
 //  $('.brand-slider').slick({

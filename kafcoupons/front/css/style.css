@@ -203,8 +203,14 @@ ul.dropdown-menu > li:hover > .dropdown-menu {
 .footer-text{
     color: var(--footer-text);
 }
-.footer-links a, .footer-links h5{
+footer a, .footer-links h5, #footerAccordion .accordion-button{
     color: var(--footer-text) !important;
+}
+#footerAccordion .accordion-button:focus{
+    box-shadow: none;
+}
+#footerAccordion .accordion-button::after{
+    color: var(--footer-text);
 }
 .footer-links a{
     transition: color .2s ease-out;
@@ -220,6 +226,9 @@ ul.dropdown-menu > li:hover > .dropdown-menu {
 }
 .footer-links.app-links img {
     width: 140px;
+}
+.app-icon img{
+    max-width: 150px;
 }
 .cbtr-text{
     white-space: nowrap;
@@ -629,18 +638,17 @@ button#addBnkAcc {
 .code-btn{
     text-wrap: nowrap;
 }
-.page-cover-img {
+.page-cover-img, .home-slideImg {
     min-height: 120px;
     object-fit: cover;
 }
-#useAccSidebar{
-    position: relative;
+#useAccSidebar, .mobile-sidebar{
     overflow: auto;
 }
-.showUserAcc{
+.show-sidebar{
     left: 0 !important;
 }
-#uAccSideClose {
+#sideCloseBtn {
     right: 10px;
     top: 5px;
 }
@@ -656,7 +664,7 @@ button#addBnkAcc {
     .cb-brand-img{
         width: 60px;
     }
-    #useAccSidebar{
+    .mobile-sidebar{
         position: fixed;
         left: -100%;
         top: 0;
@@ -665,10 +673,31 @@ button#addBnkAcc {
         width: 300px;
         height: 100%;
         max-width: 300px;
-        z-index: 2;
+        z-index: 999;
         border-radius: 0 !important;
+        border-right: 1px solid #dee2e6;
+        padding: 1rem .5rem;
+        background-color: #fff;
     }
+    .mobileFilter{
+        border: 1px solid #000;
+        border-radius: .3rem;
+    }
+    .mobileFilter .col:not(:last-child) .filter-item{
+        border-right: 1px solid #000;
+    }
+    .mobileFilter select{
+        width: 100%;
+        border: none;
+        outline: 0;
+        text-align: center;
 
+    }
+    .mobileFilter select:focus{
+        border: none;
+        outline: none;
+        box-shadow: none;
+    }
 }
 @media screen and (min-width: 768px) {
     /* .brand-cb-detail-card{
@@ -681,5 +710,8 @@ button#addBnkAcc {
     }
     .plan-type{
         flex: 0 0 30%;
+    }
+    .page-heading h1{
+        font-size: 1.3rem;
     }
 }

@@ -12,7 +12,9 @@
     <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
     <div class="row">
         <div class="col-md-3">
-            <div class="sideBar">
+            <div class="sidebar mobile-sidebar">
+                <button class="btn-close position-absolute d-md-none d-block" type="button"
+                id="sideCloseBtn"></button>
                 <h5>Refine Search</h5>
                 <form method="post" id="coupon_filter_form" novalidate="novalidate">
                     <div class="input-group">
@@ -123,14 +125,24 @@
         </div>
         <div class="col-md-9">
             <div class="code-offer" id="allCoupon">
-                <div class="page-heading d-flex justify-content-between align-items-center mb-2">
+                <div class="page-heading d-md-flex justify-content-between align-items-center mb-2">
                     <h1 class="mb-0">All Coupons & Offers</h1>
-                    <div>
-                        <select name="code-offer" id="" class="form-control">
-                            <option value="all" selected>All</option>
-                            <option value="codes">Codes</option>
-                            <option value="offers">Offers</option>
-                        </select>
+                    <div class="row mx-0 justify-content-between mobileFilter">
+                        <div class="col px-0">
+                            <div class="filter-item d-md-none d-block mx-auto">
+                                <button class="btn btn-link w-100 text-decoration-none text-dark" id="showSideBarBtn"><span><i class="fa-solid fa-list"></i></span>
+                                    Filter</button>
+                            </div>
+                        </div>
+                        <div class="col px-0">
+                            <div class="filter-item">
+                                <select name="code-offer" id="" class="form-control">
+                                    <option value="all" selected>All</option>
+                                    <option value="codes">Codes</option>
+                                    <option value="offers">Offers</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="all-coupon">
