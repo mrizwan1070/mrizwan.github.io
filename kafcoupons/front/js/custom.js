@@ -29,6 +29,8 @@ jQuery(document).ready(function () {
     });
     $('.user-setting li a[data-bs-toggle="tab"], #viewAllTrasacHis').on('click', function(event) {
         $('.mobile-sidebar').removeClass('show-sidebar');
+        $('.sidebar-outer').css({'display': 'none', 'opcaity': "0"});
+        $('body').css('overflow', 'auto');
         // Remove 'active' class from all tab panes
         $('.tab-content .tab-pane').removeClass('show active');
         $('.dropdown-toggle').removeClass('active');
@@ -44,11 +46,22 @@ jQuery(document).ready(function () {
         $(this).find(".addFavCode i").toggleClass("fa-solid text-danger");
     });
     $("#sideCloseBtn").on('click', function(){
-        userSide.removeClass('show-sidebar')
+        userSide.removeClass('show-sidebar');
+        $('.sidebar-outer').css({'display': 'none', 'opcaity': "0"});
+        $('body').css('overflow', 'auto');
     });
-    $("#showSideBarBtn").on('click', function(){
+    $(".showSideBarBtn").on('click', function(){
         userSide.addClass('show-sidebar');
-    })
+        $('.sidebar-outer').css({'display': 'block', 'opacity': '1'});
+        $('body').css('overflow', 'hidden');
+    });
+    $(window).resize(function(){
+        if (window.innerWidth > 767) {
+            $('.sidebar-outer').css({'display': 'block', 'opacity': '1'});
+        } else {
+            $('.sidebar-outer').css({'display': 'none', 'opacity': '0'});
+        }
+    });
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,

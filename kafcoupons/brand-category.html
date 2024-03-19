@@ -1,0 +1,339 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+<div id="header"></div>
+<div id="brandCategory" class="">
+    <div class="container-lg">
+        <img src="front/images/banners/brand-category.png" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <div class="category-brands">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="sidebar-outer">
+                        <div class="sidebar mobile-sidebar">
+                            <div class="sidebar-header d-flex justify-content-between">
+                                <h5>Refine Search</h5>
+                                <button class="btn-close btn-close-white d-md-none d-block" type="button"
+                                id="sideCloseBtn"></button>
+                            </div>
+                            <div class="sidebar-body">
+                                <form method="post" id="coupon_filter_form" novalidate="novalidate">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search by keyword"
+                                            aria-label="Username" aria-describedby="input-group-right">
+                                        <span class="input-group-text" id="couponSearch"><i class="fa fa-search"
+                                                aria-hidden="true"></i></span>
+                                    </div>
+                                </form>
+                                <div class="side-filter mb-4">
+                                    <div class="" id="AllCouponCategories">
+                                        <h6>Sub Categories</h6>
+                                        <label class="filter-check d-flex my-3">
+                                            Men Fashion
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="313">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Women Fashion
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="482">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Bags & Accessories
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="495">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Jewellery & Watches
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Kids Fashion
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Footwear
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Sportswear
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="side-filter mb-4 d-none">
+                                    <div class="popular-brands">
+                                        <h5>Popular Brands</h5>
+                                        <div
+                                            class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="brand-logo me-2">
+                                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="right">
+                                                    <h3 class="mb-0 similar-title">eoutlet</h3>
+                                                    <div class="rating">
+                                                        <i
+                                                            class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                                    </div>
+                                                    <p class="mb-0">
+                                                        Up to 5% Cashback
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                                        </div>
+                                        <div
+                                            class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="brand-logo me-2">
+                                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="right">
+                                                    <h3 class="mb-0 similar-title">eoutlet</h3>
+                                                    <div class="rating">
+                                                        <i
+                                                            class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                                    </div>
+                                                    <p class="mb-0">
+                                                        2 Coupons
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                                        </div>
+                                        <div
+                                            class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <div class="brand-logo me-2">
+                                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo"
+                                                        class="img-fluid">
+                                                </div>
+                                                <div class="right">
+                                                    <h3 class="mb-0 similar-title">eoutlet</h3>
+                                                    <div class="rating">
+                                                        <i
+                                                            class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                                    </div>
+                                                    <p class="mb-0">
+                                                        Up to 5% Cashback
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="page-right">
+                        <div class="page-heading d-md-flex justify-content-between align-items-center mb-2 px-2">
+                            <h1 class="mb-0">Fashion & Clothing</h1>
+                            <div class="row mx-0 justify-content-between mobileFilter my-md-0 my-2">
+                                <div class="col px-0 d-md-none d-block ">
+                                    <div class="filter-item mx-auto">
+                                        <button class="btn btn-link w-100 text-decoration-none text-dark showSideBarBtn"
+                                            id="showSideBarBtnBrand"><span><i class="fa-solid fa-filter"></i></span>
+                                            Filter</button>
+                                    </div>
+                                </div>
+                                <div class="col px-0">
+                                    <div class="filter-item">
+                                        <select name="code-offer" id="" class="form-control">
+                                            <option value="all" selected>Sort By</option>
+                                            <option value="codes">A - Z</option>
+                                            <option value="offers">Z - A</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mx-0">
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/namshi.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Namshi
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/noon-06.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Noon
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/pottery-barn.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Pottery Barn
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/eoutlet-02.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                eoutlet
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/namshi.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Namshi
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/Fordeal-06.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Fordeal
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/styli-02.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Styli
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-4 col-sm-6 mb-5 d-flex justify-content-center">
+                                <div class="brand-card d-flex">
+                                    <div class="brand-card-inner text-center">
+                                        <div class="brand-detail px-4 pt-3">
+                                            <img src="front/images/brand/noon-06.png" alt="Brand Title Logo"
+                                                class="brand-img img-fluid shadow-sm mb-2">
+                                            <h3 class="brand-title mb-1">
+                                                Noon
+                                            </h3>
+                                            <p class="brand-cashback">
+                                                up to 5% cashback
+                                            </p>
+                                        </div>
+                                        <div class="visit-button mt-3">
+                                            <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="footer"></div>

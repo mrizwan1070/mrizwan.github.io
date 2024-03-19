@@ -12,125 +12,144 @@
     <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
     <div class="row">
         <div class="col-md-3">
-            <div class="sidebar mobile-sidebar">
-                <button class="btn-close position-absolute d-md-none d-block" type="button"
-                id="sideCloseBtn"></button>
-                <h5>Refine Search</h5>
-                <form method="post" id="coupon_filter_form" novalidate="novalidate">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Search by keyword" aria-label="Username"
-                            aria-describedby="input-group-right">
-                        <span class="input-group-text" id="couponSearch"><i class="fa fa-search"
-                                aria-hidden="true"></i></span>
+            <div class="sidebar-outer">
+                <div class="sidebar mobile-sidebar">
+                    <div class="sidebar-header d-flex justify-content-between">
+                        <h5>Refine Search</h5>
+                        <button class="btn-close btn-close-white d-md-none d-block" type="button"
+                            id="sideCloseBtn"></button>
                     </div>
-                </form>
-                <div class="side-filter mb-4">
-                    <div class="" id="AllCouponCategories">
-                        <h6>Categories</h6>
-                        <label class="filter-check d-flex my-3">
-                            Fashion & Clothing
-                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="313">
-                            <span class="checkmark">
-                            </span>
-                        </label>
-                        <label class="filter-check d-flex my-3">
-                            Health & Beauty
-                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="482">
-                            <span class="checkmark">
-                            </span>
-                        </label>
-                        <label class="filter-check d-flex my-3">
-                            Computers & Laptops
-                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="495">
-                            <span class="checkmark">
-                            </span>
-                        </label>
-                        <label class="filter-check d-flex my-3">
-                            Mobile & Accessories
-                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
-                            <span class="checkmark">
-                            </span>
-                        </label>
-                        <label class="filter-check d-flex my-3">
-                            Home & Garden
-                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
-                            <span class="checkmark">
-                            </span>
-                        </label>
-                        <label class="filter-check d-flex my-3">
-                            Financial Services
-                            <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter" value="931">
-                            <span class="checkmark">
-                            </span>
-                        </label>
-                    </div>
-                </div>
-                <div class="side-filter mb-4 d-md-block d-none">
-                    <div class="popular-brands">
-                        <h5>Popular Brands</h5>
-                        <div class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
-                            <div class="d-flex align-items-center mb-2">
-                                <div class="brand-logo me-2">
-                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo" class="img-fluid">
-                                </div>
-                                <div class="right">
-                                    <h3 class="mb-0 similar-title">eoutlet</h3>
-                                    <div class="rating">
-                                        <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
-                                    </div>
-                                    <p class="mb-0">
-                                        Up to 5% Cashback
-                                    </p>
-                                </div>
+                    <div class="sidebar-body">
+                        <form method="post" id="coupon_filter_form" novalidate="novalidate">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search by keyword"
+                                    aria-label="Username" aria-describedby="input-group-right">
+                                <span class="input-group-text" id="couponSearch"><i class="fa fa-search"
+                                        aria-hidden="true"></i></span>
                             </div>
-                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                        </form>
+                        <div class="side-filter mb-4">
+                            <div class="" id="AllCouponCategories">
+                                <h6>Categories</h6>
+                                <label class="filter-check d-flex my-3">
+                                    Fashion & Clothing
+                                    <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter"
+                                        value="313">
+                                    <span class="checkmark">
+                                    </span>
+                                </label>
+                                <label class="filter-check d-flex my-3">
+                                    Health & Beauty
+                                    <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter"
+                                        value="482">
+                                    <span class="checkmark">
+                                    </span>
+                                </label>
+                                <label class="filter-check d-flex my-3">
+                                    Computers & Laptops
+                                    <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter"
+                                        value="495">
+                                    <span class="checkmark">
+                                    </span>
+                                </label>
+                                <label class="filter-check d-flex my-3">
+                                    Mobile & Accessories
+                                    <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter"
+                                        value="931">
+                                    <span class="checkmark">
+                                    </span>
+                                </label>
+                                <label class="filter-check d-flex my-3">
+                                    Home & Garden
+                                    <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter"
+                                        value="931">
+                                    <span class="checkmark">
+                                    </span>
+                                </label>
+                                <label class="filter-check d-flex my-3">
+                                    Financial Services
+                                    <input type="checkbox" name="coupon_store_filter" class="coupon_store_filter"
+                                        value="931">
+                                    <span class="checkmark">
+                                    </span>
+                                </label>
+                            </div>
                         </div>
-                        <div class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
-                            <div class="d-flex align-items-center mb-2">
-                                <div class="brand-logo me-2">
-                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo" class="img-fluid">
-                                </div>
-                                <div class="right">
-                                    <h3 class="mb-0 similar-title">eoutlet</h3>
-                                    <div class="rating">
-                                        <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                        <div class="side-filter mb-4 d-md-block d-none">
+                            <div class="popular-brands">
+                                <h5>Popular Brands</h5>
+                                <div
+                                    class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="brand-logo me-2">
+                                            <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="mb-0 similar-title">eoutlet</h3>
+                                            <div class="rating">
+                                                <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                            </div>
+                                            <p class="mb-0">
+                                                Up to 5% Cashback
+                                            </p>
+                                        </div>
                                     </div>
-                                    <p class="mb-0">
-                                        2 Coupons
-                                    </p>
+                                    <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                                </div>
+                                <div
+                                    class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="brand-logo me-2">
+                                            <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="mb-0 similar-title">eoutlet</h3>
+                                            <div class="rating">
+                                                <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                            </div>
+                                            <p class="mb-0">
+                                                2 Coupons
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
+                                </div>
+                                <div
+                                    class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="brand-logo me-2">
+                                            <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo"
+                                                class="img-fluid">
+                                        </div>
+                                        <div class="right">
+                                            <h3 class="mb-0 similar-title">eoutlet</h3>
+                                            <div class="rating">
+                                                <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
+                                            </div>
+                                            <p class="mb-0">
+                                                Up to 5% Cashback
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
                                 </div>
                             </div>
-                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
-                        </div>
-                        <div class="similar-brand-card brandCard-sidebar border kc-border-light rounded-3 p-2 my-3">
-                            <div class="d-flex align-items-center mb-2">
-                                <div class="brand-logo me-2">
-                                    <img src="front/images/brand/eoutlet-02.png" alt="eoutlet logo" class="img-fluid">
-                                </div>
-                                <div class="right">
-                                    <h3 class="mb-0 similar-title">eoutlet</h3>
-                                    <div class="rating">
-                                        <i class="text-danger fa-solid fa-star me-2"></i><span>4.6</span>
-                                    </div>
-                                    <p class="mb-0">
-                                        Up to 5% Cashback
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="" class="btn kc-btn d-block" role="button">Visit Brand</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-md-9">
-            <div class="code-offer" id="allCoupon">
-                <div class="page-heading d-md-flex justify-content-between align-items-center mb-2">
+            <div class="code-offer page-right" id="allCoupon">
+                <div class="page-heading d-md-flex justify-content-between align-items-center mb-2 px-2">
                     <h1 class="mb-0">All Coupons & Offers</h1>
-                    <div class="row mx-0 justify-content-between mobileFilter">
-                        <div class="col px-0">
-                            <div class="filter-item d-md-none d-block mx-auto">
-                                <button class="btn btn-link w-100 text-decoration-none text-dark" id="showSideBarBtn"><span><i class="fa-solid fa-list"></i></span>
+                    <div class="row mx-0 justify-content-between mobileFilter my-md-0 my-2">
+                        <div class="col px-0 d-md-none d-block ">
+                            <div class="filter-item mx-auto">
+                                <button class="btn btn-link w-100 text-decoration-none text-dark showSideBarBtn"
+                                    id="showSideBarBtnCoupon"><span><i class="fa-solid fa-filter"></i></span>
                                     Filter</button>
                             </div>
                         </div>

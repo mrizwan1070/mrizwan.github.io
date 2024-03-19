@@ -12,82 +12,83 @@
 <div id="userAccount" class="bg-light">
     <div class="container-lg">
         <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
-        <button class="btn btn-kc-outline-rounded d-md-none d-block mb-3" id="showSideBarBtn"><span><i
+        <button class="btn btn-kc-outline-rounded d-md-none d-block mb-3 showSideBarBtn" id="showSideBarBtnUser"><span><i
                     class="fa-solid fa-bars"></i></span> Menu</button>
         <div class="row">
             <div class="col-md-3">
-                <div class="user-side sidebar border mobile-sidebar rounded-3 bg-white">
-                    <div class="user-account mb-3" id="useAccSidebar">
-                        <button class="btn-close position-absolute d-md-none d-block" type="button"
-                            id="sideCloseBtn"></button>
-                        <div class="user-account-header border-bottom mb-3">
-                            <div class="p-4 d-flex align-items-center flex-column">
-                                <div class="user-img mb-2">
-                                    <img src="front/images/mudassar.jpg" alt="Mudassar Iqbal"
-                                        class="img-fluid rounded-circle">
-                                </div>
-                                <div class="username">
-                                    Mudassar Iqbal
-                                </div>
-                                <!-- <button type="button" class="btn ms-auto">
+                <div class="sidebar-outer">
+                    <div class="user-side sidebar border mobile-sidebar rounded-3 bg-white">
+                        <div class="user-account mb-3" id="useAccSidebar">
+                            <button class="btn-close position-absolute d-md-none d-block" type="button"
+                                id="sideCloseBtn"></button>
+                            <div class="user-account-header border-bottom mb-3">
+                                <div class="p-4 d-flex align-items-center flex-column">
+                                    <div class="user-img mb-2">
+                                        <img src="front/images/mudassar.jpg" alt="Mudassar Iqbal"
+                                            class="img-fluid rounded-circle">
+                                    </div>
+                                    <div class="username">
+                                        Mudassar Iqbal
+                                    </div>
+                                    <!-- <button type="button" class="btn ms-auto">
                                 <span class="display-6"><i class="fa-solid fa-arrow-right-from-bracket"></i></span>
                             </button> -->
+                                </div>
                             </div>
-                        </div>
-                        <div class="user-setting px-2" role="tablist">
-                            <ul class="list-unstyled nav-userAcc">
-                                <li class="py-1">
-                                    <a href="#dashboard" data-bs-toggle="tab" data-bs-target="#dashboard"
-                                        id="nav-dashboard" role="tab" aria-controls="dashboard"
-                                        aria-selected="true">Dashboard</a>
-                                </li>
-                                <li class="py-1">
-                                    <a href="" data-bs-toggle="collapse" data-bs-target="#profileSetting"
-                                        class="dropdown-toggle collapsed">
-                                        Account
-                                    </a>
-                                    <ul class="list-unstyled collapse ps-2" id="profileSetting">
-                                        <li class="py-1">
-                                            <a href="#edit-profile" data-bs-toggle="tab" data-bs-target="#edit-profile"
-                                                id="nav-editProfile" role="tab" aria-controls="edit-profile"
-                                                aria-selected="false">
-                                                Edit Profile
-                                            </a>
-                                        </li>
-                                        <li class="py-1">
-                                            <a href="" data-bs-toggle="tab" data-bs-target="#user-setting"
-                                                id="nav-userSetting" role="tab" aria-controls="user-setting"
-                                                aria-selected="false">
-                                                Setting
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="py-1">
-                                    <a href="" data-bs-toggle="collapse" data-bs-target="#userCashbacks"
-                                        class="dropdown-toggle collapsed">Cashbacks</a>
-                                    <ul class="list-unstyled collapse ps-2" id="userCashbacks">
-                                        <li class="py-1">
-                                            <a href="#cb-history" data-bs-toggle="tab" data-bs-target="#cb-history"
-                                                id="nav-cbHistory" role="tab" aria-controls="cb-history">Cashback
-                                                History</a>
-                                        </li>
-                                        <li class="py-1">
-                                            <a href="#cb-wallet-tab" data-bs-toggle="tab"
-                                                data-bs-target="#cb-wallet-tab" id="nav-cb-wallet-tab" role="tab"
-                                                aria-controls="cb-wallet-tab">Cashback
-                                                Wallet</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="py-1">
-                                    <a href="" data-bs-toggle="modal" data-bs-target="#needHelp">Help</a>
-                                </li>
-                                <li class="py-1">
-                                    <a href="">Logout</a>
-                                </li>
-                            </ul>
-                            <!-- <div class="bg-white rounded-3 p-4 d-flex align-items-center justify-content-center">
+                            <div class="user-setting px-2" role="tablist">
+                                <ul class="list-unstyled nav-userAcc">
+                                    <li class="py-1">
+                                        <a href="#dashboard" data-bs-toggle="tab" data-bs-target="#dashboard"
+                                            id="nav-dashboard" role="tab" aria-controls="dashboard"
+                                            aria-selected="true">Dashboard</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="" data-bs-toggle="collapse" data-bs-target="#profileSetting"
+                                            class="dropdown-toggle collapsed">
+                                            Account
+                                        </a>
+                                        <ul class="list-unstyled collapse ps-2" id="profileSetting">
+                                            <li class="py-1">
+                                                <a href="#edit-profile" data-bs-toggle="tab"
+                                                    data-bs-target="#edit-profile" id="nav-editProfile" role="tab"
+                                                    aria-controls="edit-profile" aria-selected="false">
+                                                    Edit Profile
+                                                </a>
+                                            </li>
+                                            <li class="py-1">
+                                                <a href="" data-bs-toggle="tab" data-bs-target="#user-setting"
+                                                    id="nav-userSetting" role="tab" aria-controls="user-setting"
+                                                    aria-selected="false">
+                                                    Setting
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="" data-bs-toggle="collapse" data-bs-target="#userCashbacks"
+                                            class="dropdown-toggle collapsed">Cashbacks</a>
+                                        <ul class="list-unstyled collapse ps-2" id="userCashbacks">
+                                            <li class="py-1">
+                                                <a href="#cb-history" data-bs-toggle="tab" data-bs-target="#cb-history"
+                                                    id="nav-cbHistory" role="tab" aria-controls="cb-history">Cashback
+                                                    History</a>
+                                            </li>
+                                            <li class="py-1">
+                                                <a href="#cb-wallet-tab" data-bs-toggle="tab"
+                                                    data-bs-target="#cb-wallet-tab" id="nav-cb-wallet-tab" role="tab"
+                                                    aria-controls="cb-wallet-tab">Cashback
+                                                    Wallet</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="" data-bs-toggle="modal" data-bs-target="#needHelp">Help</a>
+                                    </li>
+                                    <li class="py-1">
+                                        <a href="">Logout</a>
+                                    </li>
+                                </ul>
+                                <!-- <div class="bg-white rounded-3 p-4 d-flex align-items-center justify-content-center">
                             <button type="button" class="btn d-flex flex-column align-items-center">
                                 <span class="mb-2 display-6"><i class="fa-solid fa-user-pen"></i></span>
                                 <span>Edit Profile</span>
@@ -101,6 +102,7 @@
                                 <span>Setting</span>
                             </button>
                         </div> -->
+                            </div>
                         </div>
                     </div>
                 </div>

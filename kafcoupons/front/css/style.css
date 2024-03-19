@@ -646,7 +646,7 @@ button#addBnkAcc {
     overflow: auto;
 }
 .show-sidebar{
-    left: 0 !important;
+   left: 0 !important;
 }
 #sideCloseBtn {
     right: 10px;
@@ -664,20 +664,42 @@ button#addBnkAcc {
     .cb-brand-img{
         width: 60px;
     }
+    .sidebar-outer{
+        position: fixed;
+        inset: 0;
+        background-color: #f8ee1538;
+        display: none;
+        opacity: 0;
+        z-index: 999;
+    }
     .mobile-sidebar{
         position: fixed;
         left: -100%;
         top: 0;
         height: 100vh;
-        transition: left .5s ease-in-out;
+        transition: left 2.5s ease-in-out;
         width: 300px;
         height: 100%;
         max-width: 300px;
         z-index: 999;
         border-radius: 0 !important;
         border-right: 1px solid #dee2e6;
-        padding: 1rem .5rem;
         background-color: #fff;
+        overflow: hidden;
+    }
+    .sidebar-header, .sidebar-body{
+        padding: 1rem .5rem;
+    }
+    .sidebar-body{
+        overflow: auto;
+        max-height: 100%;
+    }
+    .sidebar-header{
+        background: #212529;
+        color: #fff;
+    }
+    .sidebar-header h5{
+        margin-bottom: 0;
     }
     .mobileFilter{
         border: 1px solid #000;
@@ -698,11 +720,6 @@ button#addBnkAcc {
         outline: none;
         box-shadow: none;
     }
-}
-@media screen and (min-width: 768px) {
-    /* .brand-cb-detail-card{
-        margin-top: -70%;
-    } */
 }
 @media screen and (max-width: 576px){
     #cbHistory, #userWallet, #userAccTab{
