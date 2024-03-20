@@ -62,6 +62,12 @@ jQuery(document).ready(function () {
             $('.sidebar-outer').css({'display': 'none', 'opacity': '0'});
         }
     });
+    $('#getOTP').on('click', function(){
+        $('#verification').css('display', 'block');
+    });
+    $('#verification').on('click', function(){
+        $('#userRegister').css('display', 'block');
+    });
  // brand slider
 //  $('.brand-slider').slick({
 //     slidesToShow: 10,

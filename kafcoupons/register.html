@@ -10,12 +10,87 @@
 <div id="header"></div>
 <div id="loginRegister" class="">
     <div class="container-lg">
-        <img src="front/images/banners/brand-category.png" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <!-- <img src="front/images/banners/brand-category.png" alt="" class="img-fluid my-3 rounded-3 page-cover-img"> -->
         <div class="">
             <div class="page-heading">
                 <h1>Login or Register</h1>
             </div>
-            
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="login-register d-flex align-items-center h-100">
+                        <div class="login-form w-100">
+                            <div class="login-icon text-center mb-4">
+                            <img src="front/images/icons/login-user-icon.png" class="img-fluid" alt="">
+                            </div>
+                            <form>
+                                <div class="form-group mb-3">
+                                    <label for="mobile-number" class="form-label">Enter Your Mobile Number</label>
+                                    <div class="input-group mb-3">
+                                        <span class="input-group-text">+92</span>
+                                        <input type="number" class="form-control" id="mobileNumber" placeholder="Enter mobile number">
+                                    </div>
+                                    <button class="btn viewAll-btn w-100" id="getOTP" type="button">Get Code</button>
+                                </div>
+                                <div class="form-group mb-3" id="verification" style="display: none;">
+                                    <label for="mobile-number" class="form-label">Code To Verify</label>
+                                    <div class="input-group mb-3">
+                                        <input type="number" class="form-control" id="verifyCode" placeholder="Enter OTP">
+                                    </div>
+                                    <button class="btn viewAll-btn w-100" type="button">Verify</button>
+                                </div>
+                                <div class="register" id="userRegister" style="display: none;">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <div class="form-group mb-3">
+                                                <label for="mobile-number" class="form-label">Full Name</label>
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form-control" id="fullName"
+                                                        placeholder="Enter Your Name">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div class="form-group mb-3">
+                                                <label for="mobile-number" class="form-label">City
+                                                    <small>(Optional)</small></label>
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form-control" id="city" placeholder="Your City">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="" class="mb-2">Gender</label>
+                                        <div class="gender-selector d-flex">
+                                            <div class="gmale">
+                                                <input class="me-2" type="radio" name="gender" id="male" value="male">
+                                                <label for="male">Male</label>
+                                            </div>
+                                            <div class="f-male">
+                                                <input class="me-2" type="radio" name="gender" id="female"
+                                                    value="female">
+                                                <label for="female">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group mb-3">
+                                        <input type="checkbox" name="terms" id="terms" class="me-2">
+                                        <label for="terms">I agree with <a href="https://kafcoupons.com/policy/terms-and-conditions/43" target="_blank" class="text-decoration-underline">Terms
+                                                & Conditions</a></label>
+                                    </div>
+                                    <button type="button" class="btn viewAll-btn w-100">Register</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="loginImg">
+                        <img src="/front/images/banners/Mobile-login-rafiki.png"
+                            class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
