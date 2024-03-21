@@ -29,7 +29,9 @@ jQuery(document).ready(function () {
     });
     $('.user-setting li a[data-bs-toggle="tab"], #viewAllTrasacHis').on('click', function(event) {
         $('.mobile-sidebar').removeClass('show-sidebar');
+        if ($(window).width() <= 767){
         $('.sidebar-outer').css({'display': 'none', 'opcaity': "0"});
+        };
         $('body').css('overflow', 'auto');
         // Remove 'active' class from all tab panes
         $('.tab-content .tab-pane').removeClass('show active');
