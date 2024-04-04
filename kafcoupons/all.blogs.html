@@ -1,0 +1,245 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+<div id="header"></div>
+
+<div id="allBlog">
+    <div class="container-lg">
+        <img src="front/images/page-header/kc-faqs.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <div class="allblog">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="sidebar-outer">
+                        <div class="sidebar mobile-sidebar">
+                            <div class="sidebar-header d-flex justify-content-between">
+                                <h5>Refine Search</h5>
+                                <button class="btn-close btn-close-white d-md-none d-block" type="button"
+                                    id="sideCloseBtn"></button>
+                            </div>
+                            <div class="sidebar-body">
+                                <form method="post" id="coupon_filter_form" novalidate="novalidate">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search by keyword"
+                                            aria-label="Username" aria-describedby="input-group-right">
+                                        <span class="input-group-text" id="couponSearch"><i class="fa fa-search"
+                                                aria-hidden="true"></i></span>
+                                    </div>
+                                </form>
+                                <div class="side-filter mb-4">
+                                    <div class="" id="AllCouponCategories">
+                                        <h6>Blog Categories</h6>
+                                        <label class="filter-check d-flex my-3">
+                                            Fashion & Clothing
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="313">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Health & Beauty
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="482">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Computers & Laptops
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="495">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Mobile & Accessories
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Home & Garden
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                        <label class="filter-check d-flex my-3">
+                                            Financial Services
+                                            <input type="checkbox" name="coupon_store_filter"
+                                                class="coupon_store_filter" value="931">
+                                            <span class="checkmark">
+                                            </span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="code-offer page-right" id="allCoupon">
+                        <div class="page-heading d-md-flex justify-content-between align-items-center mb-2 px-2">
+                            <h1 class="mb-0">Our Latest Blog Posts | Discover the latest news, tips, and tricks</h1>
+                            <div class="row mx-0 justify-content-between mobileFilter my-md-0 my-2">
+                                <div class="col px-0 d-md-none d-block ">
+                                    <div class="filter-item mx-auto">
+                                        <button class="btn btn-link w-100 text-decoration-none text-dark showSideBarBtn"
+                                            id="showSideBarBtnCoupon"><span><i class="fa-solid fa-filter"></i></span>
+                                            Filter</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="blog-list">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                            <a href="">
+                                                <div class="blog-img">
+                                                    <img src="front/images/banners/blog-img.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="blog-summery mt-2">
+                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <h2>
+                                                        Top 10 Electronics Stores in the Middle East
+                                                    </h2>
+                                                    <p>
+                                                        Electronic products are an important part of our daily lives,
+                                                        that’s why they are considered the best selling items in the
+                                                        trading community. Over the last few years, internet access for
+                                                        common users has boosted the e-commerce trends, leading to a
+                                                        record increase in online trading. Highly competitive markets
+                                                        and low maintenance costs of online businesses have made it easy
+                                                        for customers to buy their required products, cheaply and
+                                                        easily.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                            <a href="">
+                                                <div class="blog-img">
+                                                    <img src="front/images/banners/blog-img.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="blog-summery mt-2">
+                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <h2>
+                                                        Top 10 Electronics Stores in the
+                                                    </h2>
+                                                    <p>
+                                                        Electronic products are an important part of our daily lives,
+                                                        that’s why they are considered the best selling items in the
+                                                        trading community. Over the last few years, internet access for
+                                                        common users has boosted the e-commerce trends, leading to a
+                                                        record increase in online trading. Highly competitive markets
+                                                        and low maintenance costs of online businesses have made it easy
+                                                        for customers to buy their required products, cheaply and
+                                                        easily.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                            <a href="">
+                                                <div class="blog-img">
+                                                    <img src="front/images/banners/blog-img.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="blog-summery mt-2">
+                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <h2>
+                                                        Top 10 Electronics Stores in the Middle East
+                                                    </h2>
+                                                    <p>
+                                                        Electronic products are an important part of our daily lives,
+                                                        that’s why they are considered the best selling items in the
+                                                        trading community. Over the last few years, internet access for
+                                                        common users has boosted the e-commerce trends, leading to a
+                                                        record increase in online trading. Highly competitive markets
+                                                        and low maintenance costs of online businesses have made it easy
+                                                        for customers to buy their required products, cheaply and
+                                                        easily.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                            <a href="">
+                                                <div class="blog-img">
+                                                    <img src="front/images/banners/blog-img.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="blog-summery mt-2">
+                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <h2>
+                                                        Top 10 Electronics Stores in the Middle East
+                                                    </h2>
+                                                    <p>
+                                                        Electronic products are an important part of our daily lives,
+                                                        that’s why they are considered the best selling items in the
+                                                        trading community. Over the last few years, internet access for
+                                                        common users has boosted the e-commerce trends, leading to a
+                                                        record increase in online trading. Highly competitive markets
+                                                        and low maintenance costs of online businesses have made it easy
+                                                        for customers to buy their required products, cheaply and
+                                                        easily.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="blog-card">
+                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                            <a href="">
+                                                <div class="blog-img">
+                                                    <img src="front/images/banners/blog-img.jpg" class="img-fluid" alt="">
+                                                </div>
+                                                <div class="blog-summery mt-2">
+                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <h2>
+                                                        Top 10 Electronics Stores in the Middle East
+                                                    </h2>
+                                                    <p>
+                                                        Electronic products are an important part of our daily lives,
+                                                        that’s why they are considered the best selling items in the
+                                                        trading community. Over the last few years, internet access for
+                                                        common users has boosted the e-commerce trends, leading to a
+                                                        record increase in online trading. Highly competitive markets
+                                                        and low maintenance costs of online businesses have made it easy
+                                                        for customers to buy their required products, cheaply and
+                                                        easily.
+                                                    </p>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>

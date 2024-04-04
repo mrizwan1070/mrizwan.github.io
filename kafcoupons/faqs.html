@@ -1,0 +1,92 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+    });
+</script>
+
+<div id="header"></div>
+
+<div id="frequentylAsked" class="bg-light">
+    <div class="container-lg">
+        <img src="front/images/page-header/kc-faqs.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <div class="page-heading">
+            <h1>Frequently Asked Questions</h1>
+        </div>
+        <div class="faqs pb-4">
+            <div class="accordion" id="kcFaqs">
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            General
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#kcFaqs">
+                        <div class="accordion-body">
+                            <div class="faq">
+                                <h3>
+                                    What is Cashback?
+                                </h3>
+                                <p>
+                                    Cashback is a financial benefit offered by Kafcoupons to its registered users,
+                                    and it means getting back a percentage of the money spent on purchases you got from
+                                    your favorite stores. This cashback value gets added to your account on Kafcoupons
+                                    so that you can transfer it to your PayPal account.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Payment Queries
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#kcFaqs">
+                        <div class="accordion-body">
+                            <div class="faq">
+                                <h3>
+                                    When can I request a payment?
+                                </h3>
+                                <p>
+                                    When your account's available Cashback amount reaches a minimum of Rs 100, you can
+                                    request a payment.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            DO's and DON'Ts
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#kcFaqs">
+                        <div class="accordion-body">
+                            <div class="faq">
+                                <h3>
+                                    Is there anything I need to do to make sure my cashback tracks properly?
+                                </h3>
+                                <p>
+                                    If you have any other shopping oriented toolbars or browser add-ons installed (that
+                                    offer coupon, cashback, etc.), they can interfere with the proper functioning of the
+                                    cashback Button and therefore earning Cashback. For best results, we recommend
+                                    removing any other shopping oriented browser add-ons or toolbars.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer"></div>
