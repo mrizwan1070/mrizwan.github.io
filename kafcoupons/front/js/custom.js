@@ -1,14 +1,10 @@
 jQuery(document).ready(function () {
     //star rating bars
-    $('.rating-bar').each(function() {
-        // Get the total-stars attribute value
-        var totalStars = parseInt($(this).find('.rate-bar').attr('total-stars'));
-
-        // Calculate the width for the rating bar
-        var widthPercentage = (totalStars / 100) * 100; // Assuming the maximum value is 100
-
-        // Set the width using CSS
-        $(this).find('.rate-bar').css('width', totalStars + '%');
+    var totalRating = $('#total-rating').text();
+    console.log(totalRating);
+    $('.rate-bar').each(function(){
+        var rating = $(this).attr('total-stars');
+        $(this).find('span').css('width', (rating/totalRating)*100 + '%');
     });
 
     var userSide = $('.mobile-sidebar');

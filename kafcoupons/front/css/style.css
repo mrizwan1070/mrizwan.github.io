@@ -297,11 +297,10 @@ footer a, .footer-links h5, #footerAccordion .accordion-button{
     border-radius: 8px;
     overflow: hidden;
 }
-.rate-bar::after{
-    content: "";
+.rate-bar > span{
+    display: block;
     position: absolute;
     height: 100%;
-    width: 50%;
     background-color: #FF6B00;
 }
 .user-img{
@@ -641,7 +640,7 @@ button#addBnkAcc {
     text-wrap: nowrap;
 }
 .page-cover-img, .home-slideImg {
-    min-height: 135px;
+    min-height: 130px;
     object-fit: cover;
 }
 #useAccSidebar, .mobile-sidebar{
@@ -672,12 +671,12 @@ input#mobileNumber{
     font-size: 1.2rem;
 }
 .blog-summery h2 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
-    height: 3.5rem;
+    height: 3rem;
 }
 .blog-summery p {
     display: -webkit-box;
