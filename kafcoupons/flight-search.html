@@ -40,14 +40,14 @@
     }
 </style>
 <div class="container-lg">
-    <div class="flight-searchForm p-4 bg-dark rounded">
+    <div class="flight-searchForm p-md-4 p-2 bg-dark rounded">
         <form action="" class="mb-0">
             <div class="row mx-0">
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded position-relative">
-                        <label for="" class="text-center fw-bold d-block">FLYING FROM
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1 position-relative">
+                        <label for="" class="text-center fw-bold d-md-block d-none">FLYING FROM
                         </label>
-                        <input type="text" class="form-control text-center" id="departFrom" placeholder="Depart From">
+                        <input type="text" class="form-control text-center" id="departFrom" autocomplete="off" placeholder="Depart From">
                         <div id="departFromlocation" class="selectLocation position-absolute w-100 p-2 bg-light rounded"
                             style="display: none;">
                             <ul class="list-unstyled border mb-0">
@@ -70,11 +70,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded position-relative">
-                        <label for="" class="text-center fw-bold d-block">FLYING TO
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1 position-relative">
+                        <label for="" class="text-center fw-bold d-md-block d-none">FLYING TO
                         </label>
-                        <input type="text" class="form-control text-center" id="flyTo" placeholder="Destination">
+                        <input type="text" class="form-control text-center" id="flyTo" autocomplete="off" placeholder="Destination">
                         <div id="flyTolocation" class="selectLocation position-absolute w-100 p-2 bg-light rounded"
                             style="display: none;">
                             <ul class="list-unstyled border mb-0">
@@ -97,9 +97,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded">
-                        <label for="" class="text-center fw-bold d-block">DATES
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1">
+                        <label for="" class="text-center fw-bold d-md-block d-none">DATES
                         </label>
                         <div class="row mx-0 flex-nowrap">
                             <div class="col px-1">
@@ -115,9 +115,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded position-relative pessanger">
-                        <label for="" class="text-center fw-bold d-block">PASSENGERS</label>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1 position-relative pessanger">
+                        <label for="" class="text-center fw-bold d-md-block d-none">PASSENGERS</label>
                         <input type="text" value="1 Adult" readonly class="form-control text-center"
                             id="totalPessanger">
                         <div class="pessangerSelect bg-light position-absolute w-100 p-2" style="display: none;">
@@ -172,36 +172,36 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded">
-                        <label for="" class="text-center fw-bold d-block">NAME
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1">
+                        <label for="" class="text-center fw-bold d-md-block d-none">NAME
                         </label>
                         <input type="text" class="form-control text-center" placeholder="Your name">
                     </div>
                 </div>
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded">
-                        <label for="" class="text-center fw-bold d-block">PHONE
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1">
+                        <label for="" class="text-center fw-bold d-md-block d-none">PHONE
                         </label>
                         <input type="text" class="form-control text-center" placeholder="Your phone">
                     </div>
                 </div>
-                <div class="col-md-3 col-6 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded">
-                        <label for="" class="text-center fw-bold d-block">EMAIL
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1">
+                        <label for="" class="text-center fw-bold d-md-block d-none">EMAIL
                         </label>
                         <input type="email" class="form-control text-center" placeholder="Your email">
                     </div>
                 </div>
-                <div class="col-md-3 col-6">
+                <div class="col-md-3 col-sm-6">
                     <div class="form-element d-flex justify-content-center align-items-center h-100 pb-3">
                         <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
                                     class="flaticon-flight-1"></i></span></button>
                     </div>
                 </div>
                 <!-- <div class="col-md-3 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded">
-                        <label for="" class="text-center fw-bold d-block">CHILDREN</label>
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1">
+                        <label for="" class="text-center fw-bold d-md-block d-none">CHILDREN</label>
                         <select name="" id="" class="form-control text-center">
                             <option value="">No Child</option>
                             <option value="">One Child</option>
@@ -218,8 +218,8 @@
                     </div>
                 </div>
                 <div class="col-md-3 px-1 mb-3">
-                    <div class="form-element py-2 bg-white rounded">
-                        <label for="" class="text-center fw-bold d-block">INFANT</label>
+                    <div class="form-element py-md-2 p-0 bg-white rounded-1">
+                        <label for="" class="text-center fw-bold d-md-block d-none">INFANT</label>
                         <select name="" id="" class="form-control text-center">
                             <option value="">No Infant </option>
                             <option value="">One Infant</option>
