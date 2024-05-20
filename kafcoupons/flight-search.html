@@ -1,0 +1,297 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+        console.log("I am working")
+    });
+</script>
+<div id="header"></div>
+<style>
+    .form-element input,
+    .form-element select {
+        border: none;
+        outline: none;
+    }
+
+    .form-element input:focus,
+    .form-element select:focus {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none;
+    }
+
+    .pessangerSelect,
+    .selectLocation {
+        left: .3rem;
+        z-index: 1;
+    }
+
+    .selectLocation ul li:hover {
+        background-color: #0dcaf0 !important;
+    }
+    .trip input[type=radio]{
+        width: 1rem;
+        height: 1rem;
+        vertical-align: middle;
+    }
+</style>
+<div class="container-lg">
+    <div class="flight-searchForm p-4 bg-dark rounded">
+        <form action="" class="mb-0">
+            <div class="row mx-0">
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded position-relative">
+                        <label for="" class="text-center fw-bold d-block">FLYING FROM
+                        </label>
+                        <input type="text" class="form-control text-center" id="departFrom" placeholder="Depart From">
+                        <div id="departFromlocation" class="selectLocation position-absolute w-100 p-2 bg-light rounded"
+                            style="display: none;">
+                            <ul class="list-unstyled border mb-0">
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded position-relative">
+                        <label for="" class="text-center fw-bold d-block">FLYING TO
+                        </label>
+                        <input type="text" class="form-control text-center" id="flyTo" placeholder="Destination">
+                        <div id="flyTolocation" class="selectLocation position-absolute w-100 p-2 bg-light rounded"
+                            style="display: none;">
+                            <ul class="list-unstyled border mb-0">
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                                <li class="bg-white border-bottom p-1">
+                                    London
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded">
+                        <label for="" class="text-center fw-bold d-block">DATES
+                        </label>
+                        <div class="row mx-0 flex-nowrap">
+                            <div class="col px-1">
+                                <input type="text" id="departDate" onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" class="form-control text-center"
+                                    placeholder="Depart date">
+                            </div>
+                            <div class="col px-1">
+                                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
+                                    class="form-control text-center" placeholder="Return date">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded position-relative pessanger">
+                        <label for="" class="text-center fw-bold d-block">PASSENGERS</label>
+                        <input type="text" value="1 Adult" readonly class="form-control text-center"
+                            id="totalPessanger">
+                        <div class="pessangerSelect bg-light position-absolute w-100 p-2" style="display: none;">
+                            <div class="row mx-0">
+                                <div class="col px-1">
+                                    <div class="adultSelect border p-1 bg-white">
+                                        <label for="selectAdult" id="adultLabel">Adult</label>
+                                        <select name="selectAdult" id="selectAdult" class="form-select lh-1 p-0">
+                                            <option value="1" selected>1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col px-1">
+                                    <div class="childSelect border p-1 bg-white">
+                                        <label for="">Child</label>
+                                        <select name="" id="selectChild" class="form-select lh-1 p-0">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col px-1">
+                                    <div class="infantSelect border p-1 bg-white">
+                                        <label for="">Infant</label>
+                                        <select name="" id="selectInfant" class="form-select lh-1 p-0">
+                                            <option value="0" selected>0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end mt-1">
+                                <button type="button" class="btn btn-info me-1 py-1" id="setPessanger">Submit</button>
+                                <button type="button" class="btn btn-info py-1" id="pessangerClose">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded">
+                        <label for="" class="text-center fw-bold d-block">NAME
+                        </label>
+                        <input type="text" class="form-control text-center" placeholder="Your name">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded">
+                        <label for="" class="text-center fw-bold d-block">PHONE
+                        </label>
+                        <input type="text" class="form-control text-center" placeholder="Your phone">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded">
+                        <label for="" class="text-center fw-bold d-block">EMAIL
+                        </label>
+                        <input type="email" class="form-control text-center" placeholder="Your email">
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="form-element d-flex justify-content-center align-items-center h-100 pb-3">
+                        <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
+                            class="flaticon-flight-1"></i></span></button>
+                    </div>
+                </div>
+                <!-- <div class="col-md-3 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded">
+                        <label for="" class="text-center fw-bold d-block">CHILDREN</label>
+                        <select name="" id="" class="form-control text-center">
+                            <option value="">No Child</option>
+                            <option value="">One Child</option>
+                            <option value="">Two Children</option>
+                            <option value="">Three Children</option>
+                            <option value="">Four Children</option>
+                            <option value="">Five Children</option>
+                            <option value="">Six Children</option>
+                            <option value="">Seven Children</option>
+                            <option value="">Eight Children</option>
+                            <option value="">Nine Children</option>
+                            <option value="">Ten Children</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3 px-1 mb-3">
+                    <div class="form-element py-2 bg-white rounded">
+                        <label for="" class="text-center fw-bold d-block">INFANT</label>
+                        <select name="" id="" class="form-control text-center">
+                            <option value="">No Infant </option>
+                            <option value="">One Infant</option>
+                            <option value="">Two Infants</option>
+                            <option value="">Three Infants</option>
+                            <option value="">Four Infants</option>
+                            <option value="">Five Infants</option>
+                            <option value="">Six Infants</option>
+                            <option value="">Seven Infants</option>
+                            <option value="">Eight Infants</option>
+                            <option value="">Nine Infants</option>
+                            <option value="">Ten Infants</option>
+                        </select>
+                    </div>
+                </div> -->
+            </div>
+            <div class="d-flex justify-content-between">
+                <div class="trip text-white d-flex">
+                    <div class="round me-3">
+                        <input type="radio" name="trip" id="round" value="round">
+                        <label for="round" class="ms-1">Round</label>
+                    </div>
+                    <div class="oneway">
+                        <input type="radio" name="trip" id="oneway" value="oneway" checked>
+                        <label for="oneway" class="ms-1">One Way</label>
+                    </div>
+                </div>
+                <!-- <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
+                            class="flaticon-flight-1"></i></span></button> -->
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+<script>
+    $(document).ready(function () {
+        $(".pessangerSelect").click(function (event) {
+            event.stopPropagation(); // Prevent click event from bubbling up
+        });
+        $(".pessanger").click(function () {
+            $(".pessangerSelect").css("display", "block");
+        });
+        $("#pessangerClose").click(function () {
+            $(".pessangerSelect").css("display", "none");
+        });
+        $('#setPessanger').click(function () {
+            var adult = $('#selectAdult').val();
+            var child = $('#selectChild').val();
+            var infant = $('#selectInfant').val();
+
+            var totalPessanger = '';
+
+            if (adult > 0) {
+                totalPessanger += adult + (adult > 1 ? ' Adults, ' : ' Adult, ');
+            }
+            if (child > 0) {
+                totalPessanger += child + (child > 1 ? ' Children, ' : ' Child, ');
+            }
+            if (infant > 0) {
+                totalPessanger += infant + (infant > 1 ? ' Infants' : ' Infant');
+            }
+
+            $('#totalPessanger').val(totalPessanger);
+            $(".pessangerSelect").css("display", "none");
+        });
+        $("#flyTo, #departFrom").keydown(function () {
+            $(this).next(".selectLocation").css("display", "block");
+            $(this).blur(function () {
+                $(".selectLocation").css("display", "none");
+            })
+        });
+
+    });
+</script>
+</body>
+
+</html>

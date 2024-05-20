@@ -686,6 +686,9 @@ input#mobileNumber{
     height: 4.5rem;
     margin-bottom: 0;
 }
+.side-blog-img img {
+    width: 175px;
+}
 @media screen and (max-width: 992px) {
     .cb-brand-img{
         width: 70px;

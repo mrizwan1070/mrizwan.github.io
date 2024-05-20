@@ -9,7 +9,7 @@ jQuery(document).ready(function () {
 
     var userSide = $('.mobile-sidebar');
 
-    $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
+    $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col, .cb-progress > div > div").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
     $("#addBnkAcc").click(function(){
         $("#addAccount").removeClass("d-none");
     });
