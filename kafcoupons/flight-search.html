@@ -193,11 +193,25 @@
                         <input type="email" class="form-control text-center" placeholder="Your email">
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="form-element d-flex justify-content-center align-items-center h-100 pb-3">
+                <div class="col-md-3 col-sm-6 order-sm-0 order-last">
+                    <div class="form-element d-flex justify-content-center align-items-center h-100 pb-sm-3">
                         <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
                                     class="flaticon-flight-1"></i></span></button>
                     </div>
+                </div>
+                <div class="col-12 d-flex mb-sm-0 mb-3 justify-content-between">
+                    <div class="trip text-white d-flex">
+                        <div class="round me-3">
+                            <input type="radio" name="trip" id="round" value="round">
+                            <label for="round" class="ms-1">Round</label>
+                        </div>
+                        <div class="oneway">
+                            <input type="radio" name="trip" id="oneway" value="oneway" checked>
+                            <label for="oneway" class="ms-1">One Way</label>
+                        </div>
+                    </div>
+                    <!-- <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
+                                class="flaticon-flight-1"></i></span></button> -->
                 </div>
                 <!-- <div class="col-md-3 px-1 mb-3">
                     <div class="form-element py-md-2 p-0 bg-white rounded-1">
@@ -235,20 +249,6 @@
                         </select>
                     </div>
                 </div> -->
-            </div>
-            <div class="d-flex justify-content-between">
-                <div class="trip text-white d-flex">
-                    <div class="round me-3">
-                        <input type="radio" name="trip" id="round" value="round">
-                        <label for="round" class="ms-1">Round</label>
-                    </div>
-                    <div class="oneway">
-                        <input type="radio" name="trip" id="oneway" value="oneway" checked>
-                        <label for="oneway" class="ms-1">One Way</label>
-                    </div>
-                </div>
-                <!-- <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
-                            class="flaticon-flight-1"></i></span></button> -->
             </div>
         </form>
     </div>
