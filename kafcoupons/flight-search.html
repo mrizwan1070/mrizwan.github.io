@@ -32,7 +32,8 @@
     .selectLocation ul li:hover {
         background-color: #0dcaf0 !important;
     }
-    .trip input[type=radio]{
+
+    .trip input[type=radio] {
         width: 1rem;
         height: 1rem;
         vertical-align: middle;
@@ -42,7 +43,7 @@
     <div class="flight-searchForm p-4 bg-dark rounded">
         <form action="" class="mb-0">
             <div class="row mx-0">
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded position-relative">
                         <label for="" class="text-center fw-bold d-block">FLYING FROM
                         </label>
@@ -69,7 +70,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded position-relative">
                         <label for="" class="text-center fw-bold d-block">FLYING TO
                         </label>
@@ -96,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded">
                         <label for="" class="text-center fw-bold d-block">DATES
                         </label>
@@ -107,13 +108,14 @@
                                     placeholder="Depart date">
                             </div>
                             <div class="col px-1">
-                                <input type="text" onfocus="(this.type='date')" onblur="(this.type='text')"
-                                    class="form-control text-center" placeholder="Return date">
+                                <input type="text" id="returnDate" onfocus="(this.type='date')"
+                                    onblur="(this.type='text')" class="form-control text-center"
+                                    placeholder="Return date">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded position-relative pessanger">
                         <label for="" class="text-center fw-bold d-block">PASSENGERS</label>
                         <input type="text" value="1 Adult" readonly class="form-control text-center"
@@ -170,31 +172,31 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded">
                         <label for="" class="text-center fw-bold d-block">NAME
                         </label>
                         <input type="text" class="form-control text-center" placeholder="Your name">
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded">
                         <label for="" class="text-center fw-bold d-block">PHONE
                         </label>
                         <input type="text" class="form-control text-center" placeholder="Your phone">
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6 px-1 mb-3">
+                <div class="col-md-3 col-6 px-1 mb-3">
                     <div class="form-element py-2 bg-white rounded">
                         <label for="" class="text-center fw-bold d-block">EMAIL
                         </label>
                         <input type="email" class="form-control text-center" placeholder="Your email">
                     </div>
                 </div>
-                <div class="col-md-3 col-sm-6">
+                <div class="col-md-3 col-6">
                     <div class="form-element d-flex justify-content-center align-items-center h-100 pb-3">
                         <button type="button" class="btn btn-lg btn-info">Show Flights <span><i
-                            class="flaticon-flight-1"></i></span></button>
+                                    class="flaticon-flight-1"></i></span></button>
                     </div>
                 </div>
                 <!-- <div class="col-md-3 px-1 mb-3">
@@ -255,7 +257,7 @@
 <script>
     $(document).ready(function () {
         $(".pessangerSelect").click(function (event) {
-            event.stopPropagation(); // Prevent click event from bubbling up
+            event.stopPropagation();
         });
         $(".pessanger").click(function () {
             $(".pessangerSelect").css("display", "block");
@@ -289,7 +291,11 @@
                 $(".selectLocation").css("display", "none");
             })
         });
-
+        $(".selectLocation > ul > li").click(function () {
+            var location = $(this).html();
+            console.log(location);
+            $("#departFrom").val(location);
+        });
     });
 </script>
 </body>
