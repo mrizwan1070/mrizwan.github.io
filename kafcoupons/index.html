@@ -1,574 +1,723 @@
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <script>
-        $(function(){
-            // Load header and footer
-            $('#header').load('header.html');
-            $('#footer').load('footer.html');
-            console.log("I am working")
-        });
-    </script>
-    <div id="header"></div>
-    <div class="header-hero">
-        <div class="container-lg">
-            <div class="row">
-                <div class="col">
-                    <div class="my-2 text-center">
-                        <div id="carouselHeaderHero" class="carousel slide" data-bs-ride="carousel">
-                            <div class="carousel-inner rounded">
-                                <div class="carousel-item active">
-                                    <a href="">
-                                        <img src="front/images/banners/footlocker.webp" alt=""
-                                            class="img-fluid rounded-3 home-slideImg">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="">
-                                        <img src="front/images/banners/namshi.webp" alt="" class="img-fluid rounded-3 home-slideImg">
-                                    </a>
-                                </div>
-                                <div class="carousel-item">
-                                    <a href="">
-                                        <img src="front/images/banners/rayna-toures.webp" alt=""
-                                            class="img-fluid rounded-3 home-slideImg">
-                                    </a>
-                                </div>
-                                <a class="carousel-control-prev" href="#carouselHeaderHero" role="button"
-                                    data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                </a>
-                                <a class="carousel-control-next" href="#carouselHeaderHero" role="button"
-                                    data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<script>
+    $(document).ready (function(){
+    $(function () {
+        // Load header and footer
+        $('#header').load('header.html');
+        $('#footer').load('footer.html');
+        console.log("I am working")
+    })});
+</script>
+<div id="header"></div>
+<div class="header-hero">
     <div class="container-lg">
-        <div id="brandSlider" class="my-md-4 my-3">
-            <div class="brand-slider-container-lg bg-secondary-kc rounded-3">
-                <div class="brand-slider owl-carousel d-flex flex-nowrap p-3">
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/cos.png" class="img-fluid rounded-3" alt="Brand Name">
+        <div class="row">
+            <div class="col">
+                <div class="my-2 text-center">
+                    <div id="carouselHeaderHero" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner rounded">
+                            <div class="carousel-item active">
+                                <a href="">
+                                    <img src="front/images/banners/footlocker.webp" alt=""
+                                        class="img-fluid rounded-3 home-slideImg">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="">
+                                    <img src="front/images/banners/namshi.webp" alt=""
+                                        class="img-fluid rounded-3 home-slideImg">
+                                </a>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="">
+                                    <img src="front/images/banners/rayna-toures.webp" alt=""
+                                        class="img-fluid rounded-3 home-slideImg">
+                                </a>
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselHeaderHero" role="button"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
                             </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/alkhalil.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/Citrusss-02.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/eoutlet-02.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/Fordeal-06.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/likecard-02.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/linzi.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/namshi.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/noon-06.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/pottery-barn.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/saramart.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/styli-02.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/the-moms-co.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/to-the.png" class="img-fluid rounded-3" alt="Brand Name">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="brand-card-slider mx-2">
-                        <div class="brand-card-slider-inner">
-                            <a href="javascript:;">
-                                <img src="front/images/brand/vistoria-secret.png" class="img-fluid rounded-3"
-                                    alt="Brand Name">
+                            <a class="carousel-control-next" href="#carouselHeaderHero" role="button"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <section id="homeCategories" class="my-md-4 my-3">
-            <div class="top-categories">
-                <div class="row">
-                    <div class="col-md-3 d-md-block d-none">
-                        <div
-                            class="promo bg-secondary-kc h-100 d-flex align-items-center justify-content-center rounded-3">
-                            <video style="width: 100%; height: 100%;" autoplay muted loop>
-                                <source src="https://kafcoupons.com/assets/admin/images/profile/1704050678.mp4">
-                            </video>
-                        </div>
-                    </div>
-                    <div class="col-md-9">
-                        <div class="home-categoreis secondary-color-lt py-4 px-3 rounded-3">
-                            <div class="section-title">
-                                <h2>
-                                    Categories
-                                </h2>
-                            </div>
-                            <div class="category-cards owl-carousel">
-                                <div class="cat-card px-1">
-                                    <a href="javascript:;">
-                                        <img src="front/images/categoreis/games.png" alt="Category Title"
-                                            class="img-fluid rounded-3">
-                                    </a>
-                                </div>
-                                <div class="cat-card px-1">
-                                    <a href="javascript:;">
-                                        <img src="front/images/categoreis/grocery.png" alt="Category Title"
-                                            class="img-fluid rounded-3">
-                                    </a>
-                                </div>
-                                <div class="cat-card px-1">
-                                    <a href="javascript:;">
-                                        <img src="front/images/categoreis/games.png" alt="Category Title"
-                                            class="img-fluid rounded-3">
-                                    </a>
-                                </div>
-                                <div class="cat-card px-1">
-                                    <a href="javascript:;">
-                                        <img src="front/images/categoreis/grocery.png" alt="Category Title"
-                                            class="img-fluid rounded-3">
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="topBrand" class="my-4">
-            <div class="top-brands">
-                <div class="section-title">
-                    <h2>
-                        Top Brands
-                    </h2>
-                </div>
-                <div class="top-brand-cards py-4">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/namshi.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Namshi
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/noon-06.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Noon
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/pottery-barn.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Pottery Barn
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/eoutlet-02.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            eoutlet
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/haier-logo.jpg" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Haier
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 1.5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/Fordeal-06.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Fordeal
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/styli-02.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Styli
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/noon-06.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Noon
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="all-brand.html" class="btn btn-lg viewAll-btn mx-auto d-block">View All</a>
-                </div>
-            </div>
-        </section>
-        <section id="popularBrand" class="my-4">
-            <div class="popular-brand">
-                <div class="section-title">
-                    <h2>
-                        Popular Brands
-                    </h2>
-                </div>
-                <div class="popular-brand-cards py-4">
-                    <div class="row">
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            The Moms Co
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/linzi.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Linzi
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/vistoria-secret.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Vistoria Secret
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/alkhalil.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Al Khalil
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/saramart.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Sara Mart
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/cos.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            cos
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/namshi.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Namshi
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/Citrusss-02.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            Citrus
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
-                            <div class="brand-card d-flex">
-                                <div class="brand-card-inner text-center">
-                                    <div class="brand-detail p-md-4 p-1">
-                                        <img src="front/images/brand/to-the.png" alt="Brand Title Logo"
-                                            class="brand-img img-fluid shadow-sm mb-2">
-                                        <h3 class="brand-title mb-1">
-                                            To The
-                                        </h3>
-                                        <p class="brand-cashback">
-                                            up to 5% cashback
-                                        </p>
-                                    </div>
-                                    <div class="visit-button mt-3">
-                                        <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="all-brand.html" class="btn btn-lg viewAll-btn mx-auto d-block">View All</a>
-                </div>
-            </div>
-        </section>
     </div>
+</div>
+<div class="container-lg">
+    <div id="brandSlider" class="my-md-4 my-3">
+        <div class="brand-slider-container-lg bg-secondary-kc rounded-3">
+            <div class="brand-slider owl-carousel d-flex flex-nowrap p-3">
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/cos.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/alkhalil.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/Citrusss-02.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/eoutlet-02.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/Fordeal-06.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/likecard-02.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/linzi.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/namshi.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/noon-06.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/pottery-barn.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/saramart.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/styli-02.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/the-moms-co.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/to-the.png" class="img-fluid rounded-3" alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+                <div class="brand-card-slider mx-2">
+                    <div class="brand-card-slider-inner">
+                        <a href="javascript:;">
+                            <img src="front/images/brand/vistoria-secret.png" class="img-fluid rounded-3"
+                                alt="Brand Name">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="homeCategories" class="my-md-4 my-3">
+        <div class="top-categories">
+            <div class="">
+                <div class="home-categoreis py-4 px-3 rounded-3">
+                    <div class="section-title d-flex justify-content-between mb-3">
+                        <h2>
+                            Categories
+                        </h2>
+                        <a href="" class="cat-linkHome text-danger fw-bold d-flex align-items-center">See All <span><i class='fa-solid fa-arrow-right'></i></span></a>
+                    </div>
+                    <div class="category-cards owl-carousel border-0 nav-tabs position-relative" role="tablist">
+                        <a class="catTabLink active" data-bs-toggle="tab" data-bs-target="#fashion" role="tab"
+                            aria-controls="fashion" id="nav-fashion">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Fashion</p>
+                            </div>
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#beauty" role="tab"
+                            aria-controls="beauty" id="nav-beauty">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image1.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Beauty</p>
+                            </div>
+                          
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#grocery" role="tab"
+                            aria-controls="grocery">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Grocery</p>
+                            </div>
+                            
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#electronics" role="tab"
+                            aria-controls="electronics">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image1.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Electronics</p>
+                            </div>
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#mother" role="tab"
+                            aria-controls="mother">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Mother & Baby</p>
+                            </div>
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#lifestyle" role="tab"
+                            aria-controls="lifestyle">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image1.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Home & Lifestyle</p>
+                            </div>
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#garden" role="tab"
+                            aria-controls="garden">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image1.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Home & Garden</p>
+                            </div>
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#tools" role="tab"
+                            aria-controls="tools">
+                            <div class="cat-card px-1 d-flex flex-column align-items-center">
+                                <img src="front/images/categoreis/category-image.webp" alt="Category Title"
+                                    class="img-fluid rounded-circle catImg-home">
+                                    <p class="fw-bold mb-2 mt-3">Tools & DIY</p>
+                            </div>
+                        </a>
+                        <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#diy" role="tab"
+                        aria-controls="diy">
+                        <div class="cat-card px-1 d-flex flex-column align-items-center">
+                            <img src="front/images/categoreis/category-image1.webp" alt="Category Title"
+                                class="img-fluid rounded-circle catImg-home">
+                                <p class="fw-bold mb-2 mt-3">Outdoor & DIY</p>
+                        </div>
+                    </a>
+                    <a class="catTabLink" data-bs-toggle="tab" data-bs-target="#kitchen" role="tab"
+                    aria-controls="kitchen">
+                    <div class="cat-card px-1 d-flex flex-column align-items-center">
+                        <img src="front/images/categoreis/category-image.webp" alt="Category Title"
+                            class="img-fluid rounded-circle catImg-home">
+                            <p class="fw-bold mb-2 mt-3">Kitchen</p>
+                    </div>
+                </a>
+                    </div>
+                    <div class="tab-content mt-4" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="fashion" role="tabpanel" aria-labelledby="nav-fashion" tabindex="0">
+                            <div class="row">
+                                <div class="col-lg-2 col-sm-4 col-6 mb-3 d-flex justify-content-center">
+                                    <div class="brand-card d-flex">
+                                        <div class="brand-card-inner text-center">
+                                            <div class="brand-detail p-2">
+                                                <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                                    class="brand-img img-fluid shadow-sm mb-2">
+                                                <h3 class="brand-title mb-1">
+                                                    The Moms Co
+                                                </h3>
+                                                <p class="brand-cashback">
+                                                    up to 5% cashback
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-4 col-6 mb-3 d-flex justify-content-center">
+                                    <div class="brand-card d-flex">
+                                        <div class="brand-card-inner text-center">
+                                            <div class="brand-detail p-2">
+                                                <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                                    class="brand-img img-fluid shadow-sm mb-2">
+                                                <h3 class="brand-title mb-1">
+                                                    The Moms Co
+                                                </h3>
+                                                <p class="brand-cashback">
+                                                    up to 5% cashback
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-4 col-6 mb-3 d-flex justify-content-center">
+                                    <div class="brand-card d-flex">
+                                        <div class="brand-card-inner text-center">
+                                            <div class="brand-detail p-2">
+                                                <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                                    class="brand-img img-fluid shadow-sm mb-2">
+                                                <h3 class="brand-title mb-1">
+                                                    The Moms Co
+                                                </h3>
+                                                <p class="brand-cashback">
+                                                    up to 5% cashback
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-4 col-6 mb-3 d-flex justify-content-center">
+                                    <div class="brand-card d-flex">
+                                        <div class="brand-card-inner text-center">
+                                            <div class="brand-detail p-2">
+                                                <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                                    class="brand-img img-fluid shadow-sm mb-2">
+                                                <h3 class="brand-title mb-1">
+                                                    The Moms Co
+                                                </h3>
+                                                <p class="brand-cashback">
+                                                    up to 5% cashback
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-4 col-6 mb-3 d-flex justify-content-center">
+                                    <div class="brand-card d-flex">
+                                        <div class="brand-card-inner text-center">
+                                            <div class="brand-detail p-2">
+                                                <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                                    class="brand-img img-fluid shadow-sm mb-2">
+                                                <h3 class="brand-title mb-1">
+                                                    The Moms Co
+                                                </h3>
+                                                <p class="brand-cashback">
+                                                    up to 5% cashback
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-4 col-6 mb-3 d-flex justify-content-center">
+                                    <div class="brand-card d-flex">
+                                        <div class="brand-card-inner text-center">
+                                            <div class="brand-detail p-2">
+                                                <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                                    class="brand-img img-fluid shadow-sm mb-2">
+                                                <h3 class="brand-title mb-1">
+                                                    The Moms Co
+                                                </h3>
+                                                <p class="brand-cashback">
+                                                    up to 5% cashback
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="beauty" role="tabpanel" aria-labelledby="nav-beauty" tabindex="0">..2..</div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">..3..</div>
+                        <div class="tab-pane fade" id="nav-disabled" role="tabpanel" aria-labelledby="nav-disabled-tab" tabindex="0">..4..</div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="topBrand" class="my-4">
+        <div class="top-brands">
+            <div class="section-title">
+                <h2>
+                    Top Brands
+                </h2>
+            </div>
+            <div class="top-brand-cards py-4">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/namshi.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Namshi
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/noon-06.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Noon
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/pottery-barn.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Pottery Barn
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/eoutlet-02.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        eoutlet
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/haier-logo.jpg" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Haier
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 1.5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/Fordeal-06.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Fordeal
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/styli-02.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Styli
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/noon-06.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Noon
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="all-brand.html" class="btn btn-lg viewAll-btn mx-auto d-block">View All</a>
+            </div>
+        </div>
+    </section>
+    <section id="popularBrand" class="my-4">
+        <div class="popular-brand">
+            <div class="section-title">
+                <h2>
+                    Popular Brands
+                </h2>
+            </div>
+            <div class="popular-brand-cards py-4">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/the-moms-co.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        The Moms Co
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/linzi.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Linzi
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/vistoria-secret.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Vistoria Secret
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/alkhalil.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Al Khalil
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/saramart.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Sara Mart
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/cos.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        cos
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/namshi.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Namshi
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/Citrusss-02.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        Citrus
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-4 col-6 mb-5 px-sm-2 px-1 d-flex justify-content-center">
+                        <div class="brand-card d-flex">
+                            <div class="brand-card-inner text-center">
+                                <div class="brand-detail p-md-4 p-1">
+                                    <img src="front/images/brand/to-the.png" alt="Brand Title Logo"
+                                        class="brand-img img-fluid shadow-sm mb-2">
+                                    <h3 class="brand-title mb-1">
+                                        To The
+                                    </h3>
+                                    <p class="brand-cashback">
+                                        up to 5% cashback
+                                    </p>
+                                </div>
+                                <div class="visit-button mt-3">
+                                    <a href="brand-detail.html" role="button" class="kc-btn">Visit Brand</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="all-brand.html" class="btn btn-lg viewAll-btn mx-auto d-block">View All</a>
+            </div>
+        </div>
+    </section>
+</div>
 <div id="footer"></div>

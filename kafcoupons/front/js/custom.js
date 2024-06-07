@@ -66,6 +66,9 @@ jQuery(document).ready(function () {
     $('#verification').on('click', function(){
         $('#userRegister').css('display', 'block');
     });
+    $("#closegetApp").click(function (){
+        $("#getApps").addClass("d-none");
+    })
 $('.brand-slider').owlCarousel({
     items:10,
     loop:true,
@@ -97,23 +100,28 @@ $('.brand-slider').owlCarousel({
     }
 });
 $('.category-cards').owlCarousel({
-    items:3,
-    loop:true,
+    items: 7,
     margin:1,
-    autoplay:true,
+    variableWidth: true,
+    nav: true,
     slideTransition: 'linear',
-    autoplayTimeout:3000,
-    autoplaySpeed: 3000,
     autoplayHoverPause:true,
+    navText : ["<i class='fa-solid fa-arrow-left'></i>","<i class='fa-solid fa-arrow-right'></i>"],
     responsive : {
         0 : {
-            items : 1
-        },
-        480 : {
             items : 2
         },
-        992 : {
+        480 : {
             items : 3
+        },
+        600 : {
+            items : 4
+        },
+        768 : {
+            items : 5
+        },
+        992 : {
+            items : 7
         }
     }
 });
