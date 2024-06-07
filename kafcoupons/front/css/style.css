@@ -990,8 +990,8 @@ input#mobileNumber {
     z-index: 9999;
 }
 .app-icon-mobile {
-    width: 70px;
-    height: 70px;
+    width: 60px;
+    height: 60px;
 }
 #getApps{
     top: 0;
@@ -999,6 +999,10 @@ input#mobileNumber {
 }
 .app-detail p{
     font-size: .8rem;
+    line-height: 1;
+}
+.rating-star-app{
+    line-height: 1;
 }
 #getApps .btn-close {
     font-size: .7rem;
