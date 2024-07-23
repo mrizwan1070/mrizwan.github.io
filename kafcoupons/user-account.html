@@ -12,8 +12,8 @@
 <div id="userAccount" class="bg-light">
     <div class="container-lg">
         <img src="front/images/user-dashbord/cb-history.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
-        <button class="btn btn-kc-outline-rounded d-md-none d-block mb-3 showSideBarBtn" id="showSideBarBtnUser"><span><i
-                    class="fa-solid fa-bars"></i></span> Menu</button>
+        <button class="btn btn-kc-outline-rounded d-md-none d-block mb-3 showSideBarBtn"
+            id="showSideBarBtnUser"><span><i class="fa-solid fa-bars"></i></span> Menu</button>
         <div class="row">
             <div class="col-md-3">
                 <div class="sidebar-outer">
@@ -450,10 +450,9 @@
                                                 <span class="cb-track-line position-absolute"></span>
                                                 <div class="row mx-0">
                                                     <div class="col px-0">
-                                                        <div
-                                                            class="cb-inReview cb-status mx-auto position-relative">
+                                                        <div class="cb-inReview cb-status mx-auto position-relative">
                                                             <span class="cb-progress-circle mx-auto"></span>
-                                                            
+
                                                             <span class="cb-progress-text mt-2 position-absolute">
                                                                 In Review
                                                             </span>
@@ -462,7 +461,8 @@
                                                     <div class="col"></div>
                                                     <div class="col"></div>
                                                     <div class="col px-0">
-                                                        <div class="cb-rejected cb-status mx-auto position-relative cb-fill active">
+                                                        <div
+                                                            class="cb-rejected cb-status mx-auto position-relative cb-fill active">
                                                             <span class="cb-progress-circle mx-auto"></span>
                                                             <span class="cb-progress-text mt-2 position-absolute">
                                                                 Rejected
@@ -569,8 +569,7 @@
                                             <div class="cb-progress mb-4">
                                                 <div class="row mx-0">
                                                     <div class="col px-0">
-                                                        <div
-                                                            class="cb-inReview cb-status mx-auto position-relative">
+                                                        <div class="cb-inReview cb-status mx-auto position-relative">
                                                             <span class="cb-progress-circle mx-auto"></span>
                                                             <span class="cb-track-line"></span>
                                                             <span class="cb-progress-text mt-2 position-absolute">
@@ -579,7 +578,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="col px-0">
-                                                        <div class="cb-pending cb-status mx-auto position-relative cb-fill active">
+                                                        <div
+                                                            class="cb-pending cb-status mx-auto position-relative cb-fill active">
                                                             <span class="cb-progress-circle mx-auto"></span>
                                                             <span class="cb-track-line"></span>
                                                             <span class="cb-progress-text mt-2 position-absolute">
@@ -588,8 +588,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="col px-0">
-                                                        <div
-                                                            class="cb-approved cb-status mx-auto position-relative">
+                                                        <div class="cb-approved cb-status mx-auto position-relative">
                                                             <span class="cb-progress-circle mx-auto"></span>
                                                             <span class="cb-track-line"></span>
                                                             <span class="cb-progress-text mt-2 position-absolute">
@@ -868,12 +867,7 @@
                                             <h5 class="modal-title">Withdraw</h5>
                                         </div>
                                         <div class="modal-body">
-                                            <div class="credit-card mx-auto rounded-3 p-4 position-relative mb-4">
-                                                <button type="button" id="addBnkAcc"
-                                                    class="btn position-absolute p-0 rounded-circle"
-                                                    data-bs-toggle="d-none" data-bs-target="#addAccount">
-                                                    <i class="fa-regular fa-pen-to-square"></i>
-                                                </button>
+                                            <!-- <div class="credit-card mx-auto rounded-3 p-4 position-relative mb-4">
                                                 <div class="card-user d-flex flex-column align-items-start mt-4">
                                                     <span class="mb-3">
                                                         *********
@@ -885,7 +879,98 @@
                                                         **************
                                                     </span>
                                                 </div>
+                                            </div> -->
+                                            <div class="withdraw-method">
+                                                <div class="withdraw-card border rounded-0 shadow-sm mb-3 p-2">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <div class="withdraw-icon">
+                                                                <i class="fa-solid fa-building-columns"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div
+                                                                class="withdraw-type d-flex justify-content-between align-items-center">
+                                                                <div class="accDetail text-start">
+                                                                    <p class="fw-bold mb-0">
+                                                                        Allied Bank Limited
+                                                                    </p>
+                                                                    <p class="accNumber text-secondary mb-0">
+                                                                        PK34HABB0986740019896303
+                                                                    </p>
+                                                                </div>
+                                                                <div class="default-payout-check text-success">
+                                                                    <i class="fa-regular fa-circle-check"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1 my-auto">
+                                                            <div class="withdraw-action text-secondary">
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-link text-secondary p-0"
+                                                                        type="button" id="editbank1"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu"
+                                                                        aria-labelledby="editbank1">
+                                                                        <a class="dropdown-item" role="button">Edit</a>
+                                                                        <a class="dropdown-item"
+                                                                            role="button">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="withdraw-card border rounded-0 shadow-sm mb-3 p-2">
+                                                    <div class="row">
+                                                        <div class="col-2">
+                                                            <div class="withdraw-icon">
+                                                                <i class="fa-brands fa-paypal"></i>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col">
+                                                            <div class="withdraw-type d-flex justify-content-between align-items-center">
+                                                                <div class="accDetail text-start">
+                                                                    <p class="fw-bold mb-0">
+                                                                        PayPal
+                                                                    </p>
+                                                                    <p class="accNumber text-secondary mb-0">
+                                                                        mukarram@gmai.com
+                                                                    </p>
+                                                                </div>
+                                                                <div class="default-payout-check text-success d-none">
+                                                                    <i class="fa-regular fa-circle-check"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-1 my-auto">
+                                                            <div class="withdraw-action text-secondary">
+                                                                <div class="dropdown">
+                                                                    <button class="btn btn-link text-secondary p-0"
+                                                                        type="button" id="editbank2"
+                                                                        data-toggle="dropdown" aria-haspopup="true"
+                                                                        aria-expanded="false">
+                                                                        <i class="fa-solid fa-ellipsis-vertical"></i>
+                                                                    </button>
+                                                                    <div class="dropdown-menu"
+                                                                        aria-labelledby="editbank2">
+                                                                        <a class="dropdown-item" role="button">Edit</a>
+                                                                        <a class="dropdown-item"
+                                                                            role="button">Delete</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
+                                            <button type="button" id="addBnkAcc" class="btn p-0 viewAll-btn mb-3"
+                                                data-bs-toggle="d-none" data-bs-target="#addAccount">
+                                                Add Withdraw Method
+                                            </button>
                                             <p>
                                                 Available Balance
                                             </p>

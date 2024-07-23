@@ -8,6 +8,17 @@ jQuery(document).ready(function () {
     });
 
     var userSide = $('.mobile-sidebar');
+    $('#mobileNumber').on('keypress', function(e) {
+        if(e.which == 13) { // 13 is the Enter key
+            $('#getOTP').click();
+        }
+    });
+
+    $('#verifyCode').on('keypress', function(e) {
+        if(e.which == 13) { // 13 is the Enter key
+            $('#verifyOTP').click();
+        }
+    });
 
     $(".cb-status.cb-fill, .wallet-status.cb-fill").parents(".col, .cb-progress > div > div").prevAll().find(".cb-status, .wallet-status").addClass("cb-fill");
     $("#addBnkAcc").click(function(){
@@ -69,6 +80,9 @@ jQuery(document).ready(function () {
     $("#closegetApp").click(function (){
         $("#getApps").addClass("d-none");
     })
+    var isArabic = $('html').attr('lang') === 'ar';
+    console.log(isArabic);
+
 $('.brand-slider').owlCarousel({
     items:10,
     loop:true,
@@ -78,6 +92,7 @@ $('.brand-slider').owlCarousel({
     autoplaySpeed: 2000,
     slideTransition: 'linear',
     autoplayHoverPause:true,
+     rtl: isArabic,
     responsive:{
         1200 : {
             items: 10 

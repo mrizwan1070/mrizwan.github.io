@@ -11,14 +11,13 @@
 
 <div id="allBlog">
     <div class="container-lg">
-        <img src="front/images/page-header/kc-faqs.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img">
+        <!-- <img src="front/images/page-header/kc-faqs.webp" alt="" class="img-fluid my-3 rounded-3 page-cover-img"> -->
         <div class="allblog">
             <div class="row">
-                <!-- <div class="col-md-3">
+                <div class="col-md-3 border-end pt-4">
                     <div class="sidebar-outer">
                         <div class="sidebar mobile-sidebar">
                             <div class="sidebar-header d-flex justify-content-between">
-                                <h5>Refine Search</h5>
                                 <button class="btn-close btn-close-white d-md-none d-block" type="button"
                                     id="sideCloseBtn"></button>
                             </div>
@@ -32,86 +31,174 @@
                                     </div>
                                 </form>
                                 <div class="side-filter mb-4">
+                                    <h5 class="border-bottom pb-3">Categories</h5>
                                     <div class="" id="AllCouponCategories">
-                                        <h6>Blog Categories</h6>
-                                        <label class="filter-check d-flex my-3">
-                                            Fashion & Clothing
-                                            <input type="checkbox" name="coupon_store_filter"
-                                                class="coupon_store_filter" value="313">
-                                            <span class="checkmark">
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="#" class="nav-link py-2 active">All Categories</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="nav-link py-2">Health & Beauty</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="nav-link py-2">Electronics</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="nav-link py-2">Sports & Outdoor</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="nav-link py-2">Home & Lifestyle</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="nav-link py-2">Test Category</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="side-filter mb-4">
+                                    <h5 class="border-bottom pb-3">Social Media</h5>
+                                    <div class="" id="socialShare">
+                                        <div class="social-share-icons d-flex">
+                                            <span
+                                                class="fb-share share-icon text-white mx-1 d-flex justify-content-center align-items-center">
+                                                <i class="fa-brands fa-facebook-f"></i>
                                             </span>
-                                        </label>
-                                        <label class="filter-check d-flex my-3">
-                                            Health & Beauty
-                                            <input type="checkbox" name="coupon_store_filter"
-                                                class="coupon_store_filter" value="482">
-                                            <span class="checkmark">
+                                            <span
+                                                class="twitter-share share-icon text-white mx-1 d-flex justify-content-center align-items-center">
+                                                <i class="fa-brands fa-twitter"></i>
                                             </span>
-                                        </label>
-                                        <label class="filter-check d-flex my-3">
-                                            Computers & Laptops
-                                            <input type="checkbox" name="coupon_store_filter"
-                                                class="coupon_store_filter" value="495">
-                                            <span class="checkmark">
+                                            <span
+                                                class="pinterest-share share-icon text-white mx-1 d-flex justify-content-center align-items-center">
+                                                <i class="fa-brands fa-pinterest-p"></i>
                                             </span>
-                                        </label>
-                                        <label class="filter-check d-flex my-3">
-                                            Mobile & Accessories
-                                            <input type="checkbox" name="coupon_store_filter"
-                                                class="coupon_store_filter" value="931">
-                                            <span class="checkmark">
+                                            <span
+                                                class="linkedin-share share-icon text-white mx-1 d-flex justify-content-center align-items-center">
+                                                <i class="fa-brands fa-linkedin-in"></i>
                                             </span>
-                                        </label>
-                                        <label class="filter-check d-flex my-3">
-                                            Home & Garden
-                                            <input type="checkbox" name="coupon_store_filter"
-                                                class="coupon_store_filter" value="931">
-                                            <span class="checkmark">
+                                            <span
+                                                class="email-share share-icon text-white mx-1 d-flex justify-content-center align-items-center">
+                                                <i class="fa-regular fa-envelope"></i>
                                             </span>
-                                        </label>
-                                        <label class="filter-check d-flex my-3">
-                                            Financial Services
-                                            <input type="checkbox" name="coupon_store_filter"
-                                                class="coupon_store_filter" value="931">
-                                            <span class="checkmark">
+                                            <span
+                                                class="whatsapp-share share-icon text-white mx-1 d-flex justify-content-center align-items-center">
+                                                <i class="fa-brands fa-whatsapp"></i>
                                             </span>
-                                        </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="side-filter mb-4">
+                                    <h5 class="border-bottom pb-3">Recent Blogs</h5>
+                                    <div class="" id="recentBlogs">
+                                        <div class="rcnt-blog-card border mb-2 py-1">
+                                            <div class="row mx-0">
+                                                <div class="col-sm-4 col-12 px-1">
+                                                    <div class="rcnt-img">
+                                                        <img src="/front/images/blog-img.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col px-1">
+                                                    <div class="rcnt-title">
+                                                        <p class="mb-0">
+                                                            This is recent blog post with very long tile containing 50
+                                                            character
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rcnt-blog-card border mb-2 py-1">
+                                            <div class="row mx-0">
+                                                <div class="col-sm-4 col-12 px-1">
+                                                    <div class="rcnt-img">
+                                                        <img src="/front/images/blog-img.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col px-1">
+                                                    <div class="rcnt-title">
+                                                        <p class="mb-0">
+                                                            This is recent blog post with very long tile containing 50
+                                                            character
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rcnt-blog-card border mb-2 py-1">
+                                            <div class="row mx-0">
+                                                <div class="col-sm-4 col-12 px-1">
+                                                    <div class="rcnt-img">
+                                                        <img src="/front/images/blog-img.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col px-1">
+                                                    <div class="rcnt-title">
+                                                        <p class="mb-0">
+                                                            This is recent blog post with very long tile containing 50
+                                                            character
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="rcnt-blog-card border mb-2 py-1">
+                                            <div class="row mx-0">
+                                                <div class="col-sm-4 col-12 px-1">
+                                                    <div class="rcnt-img">
+                                                        <img src="/front/images/blog-img.png" class="img-fluid" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="col px-1">
+                                                    <div class="rcnt-title">
+                                                        <p class="mb-0">
+                                                            This is recent blog post with very long tile containing 50
+                                                            character
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
-                <div class="col-12">
-                    <div class="code-offer page-right" id="allCoupon">
-                        <div class="page-heading d-md-flex justify-content-between align-items-center mb-2 px-2">
+                </div>
+                <div class="col-md-9 pt-4">
+                    <button class="btn btn-kc-outline-rounded d-md-none d-block mb-3 showSideBarBtn"
+                        id="showSideBarBtnUser"><span><i class="fa-solid fa-bars" aria-hidden="true"></i></span>
+                        Menu</button>
+                    <div class="all-blog page-right ps-lg-4 ps-md-3 ps-0" id="blogList">
+                        <div class="page-heading mb-2">
                             <h1 class="mb-0">Our Latest Blog Posts</h1>
-                            <!-- <div class="row mx-0 justify-content-between mobileFilter my-md-0 my-2">
-                                <div class="col px-0 d-md-none d-block ">
-                                    <div class="filter-item mx-auto">
-                                        <button class="btn btn-link w-100 text-decoration-none text-dark showSideBarBtn"
-                                            id="showSideBarBtnCoupon"><span><i class="fa-solid fa-filter"></i></span>
-                                            Filter</button>
-                                    </div>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="blog-list">
                             <div class="row">
-                                <div class="col-md-6">
+                                <div class="col-lg-4 col-sm-6 px-lg-4">
                                     <div class="blog-card">
-                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                        <div class="blog-card-inner mb-3 border">
                                             <a href="blog-detail.html">
                                                 <div class="blog-img">
-                                                    <img src="front/images/banners/blog.webp" class="img-fluid" alt="">
+                                                    <img src="/front/images/blog-img.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="blog-summery mt-2">
-                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
-                                                    <time itemprop="dateModified" datetime="2023-11-02T08:44:22+00:00"></time>
-                                                    <h2>
+                                                <div class="blog-summery mt-2 px-2">
+                                                    <time itemprop="datePublished"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <time itemprop="dateModified"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <p class="fw-bold">
                                                         Top 10 Electronics Stores in the Middle East
-                                                    </h2>
-                                                    <p>
+                                                    </p>
+                                                    <div class="blog-category">
+                                                        <span class="text-secondary">
+                                                            Fashion
+                                                        </span>
+                                                    </div>
+                                                    <div class="blogdate">
+                                                        <span class="text-secondary">
+                                                            July 31, 2024
+                                                        </span>
+                                                    </div>
+                                                    <!-- <p>
                                                         Electronic products are an important part of our daily lives,
                                                         that’s why they are considered the best selling items in the
                                                         trading community. Over the last few years, internet access for
@@ -120,25 +207,38 @@
                                                         and low maintenance costs of online businesses have made it easy
                                                         for customers to buy their required products, cheaply and
                                                         easily.
-                                                    </p>
+                                                    </p> -->
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-4 col-sm-6 px-lg-4">
                                     <div class="blog-card">
-                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                        <div class="blog-card-inner mb-3 border">
                                             <a href="blog-detail.html">
                                                 <div class="blog-img">
-                                                    <img src="front/images/banners/blog.webp" class="img-fluid" alt="">
+                                                    <img src="/front/images/blog-img.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="blog-summery mt-2">
-                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
-                                                    <h2>
-                                                        Top 10 Electronics Stores in the
-                                                    </h2>
-                                                    <p>
+                                                <div class="blog-summery mt-2 px-2">
+                                                    <time itemprop="datePublished"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <time itemprop="dateModified"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <p class="fw-bold">
+                                                        Top 10 Electronics Stores in the Middle East
+                                                    </p>
+                                                    <div class="blog-category">
+                                                        <span class="text-secondary">
+                                                            Fashion
+                                                        </span>
+                                                    </div>
+                                                    <div class="blogdate">
+                                                        <span class="text-secondary">
+                                                            July 31, 2024
+                                                        </span>
+                                                    </div>
+                                                    <!-- <p>
                                                         Electronic products are an important part of our daily lives,
                                                         that’s why they are considered the best selling items in the
                                                         trading community. Over the last few years, internet access for
@@ -147,25 +247,36 @@
                                                         and low maintenance costs of online businesses have made it easy
                                                         for customers to buy their required products, cheaply and
                                                         easily.
-                                                    </p>
+                                                    </p> -->
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-4 col-sm-6 px-lg-4">
                                     <div class="blog-card">
-                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                        <div class="blog-card-inner mb-3 border">
                                             <a href="blog-detail.html">
                                                 <div class="blog-img">
-                                                    <img src="front/images/banners/blog.webp" class="img-fluid" alt="">
+                                                    <img src="/front/images/blog-img.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="blog-summery mt-2">
-                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
-                                                    <h2>
+                                                <div class="blog-summery mt-2 px-2">
+                                                    <time itemprop="datePublished"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <p class="fw-bold">
                                                         Top 10 Electronics Stores in the Middle East
-                                                    </h2>
-                                                    <p>
+                                                    </p>
+                                                    <div class="blog-category">
+                                                        <span class="text-secondary">
+                                                            Fashion
+                                                        </span>
+                                                    </div>
+                                                    <div class="blogdate">
+                                                        <span class="text-secondary">
+                                                            July 31, 2024
+                                                        </span>
+                                                    </div>
+                                                    <!-- <p>
                                                         Electronic products are an important part of our daily lives,
                                                         that’s why they are considered the best selling items in the
                                                         trading community. Over the last few years, internet access for
@@ -174,25 +285,36 @@
                                                         and low maintenance costs of online businesses have made it easy
                                                         for customers to buy their required products, cheaply and
                                                         easily.
-                                                    </p>
+                                                    </p> -->
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-4 col-sm-6 px-lg-4">
                                     <div class="blog-card">
-                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                        <div class="blog-card-inner mb-3 border">
                                             <a href="blog-detail.html">
                                                 <div class="blog-img">
-                                                    <img src="front/images/banners/blog.webp" class="img-fluid" alt="">
+                                                    <img src="/front/images/blog-img.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="blog-summery mt-2">
-                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
-                                                    <h2>
+                                                <div class="blog-summery mt-2 px-2">
+                                                    <time itemprop="datePublished"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <p class="fw-bold">
                                                         Top 10 Electronics Stores in the Middle East
-                                                    </h2>
-                                                    <p>
+                                                    </p>
+                                                    <div class="blog-category">
+                                                        <span class="text-secondary">
+                                                            Fashion
+                                                        </span>
+                                                    </div>
+                                                    <div class="blogdate">
+                                                        <span class="text-secondary">
+                                                            July 31, 2024
+                                                        </span>
+                                                    </div>
+                                                    <!-- <p>
                                                         Electronic products are an important part of our daily lives,
                                                         that’s why they are considered the best selling items in the
                                                         trading community. Over the last few years, internet access for
@@ -201,25 +323,36 @@
                                                         and low maintenance costs of online businesses have made it easy
                                                         for customers to buy their required products, cheaply and
                                                         easily.
-                                                    </p>
+                                                    </p> -->
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-lg-4 col-sm-6 px-lg-4">
                                     <div class="blog-card">
-                                        <div class="blog-card-inner mb-3 my-shadow p-2">
+                                        <div class="blog-card-inner mb-3 border">
                                             <a href="blog-detail.html">
                                                 <div class="blog-img">
-                                                    <img src="front/images/banners/blog.webp" class="img-fluid" alt="">
+                                                    <img src="/front/images/blog-img.png" class="img-fluid" alt="">
                                                 </div>
-                                                <div class="blog-summery mt-2">
-                                                    <time itemprop="datePublished" datetime="2023-11-02T08:44:22+00:00"></time>
-                                                    <h2>
+                                                <div class="blog-summery mt-2 px-2">
+                                                    <time itemprop="datePublished"
+                                                        datetime="2023-11-02T08:44:22+00:00"></time>
+                                                    <p class="fw-bold">
                                                         Top 10 Electronics Stores in the Middle East
-                                                    </h2>
-                                                    <p>
+                                                    </p>
+                                                    <div class="blog-category">
+                                                        <span class="text-secondary">
+                                                            Fashion
+                                                        </span>
+                                                    </div>
+                                                    <div class="blogdate">
+                                                        <span class="text-secondary">
+                                                            July 31, 2024
+                                                        </span>
+                                                    </div>
+                                                    <!-- <p>
                                                         Electronic products are an important part of our daily lives,
                                                         that’s why they are considered the best selling items in the
                                                         trading community. Over the last few years, internet access for
@@ -228,7 +361,7 @@
                                                         and low maintenance costs of online businesses have made it easy
                                                         for customers to buy their required products, cheaply and
                                                         easily.
-                                                    </p>
+                                                    </p> -->
                                                 </div>
                                             </a>
                                         </div>
