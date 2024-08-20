@@ -69,16 +69,20 @@
     margin-right: -.5rem;
     margin-left: .5rem;
 }
-.lang-selector:lang(ar){
+
+.lang-selector:lang(ar) {
     order: 1;
 }
+
 #countrySelector:lang(ar) .country_id {
     display: flex;
     justify-content: end;
 }
+
 #countrySelector:lang(ar) .country_id img {
     order: 1;
 }
+
 /* arabic styling end */
 body {
     /* font-family: "Poppins", sans-serif; */
@@ -1034,8 +1038,46 @@ input#mobileNumber {
     font-size: 1.2rem;
 }
 
-#AllCouponCategories a.active{
+#AllCouponCategories a.active {
     font-weight: bold;
+}
+
+/* blog social share */
+.share-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.fb-share {
+    background: #3c5a9a;
+}
+
+.twitter-share {
+    background: #55acee;
+}
+
+.pinterest-share {
+    background: #e60019
+}
+
+.linkedin-share {
+    background: #0a7bba;
+}
+
+.email-share {
+    background: #161616;
+}
+
+.whatsapp-share {
+    background: #00e676;
+}
+
+.blog-text img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
 }
 
 .blog-summery h2 {
@@ -1047,7 +1089,8 @@ input#mobileNumber {
     height: 3rem;
 }
 
-.blog-summery p, .rcnt-title p {
+.blog-summery p,
+.rcnt-title p {
     display: -webkit-box;
     overflow: hidden;
     -webkit-box-orient: vertical;
@@ -1120,31 +1163,6 @@ input#mobileNumber {
 
 .rating-star-app i {
     font-size: .8rem;
-}
-/* social share */
-.share-icon {
-    width: 34px;
-    height: 34px;
-    border-radius: 50%;
-}
-.fb-share {
-    background: #3c5a9a;
-}
-
-.twitter-share{
-    background: #55acee;
-}
-.pinterest-share{
-    background: #e60019
-}
-.linkedin-share{
-    background: #0a7bba;
-}
-.email-share{
-    background: #161616;
-}
-.whatsapp-share{
-    background: #00e676;
 }
 
 @media screen and (max-width: 992px) {
