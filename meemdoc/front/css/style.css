@@ -33,6 +33,15 @@ a{
 .meem-text1{
     color: #2E4F4E !important;
 }
+.meem-rounded{
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.meem-shadow{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.15)!important;
+}
 .mole-check p a{
     color: #1f504f !important;
 }
@@ -180,7 +189,7 @@ footer{
     background: #2E4F3B;
 }
 @media screen and (max-width: 767px){
-    .health-concers-inner > .row  > [class^="col-md"]{
+    .health-concers-inner > .row  > [class^="col-md"]:not(:last-child){
         margin-bottom: 5rem !important;
     }
 }
@@ -190,8 +199,17 @@ footer{
         right: 0;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 575px){
     .site-logo img{
         width: 100px;
+    }
+    .check-symptom-text{
+        width: 80% !important;
+    }
+    .symptom-card{
+        height: auto;
+    }
+    .check-symptom-img{
+        height: 100%;
     }
 }
