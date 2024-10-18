@@ -1,0 +1,24 @@
+.solutions .container{
+  max-width: 1400px;
+}
+.solution-img{
+  width: 40px;
+}
+#testimonialsCarousel .carousel-indicators li{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgb(92, 91, 91);
+  border: 0;
+}
+#testimonialsCarousel .carousel-indicators li.active{
+background: blue
+}
+.testimonial-client img{
+  width:  80px;
+  border-radius: 50%;
+}
+.topquat-img{
+  top: 0;
+  left: 10px;
+}
