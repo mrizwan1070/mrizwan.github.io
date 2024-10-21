@@ -1,0 +1,226 @@
+:root {
+    --primary-color: #21C1AE;
+    --primaryu-color-hover: #ebe107;
+    --secondary-color: #f9d16a;
+    --sec-light-color: ;
+    --anchor-color: rgba(0,0,0,.5);
+    --secondary-color-lt: #FFF5C1;
+    --footer-text: #FDDF93;
+    --footer-link-hover: #f5c959;
+    --kc-font-color: #FF5e03;
+    --bg-success: #198754;
+}
+a{
+    text-decoration: none;
+    color: var(--anchor-color);
+}
+/* coming soon section */
+#comingsoon{
+    background: #D9D9D9;
+}
+.comingsoon h1{
+    color: #33BDB5;
+}
+/* coming soon end */
+.btn-link{
+    color: var(--anchor-color);
+}
+.bg-primary-md{
+    background-color: var(--primary-color);
+}
+#hero{
+    background-image: linear-gradient(to right, #1CB0D0, #49C397);
+}
+.hero-text{
+    top: 50%;
+    transform: translateY(-50%);
+}
+.meem-btn{
+    border-radius: 19px;
+}
+.meem-text1{
+    color: #2E4F4E !important;
+}
+.meem-rounded{
+    border-top-left-radius: .5rem;
+    border-top-right-radius: .5rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+.meem-shadow{
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.15)!important;
+}
+.mole-check p a{
+    color: #1f504f !important;
+}
+.mole-check p a span{
+    width: 20px;
+    height: 20px;
+    right: -7px;
+    bottom: 7px;
+}
+.maintext h2{
+    color: #A43232;
+}
+.maintext p:nth-of-type(n+1){
+    color: #4D4D4D;
+}
+.health-concers h3{
+    border-bottom-width: 2px !important;
+}
+.health-concers-inner > .row  > [class^="col-md"].mb-5{
+    margin-bottom: 5rem !important;
+}
+.health-concers-card > div {
+    top: -60px;
+}
+.health-concers .heading{
+    margin-bottom: 5rem;
+}
+.health-concers-card{
+    max-height: 240px;
+}
+.doc-img img{
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.symptom-card{
+    height: 200px;
+}
+.check-symptom-img{
+    bottom: 0;
+    right: 1rem;
+}
+.check-symptom{
+    background-color: #FDECF1;
+}
+.parent-health{
+    background-color: #DBFFF2;
+}
+.doc-card-inner{
+    top: -38px;
+}
+.doc-card-inner .btn{
+    font-size: 2.2rem;
+    right: -0.5rem;
+    bottom: 0;
+    line-height: 1;
+    transform: translateY(35%);
+}
+.consult-card{
+    height: 200px;
+}
+.consult-img{
+    right: 1rem;
+    bottom: 0;
+}
+.consult-card.card-one{
+    background: #FFF7C8;
+}
+.consult-card.card-two{
+    background: #FFECE4;
+}
+.medical-serivces-list .list-icon{
+    color: #D6E8E5
+}
+.free-advice-list .list-icon{
+    color: #D6E8E5
+}
+.availability-card{
+    min-height: 400px;
+}
+.availability-card.one{
+    background: #F5FFEA;
+}
+.availability-card.two{
+    background: #6FB7C1;
+}
+.availability-card.three{
+    background: #F995A4;
+}
+.availability-card.four{
+    background: #D2BDAE;
+}
+.availability-card.five{
+    background: #755888;
+}
+.services-inner{
+    background: #F7FFE9;
+}
+.free-advice-inner, .digital-services-inner{
+    background: linear-gradient(to right, #D3FFEA, #F0FFD7);
+}
+.digital-links-icons {
+    width: 1.8rem;
+    height: 1.8rem;
+    border-radius: 50%;
+}
+.digital-links-icons i{
+    font-size: .8rem;
+}
+.what-we-can-service-card a, .what-we-cant-card a{
+    outline: none;
+    border: none;
+    bottom: 0;
+    left: 0;
+    background: #D2FFDC;
+    width: 100%;
+    border-top: 0;
+
+}
+.what-we-can-service-card a:hover, .what-we-cant-card a:hover{
+    background-color: #c6ffd2;
+    transition: background 0.5s linear;
+}
+.what-we-cant-inner{
+    background: #EFFFF0;
+}
+.docCategoryCard.one{
+    background: #F995A4
+}
+.docCategoryCard.two{
+    background: #DCFFDB;
+}
+.docCategoryCard.three{
+    background: #755888;
+}
+.docCategoryCard.four{
+    background: #6FB7C1;
+}
+.docCategoryCard.five{
+    background: #D2BDAE;
+}
+.getAppsInner{
+    background: #F0FFE9;
+}
+footer{
+    background: #2E4F3B;
+}
+@media screen and (max-width: 767px){
+    .health-concers-inner > .row  > [class^="col-md"]:not(:last-child){
+        margin-bottom: 5rem !important;
+    }
+}
+@media (min-width: 992px){
+    .singin-btn{
+        position: absolute;
+        right: 0;
+    }
+}
+@media screen and (max-width: 575px){
+    .site-logo img{
+        width: 100px;
+    }
+    .check-symptom-text{
+        width: 80% !important;
+    }
+    .symptom-card{
+        height: auto;
+    }
+    .check-symptom-img{
+        height: 100%;
+    }
+    .consult-img{
+        width: 180px;
+    }
+}

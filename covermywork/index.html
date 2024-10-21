@@ -9,6 +9,8 @@
     <link rel="icon" type="image/x-icon" href="front/images/favicon.ico">
     <link rel="stylesheet" href="front/css/bootstrap.min.css" />
     <link rel="stylesheet" href="front/css/site.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="front/js/bootstrap.bundle.min.js"></script>
     <script src="front/js/popper.min.js"></script>
@@ -18,9 +20,9 @@
 </head>
 
 <body>
-    <header class="py-3">
+    <header>
         <div class="container px-lg-5">
-            <nav class="navbar navbar-expand-lg navbar-light">
+            <nav class="navbar navbar-expand-md navbar-light px-0">
                 <a class="navbar-brand" href="#"><img src="https://covermywork.com/assets/images/coverMyWork/logo.png"
                         alt=""></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
@@ -30,14 +32,14 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">HOME</a>
+                        <li class="px-lg-3 px-1 py-md-0 py-2 nav-item">
+                            <a class="nav-link p-0" href="#home">HOME</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ABOUT US</a>
+                        <li class="px-lg-3 px-1 py-md-0 py-2 nav-item">
+                            <a class="nav-link p-0" href="#about">ABOUT US</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">CONTACT US</a>
+                        <li class="px-lg-3 px-1 py-md-0 py-2 nav-item">
+                            <a class="nav-link p-0" href="#contact">CONTACT US</a>
                         </li>
                     </ul>
                     <div class="app-links d-flex">
@@ -52,35 +54,38 @@
         </div>
     </header>
     <main>
-        <section class="hero-setion py-4">
+        <section class="hero-section bg-white py-5" id="home">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="hero-img">
-                            <img src="https://covermywork.com/assets/images/coverMyWork/banner-img.png" alt="">
+                            <img src="https://covermywork.com/assets/images/coverMyWork/banner-img.png" class="img-fluid" alt="">
                         </div>
                     </div>
-                    <div class="col-md-4 d-flex align-items-center">
-                        <div class="hero-form d-flex flex-column justify-content-center">
-                            <h1>
-                                May the Work Force be With You
+                    <div class="col-md-4 d-md-flex align-items-center">
+                        <div class="hero-form d-md-flex flex-column justify-content-center">
+                            <h1 class="hero-heading font-weight-bold">
+                                <span class="hero-head1">May the</span><br> <span class="hero-head2">Work</span>
+                                Force</br> be With You
                             </h1>
-                            <form action="">
+                            <form action="" class="text-white px-4 py-5">
                                 <h2>Welcome</h2>
                                 <input type="text" placeholder="User Name" class="form-control my-3">
                                 <input type="password" placeholder="Password" class="form-control my-3">
                                 <input type="text" placeholder="Company Code" class="form-control my-3">
-                                <a href="">Forgot Password?</a>
-                                <div>
-                                    <p>Don't have account? <a href="" class="text-bold">Sign up here</a></p>
+                                <a href="" class="text-white">Forgot Password?</a>
+                                <div class="my-3">
+                                    <p>Don't have account? <a href="" class="text-white font-weight-bold">Sign up
+                                            here</a></p>
                                 </div>
+                                <button class="btn rounded-0 px-3">SIGN IN</button>
                             </form>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="daily-problem bg-light py-4">
+        <section class="daily-problem py-5" id="about" data-aos="fade-up">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 d-flex align-items-center">
@@ -90,7 +95,7 @@
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="problems-right">
+                        <div class="problem-right">
                             <h3>
                                 Daily Problems
                             </h3>
@@ -124,7 +129,7 @@
                 </div>
             </div>
         </section>
-        <section class="solutions py-4">
+        <section class="solutions py-5" data-aos="fade-up">
             <div class="container">
                 <div class="row">
                     <div class="col-md-3 d-flex align-items-center">
@@ -140,14 +145,14 @@
                     </div>
                     <div class="col-md-9">
                         <div class="our-solutions">
-                            <p class="font-weight-bold text-secondary px-3">
+                            <p class="font-weight-bold text-secondary">
                                 Our solution serves various industries with an all-in-one solution designed for
                                 condensing manual tasks, reducing administrative burden, and increasing employee morale
                                 to improve operations
                             </p>
-                            <div class="row mx-0">
-                                <div class="col-md-4">
-                                    <div class="solutions-card shadow bg-light p-2 mb-4">
+                            <div class="row">
+                                <div class="col-md-4 mb-4">
+                                    <div class="solutions-card h-100 shadow bg-light p-md-3 p-2">
                                         <div class="d-flex align-items-center mb-3">
                                             <img src="https://covermywork.com/assets/images/coverMyWork/hospitality.png"
                                                 class="img-fluid solution-img mr-2" alt="">
@@ -159,68 +164,63 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="solutions-card shadow bg-light p-2 mb-4">
+                                <div class="col-md-4  mb-4">
+                                    <div class="solutions-card h-100 shadow bg-light p-md-3 p-2">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://covermywork.com/assets/images/coverMyWork/hospitality.png"
+                                            <img src="https://covermywork.com/assets/images/coverMyWork/healthcare.png"
                                                 class="img-fluid solution-img mr-2" alt="">
-                                            <h4>Hospitality</h4>
+                                            <h4>Healthcare </h4>
                                         </div>
                                         <p>
-                                            7-day operation in the hospitality industry is very challenging. CoverMyWork
-                                            Makes it easier
+                                            Healthcare is time-critical, CoverMyWork helps provide the help quickly.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="solutions-card shadow bg-light p-2 mb-4">
+                                <div class="col-md-4  mb-4">
+                                    <div class="solutions-card h-100 shadow bg-light p-md-3 p-2">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://covermywork.com/assets/images/coverMyWork/hospitality.png"
+                                            <img src="https://covermywork.com/assets/images/coverMyWork/retailer.png"
                                                 class="img-fluid solution-img mr-2" alt="">
-                                            <h4>Hospitality</h4>
+                                            <h4>Retail</h4>
                                         </div>
                                         <p>
-                                            7-day operation in the hospitality industry is very challenging. CoverMyWork
-                                            Makes it easier
+                                            Customers must see the happy faces. CoverMyWork improves employee morale.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="solutions-card shadow bg-light p-2 mb-4">
+                                <div class="col-md-4  mb-4">
+                                    <div class="solutions-card h-100 shadow bg-light p-md-3 p-2">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://covermywork.com/assets/images/coverMyWork/hospitality.png"
+                                            <img src="https://covermywork.com/assets/images/coverMyWork/factory.png"
                                                 class="img-fluid solution-img mr-2" alt="">
-                                            <h4>Hospitality</h4>
+                                            <h4>Manufacturing</h4>
                                         </div>
                                         <p>
-                                            7-day operation in the hospitality industry is very challenging. CoverMyWork
-                                            Makes it easier
+                                            The large workforce poses challenges in communicating and helping each other. CoverMyWork makes it happen
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="solutions-card shadow bg-light p-2 mb-4">
+                                <div class="col-md-4  mb-4">
+                                    <div class="solutions-card h-100 shadow bg-light p-md-3 p-2">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://covermywork.com/assets/images/coverMyWork/hospitality.png"
+                                            <img src="https://covermywork.com/assets/images/coverMyWork/forklift.png"
                                                 class="img-fluid solution-img mr-2" alt="">
-                                            <h4>Hospitality</h4>
+                                            <h4>Warehousing</h4>
                                         </div>
                                         <p>
-                                            7-day operation in the hospitality industry is very challenging. CoverMyWork
-                                            Makes it easier
+                                            Customer experience is the key. CoverMyWork brings people together to keep the goods flowing.
                                         </p>
                                     </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="solutions-card shadow bg-light p-2 mb-4">
+                                <div class="col-md-4  mb-4">
+                                    <div class="solutions-card h-100 shadow bg-light p-md-3 p-2">
                                         <div class="d-flex align-items-center mb-3">
-                                            <img src="https://covermywork.com/assets/images/coverMyWork/hospitality.png"
+                                            <img src="https://covermywork.com/assets/images/coverMyWork/monitoring.png"
                                                 class="img-fluid solution-img mr-2" alt="">
-                                            <h4>Hospitality</h4>
+                                            <h4>Service Industry </h4>
                                         </div>
                                         <p>
-                                            7-day operation in the hospitality industry is very challenging. CoverMyWork
-                                            Makes it easier
+                                            No one has time to waste. CoverMyWork streamlines business processes for you to afford more time to interact.
                                         </p>
                                     </div>
                                 </div>
@@ -230,7 +230,7 @@
                 </div>
             </div>
         </section>
-        <section class="schedule bg-info py-5">
+        <section class="schedule py-md-5 py-4" data-aos="fade-up">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-6">
@@ -240,10 +240,10 @@
                             </h3>
                             <form action="">
                                 <div class="input-group">
-                                    <input type="email" class="form-control" placeholder="Email" aria-label=""
+                                    <input type="email" class="form-control py-4" placeholder="Email" aria-label=""
                                         aria-describedby="basic-addon1">
                                     <div class="input-group-append">
-                                        <button class="btn btn-success" type="button">Request Demo</button>
+                                        <button class="btn" type="button">Request Demo</button>
                                     </div>
                                 </div>
                             </form>
@@ -252,11 +252,11 @@
                 </div>
             </div>
         </section>
-        <section class="testimonials py-4">
+        <section class="testimonials pt-4 pb-5" data-aos="fade-up">
             <div class="container">
-                <h1 class="text-center">
+                <h3 class="mb-md-5 mb-4 text-center">
                     Our Testimony
-                </h1>
+                </h3>
                 <div id="testimonialsCarousel" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#testimonialsCarousel" data-slide-to="0" class="active"></li>
@@ -265,10 +265,10 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                         <div class="carousel-item active">
-                            <div class="testimonial-card position-relative">
+                            <div class="testimonial-card position-relative pt-3">
                                 <img src="https://covermywork.com/assets/images/coverMyWork/arrowtop.png"
                                     class="topquat-img img-fluid position-absolute" alt="">
-                                <p class="bg-light p-md-4 p-3">
+                                <p class="p-md-4 p-3">
                                     I used to collect emails and excel files for timesheets for my remote employees,
                                     CoverMyWork makes it easy for remote employees to clock-in and out with a tap of a
                                     button and I Don’t have to deal with excel sheets anymore.
@@ -282,10 +282,10 @@
                             </div>
                         </div>
                         <div class="carousel-item">
-                            <div class="testimonial-card position-relative">
+                            <div class="testimonial-card position-relative pt-3">
                                 <img src="https://covermywork.com/assets/images/coverMyWork/arrowtop.png"
                                     class="topquat-img img-fluid position-absolute" alt="">
-                                <p class="bg-light p-md-4 p-3">
+                                <p class="p-md-4 p-3">
                                     I used to collect emails and excel files for timesheets for my remote employees,
                                     CoverMyWork makes it easy for remote employees to clock-in and out with a tap of a
                                     button and I Don’t have to deal with excel sheets anymore.
@@ -299,10 +299,10 @@
                             </div>
                         </div>
                         <div class="carousel-item ">
-                            <div class="testimonial-card position-relative">
+                            <div class="testimonial-card position-relative pt-3">
                                 <img src="https://covermywork.com/assets/images/coverMyWork/arrowtop.png"
                                     class="topquat-img img-fluid position-absolute" alt="">
-                                <p class="bg-light p-md-4 p-3">
+                                <p class="p-md-4 p-3">
                                     I used to collect emails and excel files for timesheets for my remote employees,
                                     CoverMyWork makes it easy for remote employees to clock-in and out with a tap of a
                                     button and I Don’t have to deal with excel sheets anymore.
@@ -327,7 +327,7 @@
                 </div>
             </div>
         </section>
-        <section class="faqs">
+        <section class="faqs py-md-5 py-4" data-aos="fade-up">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
@@ -340,15 +340,15 @@
                         <div class="faq-accord">
                             <div id="faqAccordion" role="tablist">
                                 <div class="card mb-3">
-                                    <div class="card-header" role="tab" id="headingOne">
-                                        <h5 class="mb-0">
-                                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="true"
+                                    <div class="card-header shadow-sm" role="tab" id="headingOne">
+                                        <h6 class="mb-0">
+                                            <a data-toggle="collapse" href="#collapseOne" aria-expanded="false"
                                                 aria-controls="collapseOne" class="">
                                                 If CoverMyWork does so many things, is it complex to implement?
                                             </a>
-                                        </h5>
+                                        </h6>
                                     </div>
-                                    <div id="collapseOne" class="collapse" role="tabpanel" aria-labelledby="headingOne">
+                                    <div id="collapseOne" class="collapse" role="tabpanel" data-parent="#faqAccordion" aria-labelledby="headingOne">
                                         <div class="card-body">
                                             Not at all. It takes about 2 hours to set everything up for your business
                                             and that all!
@@ -356,15 +356,15 @@
                                     </div>
                                 </div>
                                 <div class="card mb-3">
-                                    <div class="card-header" role="tab" id="headingTwo">
-                                        <h5 class="mb-0">
+                                    <div class="card-header shadow-sm" role="tab" id="headingTwo">
+                                        <h6 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" href="#collapseTwo"
                                                 aria-expanded="false" aria-controls="collapseTwo">
                                                 I have “not so tech-savvy” employees, will they be able to use it
                                                 easily? </a>
-                                        </h5>
+                                        </h6>
                                     </div>
-                                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                    <div id="collapseTwo" class="collapse" role="tabpanel" data-parent="#faqAccordion" aria-labelledby="headingTwo">
                                         <div class="card-body">
                                             CoverMyWork was designed by a “not so tech-savvy” person to make sure it is
                                             extremely simple. System shows only things that you use to keep screen space
@@ -374,14 +374,15 @@
                                     </div>
                                 </div>
                                 <div class="card mb-3">
-                                    <div class="card-header" role="tab" id="headingThree">
-                                        <h5 class="mb-0">
+                                    <div class="card-header shadow-sm" role="tab" id="headingThree">
+                                        <h6 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" href="#collapseThree"
                                                 aria-expanded="false" aria-controls="collapseThree">
                                                 How does CoverMyWork improve employee Morale?</a>
-                                        </h5>
+                                        </h6>
                                     </div>
-                                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                                    <div id="collapseThree" class="collapse" role="tabpanel" data-parent="#faqAccordion"
+                                        aria-labelledby="headingThree">
                                         <div class="card-body">
                                             When you do a lot of stuff on paper, things tend to go wrong and frustrate
                                             your employees. By having a transparent and easy-to-use system, you avoid
@@ -390,16 +391,17 @@
                                     </div>
                                 </div>
                                 <div class="card mb-3">
-                                    <div class="card-header" role="tab" id="headingFour">
-                                        <h5 class="mb-0">
+                                    <div class="card-header shadow-sm" role="tab" id="headingFour">
+                                        <h6 class="mb-0">
                                             <a class="collapsed" data-toggle="collapse" href="#collapseFour"
                                                 aria-expanded="false" aria-controls="collapseTwo">
                                                 What if I only want to use a few things CoverMyWork has to offer as
                                                 other things don’t apply to my business. Can I do that?
                                             </a>
-                                        </h5>
+                                        </h6>
                                     </div>
-                                    <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingfour">
+                                    <div id="collapseFour" class="collapse" role="tabpanel" data-parent="#faqAccordion"
+                                        aria-labelledby="headingfour">
                                         <div class="card-body">
                                             Of course, one size no longer fits all. CoverMywork is very modular and you
                                             can subscribe to modules that are applicable to your business.
@@ -413,208 +415,93 @@
                 </div>
             </div>
         </section>
-        <section class="contact-us">
+        <section class="conversation contact-us py-5" id="contact" data-aos="fade-up">
             <div class="container">
-                <h3>
+                <h3 class="text-center mb-5">
                     Start Converstation
                 </h3>
-                <div class="row justify-content-center">
+                <div class="row justify-content-center mb-5">
                     <div class="col-md-8">
-                        <form action="" class="contact-form">
+                        <form action="" class="contact-form" id="conversationForm">
                             <div class="row mx-0">
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-3">
                                     <input type="text" placeholder="Company" class="form-control">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-3">
                                     <input type="text" placeholder="Name" class="form-control">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-3">
                                     <input type="email" placeholder="Email" class="form-control">
                                 </div>
-                                <div class="col-md-6">
+                                <div class="col-md-6 mb-3">
                                     <input type="text" placeholder="Phone" class="form-control">
                                 </div>
+                                <div class="col-12 mb-3">
+                                    <textarea name="" id="" class="form-control" placeholder="Message"
+                                        rows="8"></textarea>
+                                </div>
+                            </div>
+                            <div class="col-12 text-right">
+                                <button type="submit" class="btn rounded-0 px-3">Submit</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </section>
+        <section class="more-interaction py-md-5 py-2" data-aos="fade-up">
+            <div class="container">
+            <div class="more-interaction-text position-relative bg-white py-4">
+                <h4 class="text-center">
+                    More <span>Interaction</span>, Less <span>Administration</span>
+                </h4>
+            </div>
+            </div>
+        </section>
     </main>
-    <footer class="py-4">
-        <div class="container-fluid px-lg-5">
-            <div class="why-buy py-4 border-bottom border-light">
-                <div class="row">
-                    <div class="col px-1">
-                        <div class="why-us-card d-flex align-items-center justify-content-center">
-                            <div class="why-us-icon mr-3 text-warning">
-                                <i class="fa-solid fa-rocket"></i>
-                            </div>
-                            <div class="why-us-text">
-                                <h6 class="small font-weight-bold mb-0">
-                                    Free Shipping
-                                </h6>
-                                <p class="mb-0 text-secondary small">
-                                    For all orders over 200$
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col px-1">
-                        <div class="why-us-card d-flex align-items-center justify-content-center">
-                            <div class="why-us-icon mr-3 text-warning">
-                                <i class="fa-solid fa-arrow-rotate-left"></i>
-                            </div>
-                            <div class="why-us-text">
-                                <h6 class="small font-weight-bold mb-0">
-                                    1 & 1 Returns
-                                </h6>
-                                <p class="mb-0 text-secondary small">
-                                    Cancellation after 1 day
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col px-1">
-                        <div class="why-us-card d-flex align-items-center justify-content-center">
-                            <div class="why-us-icon mr-3 text-warning">
-                                <i class="fa-solid fa-shield-halved"></i>
-                            </div>
-                            <div class="why-us-text">
-                                <h6 class="small font-weight-bold mb-0">
-                                    100% Secure Payment
-                                </h6>
-                                <p class="mb-0 text-secondary small">
-                                    Gurantee secure payments
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col px-1">
-                        <div class="why-us-card d-flex align-items-center justify-content-center">
-                            <div class="why-us-icon mr-3 text-warning">
-                                <i class="fa-solid fa-life-ring"></i>
-                            </div>
-                            <div class="why-us-text">
-                                <h6 class="small font-weight-bold mb-0">
-                                    24/7 Dedicated Support
-                                </h6>
-                                <p class="mb-0 text-secondary small">
-                                    Anywhere and anytime
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col px-1">
-                        <div class="why-us-card d-flex align-items-center justify-content-center">
-                            <div class="why-us-icon mr-3 text-warning">
-                                <i class="fa-solid fa-percent"></i>
-                            </div>
-                            <div class="why-us-text">
-                                <h6 class="small font-weight-bold mb-0">
-                                    Daily Offers
-                                </h6>
-                                <p class="mb-0 text-secondary small">
-                                    Discount up to 70% OFF
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <footer class="pt-4">
+        <div class="container px-lg-5 text-center">
+            <div class="footer-logo">
+                <img src="https://covermywork.com/assets/images/coverMyWork/logo.png" class="img-fluid" alt="">
             </div>
-            <div class="footer-links py-4">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="about-us">
-                            <h6 class="mb-3">
-                                MR Mart - Your Online Food & Grocery
-                            </h6>
-                            <p class="about-us-text mb-3 text-secondary">
-                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto animi dolor tempora
-                                obcaecati consequuntur fugiat id minima, nisi nulla quibusdam.
-                            </p>
-                        </div>
-                        <div class="support-contact">
-                            <address class="text-secondary">
-                                <span class="d-block mb-3"><i class="fa-solid fa-phone mr-3"></i>Hotline 24/7:
-                                    <span class="ml-4 d-block"><strong>(+880)&nbsp;17890065</strong></span></span>
-                                <span class="d-block mb-2"><i class="fa-solid fa-house mr-3"></i>Chester Road,
-                                    Kirkcaldy.</span>
-                                <span class="d-block mb-2"><i
-                                        class="fa-solid fa-envelope mr-3"></i>contact@contact.com</span>
-                            </address>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="imp-links">
-                            <h6 class="mb-3">Usefull Links</h6>
-                            <ul class="list-unstyled">
-                                <li class="py-2">
-                                    <a href="" class="">About Us</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Contact Us</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Career</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Orders</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Categories</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Sitemap</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="imp-links">
-                            <h6 class="mb-3">Help Center</h6>
-                            <ul class="list-unstyled">
-                                <li class="py-2">
-                                    <a href="" class="">Payments</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Shipping</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">Returns</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">FAQ</a>
-                                </li>
-                                <li class="py-2">
-                                    <a href="" class="">My Orders</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="newsletter">
-                            <h6 class="mb-3">
-                                MR Mart Newsletter
-                            </h6>
-                            <p>
-                                Register now to get latest news, updates, offers and more!
-                            </p>
-                            <form action="" class="footer-subscribe">
-                                <div class="input-group position-relative">
-                                    <input type="email" class="form-control py-4">
-                                    <span class="input-text text-secondary position-absolute">
-                                        <i class="fa-solid fa-envelope mr-2"></i> Your email
-                                    </span>
-                                    <div class="input-group-append">
-                                        <button class="btn btn-warning">Subscribe</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <ul class="nav justify-content-center pt-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">CONTACT US</a>
+                </li>
+            </ul>
+            <ul class="nav justify-content-center py-3">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Terms of Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Privacy Policy</a>
+                </li>
+            </ul>
+            <h4 class="social-heading">
+                FOLLOW US
+            </h4>
+            <ul class="nav social-links justify-content-center py-4">
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-brands fa-instagram"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-brands fa-twitter"></i></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="copyright py-3 bg-dark text-center text-white">
+            <p>
+                Copyright 2022 © <a href="" class="text-white font-weight-bold ">CoverMyWork</a> All Rights Reserved
+            </p>
         </div>
     </footer>
 

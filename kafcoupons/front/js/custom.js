@@ -160,4 +160,38 @@ $('.power-cb-cards').owlCarousel({
        }
     }
 });
+    // social share
+    var currentUrl = encodeURIComponent(window.location.href);
+    var pageTitle = encodeURIComponent(document.title);
+    var imageUrl = encodeURIComponent($('.your-image-class img').attr('src')); // Set your image class here
+
+    // Share on Facebook
+    $('.fb-share').click(function() {
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank');
+    });
+
+    // Share on Twitter
+    $('.twitter-share').click(function() {
+        window.open(`https://twitter.com/intent/tweet?url=${currentUrl}&text=${pageTitle}`, '_blank');
+    });
+
+    // Share on Pinterest
+    $('.pinterest-share').click(function() {
+        window.open(`https://pinterest.com/pin/create/button/?url=${currentUrl}&media=${imageUrl}&description=${pageTitle}`, '_blank');
+    });
+
+    // Share on LinkedIn
+    $('.linkedin-share').click(function() {
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${pageTitle}`, '_blank');
+    });
+
+    // Share via Email
+    $('.email-share').click(function() {
+        window.open(`mailto:?subject=${pageTitle}&body=Check this out: ${currentUrl}`, '_blank');
+    });
+
+    // Share on WhatsApp
+    $('.whatsapp-share').click(function() {
+        window.open(`https://api.whatsapp.com/send?text=${pageTitle} ${currentUrl}`, '_blank');
+    });
 });
